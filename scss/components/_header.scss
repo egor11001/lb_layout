@@ -18,7 +18,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 64px;
+      padding: 0 64px 0 48px;
       width: 100%;
       position: relative;
 
@@ -29,6 +29,7 @@ header {
         .header_burger {
           transition: 0.2s;
           margin-right: 64px;
+          padding: 16px;
           cursor: pointer;
         }
 
@@ -44,8 +45,7 @@ header {
           }
 
           &_title {
-            mix-blend-mode: difference;
-            color: white;
+            color: colors.$black;
             font-weight: 400;
             font-size: 20px;
             line-height: 27px;
