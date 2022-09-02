@@ -16,15 +16,31 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body>
     <div class="wrapper">
       <header>
         <div class="header_main">
-          <div class="header_main__location">
-            <i class="header_main__location_icon icomoon-location"></i>
-            <h4 class="header_main__location_title">Красноярск</h4>
+          <div class="header_main__left">
+            <div onclick="toggleHeaderMenu()" class="header_burger" id="header-burger">
+              <img src="img/icons/burger.svg" alt="menu" />
+            </div>
+
+            <div class="header_main__left__location">
+              <i class="header_main__left__location_icon icomoon-location"></i>
+              <h4 class="header_main__left__location_title">Красноярск</h4>
+            </div>
           </div>
           <div class="header_main__logo">
             <img src="./img/icons/lookbook.svg" alt="Lookbook" />
@@ -47,7 +63,7 @@
             </button>
           </div>
         </div>
-        <nav>
+        <nav id="header-nav">
           <div class="header_menu">
             <ul class="header_list">
               <li class="header_list_item">Женское</li>
@@ -56,21 +72,43 @@
               <li class="header_list_item header_list_item_sale">% SALE %</li>
             </ul>
           </div>
-          <div class="header_menu__dropdown">
+          <div id="header-dropdown" class="header_menu__dropdown">
             <ul class="header_dropdown_list">
-              <li class="header_dropdown_list_item"><h5>Новинки</h5></li>
-              <li class="header_dropdown_list_item"><h5>Базовый гардероб</h5></li>
-              <li class="header_dropdown_list_item"><h5>В тренде</h5></li>
-              <li class="header_dropdown_list_item"><h5>Классик</h5></li>
-              <li class="header_dropdown_list_item"><h5>Платья</h5></li>
-              <li class="header_dropdown_list_item"><h5>Шорты</h5></li>
-              <li class="header_dropdown_list_item"><h5>Юбки</h5></li>
-              <li class="header_dropdown_list_item"><h5>Худи</h5></li>
-              <li class="header_dropdown_list_item"><h5>Свитшоты</h5></li>
-              <li class="header_dropdown_list_item"><h5>Аксессуары</h5></li>
-              <li class="header_dropdown_list_item"><h5>Обувь</h5></li>
+              <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <h5>Новинки</h5>
+              </li>
+              <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <h5>Базовый гардероб</h5>
+              </li>
+              <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <h5>В тренде</h5>
+              </li>
+              <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <h5>Классик</h5>
+              </li>
+              <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <h5>Платья</h5>
+              </li>
+              <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <h5>Шорты</h5>
+              </li>
+              <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <h5>Юбки</h5>
+              </li>
+              <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <h5>Худи</h5>
+              </li>
+              <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <h5>Свитшоты</h5>
+              </li>
+              <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <h5>Аксессуары</h5>
+              </li>
+              <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <h5>Обувь</h5>
+              </li>
             </ul>
-            <ul class="header_dropdown_list_more">
+            <ul id="header-dropdown-node" class="header_dropdown_list_more">
               <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
               <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
               <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
@@ -99,6 +137,35 @@
           </div>
         </nav>
       </header>
+      <section class="banner_main">
+        <div class="swiper swiper_main" id="swiper_main">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/baner_main.png" alt="BANER" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/baner_main.png" alt="BANER" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/baner_main.png" alt="BANER" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/baner_main.png" alt="BANER" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/baner_main.png" alt="BANER" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"><i class="icomoon-nextArrow"></i></div>
+          <div class="swiper-button-prev"><i class="icomoon-prevArrow"></i></div>
+        </div>
+      </section>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
