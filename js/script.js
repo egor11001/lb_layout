@@ -79,15 +79,26 @@ function hideNodes(element){
 } */
 
 $(document).ready(function () {
-  const swiper = new Swiper('.swiper_main', {
+  const swiperMain = new Swiper('.swiper_main', {
     slidesPerView: 1,
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.main-banner-next',
+      prevEl: '.main-banner-prev',
     },
     pagination: {
       el: '.swiper-pagination',
+    },
+  });
+
+  const swiperMainNews = new Swiper('.swiper-main-news', {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    loop: true,
+    spaceBetween: 144,
+    navigation: {
+      nextEl: '.main-news-next',
+      prevEl: '.main-news-prev',
     },
   });
 });
