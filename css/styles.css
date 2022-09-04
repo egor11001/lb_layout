@@ -1175,8 +1175,8 @@ header nav .header_menu__dropdown .header_dropdown_list_more_item h5 {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.2s;
-  position: absolute;
-  top: 20%;
+  position: fixed;
+  top: 20vh;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -1190,6 +1190,7 @@ header nav .header_menu__dropdown .header_dropdown_list_more_item h5 {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 
 .modal-close-btn {
@@ -1212,7 +1213,7 @@ header nav .header_menu__dropdown .header_dropdown_list_more_item h5 {
 .overlay {
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.2s;
   position: fixed;
   top: 0;
   left: 0;
