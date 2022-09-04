@@ -1,10 +1,9 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('/css/fonts/icomoon/icomoon.eot?d9i1ds');
-  src: url('/css/fonts/icomoon/icomoon.eot?d9i1ds#iefix') format('embedded-opentype'),
-    url('/css/fonts/icomoon/icomoon.ttf?d9i1ds') format('truetype'),
-    url('icomoon.woff?d9i1ds') format('woff'),
-    url('/css/fonts/icomoon/icomoon.svg?d9i1ds#icomoon') format('svg');
+  src: url('/css/fonts/icomoon/icomoon.eot?yixa80');
+  src: url('/css/fonts/icomoon/icomoon.eot?yixa80#iefix') format('embedded-opentype'),
+    url('/css/fonts/icomoon/icomoon.ttf?yixa80') format('truetype'), url('icomoon.woff?yixa80') format('woff'),
+    url('/css/fonts/icomoon/icomoon.svg?yixa80#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,13 +24,17 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icomoon-nextArrow:before {
-  content: '\e906';
-  color: #525050;
+.icomoon-arrow-right:before {
+  content: '\e908';
 }
-.icomoon-prevArrow:before {
-  content: '\e907';
-  color: #525050;
+.icomoon-arrow-left:before {
+  content: '\e909';
+}
+.icomoon-small-arrow-right:before {
+  content: '\e90a';
+}
+.icomoon-small-arrow-left:before {
+  content: '\e90b';
 }
 .icomoon-location:before {
   content: '\e904';

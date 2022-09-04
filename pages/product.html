@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lookbook</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link href="../css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="header_main">
+        <div class="header_main__left">
+          <button onclick="toggleHeaderMenu()" class="header_burger" id="header-burger">
+            <img src="../img/icons/burger.svg" alt="menu" />
+          </button>
+
+          <div class="header_main__left__location">
+            <i class="header_main__left__location_icon icomoon-location"></i>
+            <h4 class="header_main__left__location_title">Красноярск</h4>
+          </div>
+        </div>
+        <div class="header_main__logo">
+          <img src="../img/icons/lookbook.svg" alt="Lookbook" />
+        </div>
+        <div class="header_main__btns">
+          <button class="header_main__btn">
+            <i class="icomoon-search header_search_icon"></i>
+          </button>
+          <button class="header_main__btn">
+            <i class="icomoon-notification header_notif_icon"></i>
+          </button>
+          <button class="header_main__btn">
+            <i class="icomoon-heart header_heart_icon"></i>
+          </button>
+          <button class="header_main__btn">
+            <i class="icomoon-profile header_profile_icon"></i>
+          </button>
+          <button class="header_main__btn">
+            <i class="icomoon-basket header_basket_icon"></i>
+          </button>
+        </div>
+      </div>
+      <nav id="header-nav">
+        <div class="header_menu">
+          <ul class="header_list">
+            <li class="header_list_item">Женское</li>
+            <li class="header_list_item">Мужское</li>
+            <li class="header_list_item">Бренды</li>
+            <li class="header_list_item header_list_item_sale">% SALE %</li>
+          </ul>
+        </div>
+        <div id="header-dropdown" class="header_menu__dropdown">
+          <ul class="header_dropdown_list">
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Новинки</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Базовый гардероб</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>В тренде</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Классик</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Платья</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Шорты</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Юбки</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Худи</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Свитшоты</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Аксессуары</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Обувь</h5>
+            </li>
+          </ul>
+          <ul id="header-dropdown-node" class="header_dropdown_list_more">
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Очень длинные Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+            <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div id="item-page" class="product_wrapper">
+      <a href="../index.html" class="product_back">
+        <i class="icomoon-arrow-left"></i>
+      </a>
+      <div class="product__photos">
+        <div class="swiper swiper-product" id="swiper-product">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="../img/products-full/adidas-ozweego-meta/adidas_ozweego_meta1.jpg"
+                alt="Photo"
+                class="{styles.photo}"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="../img/products-full/adidas-ozweego-meta/adidas_ozweego_meta2.jpg"
+                alt="Photo"
+                class="product_photo"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="../img/products-full/adidas-ozweego-meta/adidas_ozweego_meta3.jpg"
+                alt="Photo"
+                class="product_photo"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="../img/products-full/adidas-ozweego-meta/adidas_ozweego_meta4.jpg"
+                alt="Photo"
+                class="product_photo"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="../img/products-full/adidas-ozweego-meta/adidas_ozweego_meta5.jpg"
+                alt="Photo"
+                class="product_photo"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="../img/products-full/adidas-ozweego-meta/adidas_ozweego_meta6.jpg"
+                alt="Photo"
+                class="product_photo"
+              />
+            </div>
+          </div>
+          <div class="swiper-pagination product-photo-pagination"></div>
+          <div class="swiper-button-next product-photo-next"><i class="icomoon-small-arrow-right"></i></div>
+          <div class="swiper-button-prev product-photo-prev"><i class="icomoon-small-arrow-left"></i></div>
+        </div>
+      </div>
+      <div class="product__content">
+        <h1 class="product__content_title">Adidas</h1>
+        <h3 class="product__content_desc">OZWEEGO META</h3>
+        <h1 class="product__content_price">15000 ₽</h1>
+
+        <div class="product__content_sizes">
+          <div class="dropdown">
+            <div class="select">
+              <span>40</span>
+              <div><i class="icomoon-small-arrow-left"></i></div>
+            </div>
+            <input type="hidden" name="size" />
+            <ul class="dropdown-menu">
+              <li id="41">41</li>
+              <li id="42">42</li>
+              <li id="43">43</li>
+              <li id="44">44</li>
+              <li id="45">45</li>
+            </ul>
+          </div>
+          <button id="btn-modal" class="sizes_modal-btn">Гид по размерам</button>
+        </div>
+
+        <div class="product__content_colors">
+          <a href="#" class="colors_item colors_item-active" style="background-color: #a39b82"> </a>
+          <a href="#" class="colors_item colors_item" style="background-color: #c2c7ea"> </a>
+          <a href="#" class="colors_item colors_item" style="background-color: #c21857"> </a>
+          <a href="#" class="colors_item colors_item" style="background-color: #478475"> </a>
+          <a href="#" class="colors_item colors_item-empty" style="background-color: #7350ad"> </a>
+        </div>
+
+        <button onClick="{handleAddToBasket}" class="product__content_buy">В корзину</button>
+
+        <div class="product__info">
+          <div class="product__info_btns">
+            <button
+              onclick="toggleInfoTabs('product-info-1')"
+              id="product-info-1"
+              class="product__info_btn product__info_btn-active"
+            >
+              Состав
+            </button>
+            <button onclick="toggleInfoTabs('product-info-2')" id="product-info-2" class="product__info_btn">
+              Уход
+            </button>
+            <button onclick="toggleInfoTabs('product-info-3')" id="product-info-3" class="product__info_btn">
+              Доставка
+            </button>
+          </div>
+          <p id="product-info-target" class="product__info_content">
+            Хлопок 100%. Лайкра 100%. Резина 100%. Хлопок 100%. Лайкра 100%. Резина 100% Хлопок 100%. Лайкра 100%.
+            Резина 100%. Хлопок 100%. Лайкра 100%. Резина 100% Хлопок 100%. Лайкра 100%. Резина 100%. Хлопок 100%.
+            Лайкра 100%. Резина 100% Хлопок 100%. Лайкра 100%. Резина 100%. Хлопок 100%. Лайкра 100%. Резина 100% Хлопок
+            100%. Лайкра 100%. Резина 100%. Хлопок 100%. Лайкра 100%. Резина 100%
+          </p>
+        </div>
+      </div>
+      <!-- <SizesModal sizes={info.sizes_guide} visible={visible} setVisible={setVisible} /> -->
+      <div class="overlay" id="overlay"></div>
+      <div class="modal" id="modal">
+        <button class="modal-close-btn" id="close-btn">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#2D2D2D" />
+            <rect
+              y="-0.353554"
+              width="19.1912"
+              height="1.59948"
+              rx="0.79974"
+              transform="matrix(0.707106 0.707107 -0.707106 0.707107 13.1465 12.5136)"
+              fill="#2D2D2D"
+              stroke="#2D2D2D"
+              stroke-width="0.5"
+            />
+            <rect
+              x="0.353553"
+              y="2.98023e-08"
+              width="19.1912"
+              height="1.59948"
+              rx="0.79974"
+              transform="matrix(-0.707106 0.707107 -0.707106 -0.707107 27.2168 13.1484)"
+              fill="#2D2D2D"
+              stroke="#2D2D2D"
+              stroke-width="0.5"
+            />
+          </svg>
+        </button>
+        SM/ длина 71, объём груди 102, длина рукава 33 ML/ длина 74,объём груди 121, длина рукава 44
+      </div>
+    </div>
+
+    <section id="product-recomendations" class="product__recomendations main__products">
+      <div class="main__section_head">
+        <h1 class="main__section_title">Вам может понравится</h1>
+        <a href="https://egor11001.github.io/lb_layout/" class="main__section_more">Смотреть все</a>
+      </div>
+      <div class="main__products_items">
+        <a href="#" class="main__products_item">
+          <button class="item-like-btn">
+            <i class="icomoon-heart"></i>
+          </button>
+          <img src="../img/products/adidas_ozweego_meta.jpg" alt="Photo" />
+          <div class="main_item_info">
+            <h3 class="main_item_info_title">Adidas</h3>
+            <h4 class="main_item_info_desc">Ozweego Meta</h4>
+            <h2 class="main_item_info_price">15000 ₽</h2>
+          </div>
+        </a>
+        <a href="#" class="main__products_item">
+          <button class="item-like-btn">
+            <i class="icomoon-heart"></i>
+          </button>
+          <img src="../img/products/tommy_hoodi.jpg" alt="Photo" />
+          <div class="main_item_info">
+            <h3 class="main_item_info_title">Tommy Jeans</h3>
+            <h4 class="main_item_info_desc">LINEAR LOGO HOODIE</h4>
+            <h2 class="main_item_info_price">12990 ₽</h2>
+          </div>
+        </a>
+        <a href="#" class="main__products_item">
+          <button class="item-like-btn">
+            <i class="icomoon-heart"></i>
+          </button>
+          <img src="../img/products/adidas_bag.jpg" alt="Photo" />
+          <div class="main_item_info">
+            <h3 class="main_item_info_title">Adidas</h3>
+            <h4 class="main_item_info_desc">ADICOLOR CLASSIC</h4>
+            <h2 class="main_item_info_price">4399 ₽</h2>
+          </div>
+        </a>
+        <a href="#" class="main__products_item">
+          <button class="item-like-btn">
+            <i class="icomoon-heart"></i>
+          </button>
+          <img src="../img/products/adidas_forum_mid.jpg" alt="Photo" />
+          <div class="main_item_info">
+            <h3 class="main_item_info_title">Adidas</h3>
+            <h4 class="main_item_info_desc">Originals x Parley FORUM MID</h4>
+            <h2 class="main_item_info_price">18999 ₽</h2>
+          </div>
+        </a>
+        <a href="#" class="main__products_item">
+          <button class="item-like-btn">
+            <i class="icomoon-heart"></i>
+          </button>
+          <img src="../img/products/vans_shirt.jpg" alt="Photo" />
+          <div class="main_item_info">
+            <h3 class="main_item_info_title">Vans</h3>
+            <h4 class="main_item_info_desc">Torrey Coaches Jacket</h4>
+            <h2 class="main_item_info_price">6090 ₽</h2>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="product-viewed" class="product__recomendations main__products">
+      <div class="main__section_head">
+        <h1 class="main__section_title">Вы смотрели</h1>
+      </div>
+      <div class="main__products_items">
+        <a href="#" class="main__products_item">
+          <button class="item-like-btn">
+            <i class="icomoon-heart"></i>
+          </button>
+          <img src="../img/products/adidas_ozweego_meta.jpg" alt="Photo" />
+          <div class="main_item_info">
+            <h3 class="main_item_info_title">Adidas</h3>
+            <h4 class="main_item_info_desc">Ozweego Meta</h4>
+            <h2 class="main_item_info_price">15000 ₽</h2>
+          </div>
+        </a>
+        <a href="#" class="main__products_item">
+          <button class="item-like-btn">
+            <i class="icomoon-heart"></i>
+          </button>
+          <img src="../img/products/tommy_hoodi.jpg" alt="Photo" />
+          <div class="main_item_info">
+            <h3 class="main_item_info_title">Tommy Jeans</h3>
+            <h4 class="main_item_info_desc">LINEAR LOGO HOODIE</h4>
+            <h2 class="main_item_info_price">12990 ₽</h2>
+          </div>
+        </a>
+        <a href="#" class="main__products_item">
+          <button class="item-like-btn">
+            <i class="icomoon-heart"></i>
+          </button>
+          <img src="../img/products/adidas_bag.jpg" alt="Photo" />
+          <div class="main_item_info">
+            <h3 class="main_item_info_title">Adidas</h3>
+            <h4 class="main_item_info_desc">ADICOLOR CLASSIC</h4>
+            <h2 class="main_item_info_price">4399 ₽</h2>
+          </div>
+        </a>
+        <a href="#" class="main__products_item">
+          <button class="item-like-btn">
+            <i class="icomoon-heart"></i>
+          </button>
+          <img src="../img/products/adidas_forum_mid.jpg" alt="Photo" />
+          <div class="main_item_info">
+            <h3 class="main_item_info_title">Adidas</h3>
+            <h4 class="main_item_info_desc">Originals x Parley FORUM MID</h4>
+            <h2 class="main_item_info_price">18999 ₽</h2>
+          </div>
+        </a>
+        <a href="#" class="main__products_item">
+          <button class="item-like-btn">
+            <i class="icomoon-heart"></i>
+          </button>
+          <img src="../img/products/vans_shirt.jpg" alt="Photo" />
+          <div class="main_item_info">
+            <h3 class="main_item_info_title">Vans</h3>
+            <h4 class="main_item_info_desc">Torrey Coaches Jacket</h4>
+            <h2 class="main_item_info_price">6090 ₽</h2>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

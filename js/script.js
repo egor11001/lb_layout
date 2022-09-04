@@ -87,7 +87,7 @@ $(document).ready(function () {
       prevEl: '.main-banner-prev',
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.main-banner-pagination',
     },
   });
 
@@ -99,6 +99,18 @@ $(document).ready(function () {
     navigation: {
       nextEl: '.main-news-next',
       prevEl: '.main-news-prev',
+    },
+  });
+
+  const swiperProduct = new Swiper('.swiper-product', {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: '.product-photo-next',
+      prevEl: '.product-photo-prev',
+    },
+    pagination: {
+      el: '.product-photo-pagination',
     },
   });
 });
@@ -145,3 +157,72 @@ function hideHeaderMenuNode() {
   let menu = document.getElementById('header-dropdown-node');
   menu.style.display = 'none';
 }
+
+function toggleInfoTabs(tabId) {
+  let el1 = document.getElementById('product-info-1');
+  let el2 = document.getElementById('product-info-2');
+  let el3 = document.getElementById('product-info-3');
+  let target = document.getElementById('product-info-target');
+
+  if (tabId === 'product-info-1') {
+    if (el1.classList.contains('product__info_btn-active')) {
+      return;
+    } else {
+      el1.classList.add('product__info_btn-active');
+      el2.classList.remove('product__info_btn-active');
+      el3.classList.remove('product__info_btn-active');
+      target.textContent =
+        'Хлопок 100%. Лайкра 100%. Резина 100%. Хлопок 100%. Лайкра 100%. Резина 100% Хлопок 100%. Лайкра 100%. Резина 100%. Хлопок 100%. Лайкра 100%. Резина 100% Хлопок 100%. Лайкра 100%. Резина 100%. Хлопок 100%. Лайкра 100%. Резина 100% Хлопок 100%. Лайкра 100%. Резина 100%. Хлопок 100%. Лайкра 100%. Резина 100% Хлопок 100%. Лайкра 100%. Резина 100%. Хлопок 100%. Лайкра 100%. Резина 100%';
+    }
+  }
+
+  if (tabId === 'product-info-2') {
+    if (el2.classList.contains('product__info_btn-active')) {
+      return;
+    } else {
+      el2.classList.add('product__info_btn-active');
+      el1.classList.remove('product__info_btn-active');
+      el3.classList.remove('product__info_btn-active');
+      target.textContent = 'Уход уход уход уход уход уход уход уход уход уход уход уход уход уход';
+    }
+  }
+
+  if (tabId === 'product-info-3') {
+    if (el3.classList.contains('product__info_btn-active')) {
+      return;
+    } else {
+      el3.classList.add('product__info_btn-active');
+      el1.classList.remove('product__info_btn-active');
+      el2.classList.remove('product__info_btn-active');
+      target.textContent = 'Доставка доставка доставка доставка доставка доставка';
+    }
+  }
+}
+
+$('.dropdown').click(function () {
+  $(this).attr('tabindex', 1).focus();
+  $(this).toggleClass('active');
+  $(this).find('.dropdown-menu').slideToggle(150);
+});
+$('.dropdown').focusout(function () {
+  $(this).removeClass('active');
+  $(this).find('.dropdown-menu').slideUp(150);
+});
+$('.dropdown .dropdown-menu li').click(function () {
+  $(this).parents('.dropdown').find('span').text($(this).text());
+  $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+});
+
+document.getElementById('btn-modal').addEventListener('click', function () {
+  document.getElementById('overlay').classList.add('is-visible');
+  document.getElementById('modal').classList.add('is-visible');
+});
+
+document.getElementById('close-btn').addEventListener('click', function () {
+  document.getElementById('overlay').classList.remove('is-visible');
+  document.getElementById('modal').classList.remove('is-visible');
+});
+document.getElementById('overlay').addEventListener('click', function () {
+  document.getElementById('overlay').classList.remove('is-visible');
+  document.getElementById('modal').classList.remove('is-visible');
+});

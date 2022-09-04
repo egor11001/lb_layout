@@ -14,7 +14,6 @@
 }
 
 .main__banner {
-  margin-top: 96px;
   height: 800px;
 
   .swiper_main {
@@ -24,6 +23,7 @@
     .swiper-button-prev {
       color: transparent;
       i {
+        color: colors.$grey;
         font-size: 48px;
       }
     }
@@ -71,6 +71,10 @@
     padding: 0 200px;
     margin-bottom: 64px;
 
+    @media (max-width: 1720px) {
+      padding: 0 100px;
+    }
+
     .main__section_title {
       font-weight: 600;
       font-size: 24px;
@@ -103,9 +107,11 @@
       border-radius: 20px;
       cursor: pointer;
       overflow: hidden;
+      transition: 0.1s;
 
       &:hover {
         box-shadow: 0px 5px 22px 5px rgba(196, 196, 196, 0.3);
+        transition: 0.1s;
       }
 
       @media (max-width: 1720px) {
@@ -206,9 +212,17 @@
       margin-bottom: 64px;
       width: 100%;
 
+      @media (max-width: 1720px) {
+        padding: 0 20px;
+      }
+
       &_title {
         font-weight: 600;
         font-size: 32px;
+
+        @media (max-width: 1400px) {
+          font-size: 28px;
+        }
       }
 
       .main__news__btns {
@@ -222,6 +236,10 @@
           i {
             font-size: 48px;
             color: colors.$black;
+
+            @media (max-width: 1400px) {
+              font-size: 40px;
+            }
           }
         }
         .main-news-prev {
