@@ -522,7 +522,7 @@ header nav .header_menu__dropdown .header_dropdown_list_more_item h5 {
 .main__news #swiper_main .swiper-wrapper .swiper-slide .main__news_item img {
   height: 400px;
   width: 100%;
-  object-fit: scale-down;
+  object-fit: cover;
   margin-bottom: 36px;
 }
 .main__news #swiper_main .swiper-wrapper .swiper-slide .main__news_item_title {
