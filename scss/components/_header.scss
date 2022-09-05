@@ -10,7 +10,7 @@ header {
 
   .header {
     &_main {
-      height: 96px;
+      height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -27,6 +27,7 @@ header {
           margin-right: 64px;
           padding: 16px;
           cursor: pointer;
+          margin-top: 2px;
         }
 
         &__location {
@@ -62,9 +63,10 @@ header {
       }
       &__logo {
         position: absolute;
-        top: 24px;
+        top: 11px;
         left: calc((100vw - 194px) / 2);
         font-size: 36px;
+        cursor: pointer;
       }
 
       &__btns {

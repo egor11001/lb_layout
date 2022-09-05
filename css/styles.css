@@ -22,7 +22,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   background-color: #ffffff;
-  padding-top: 96px;
+  padding-top: 72px;
 }
 
 a,
@@ -86,7 +86,7 @@ header {
   box-shadow: 0px 30px 22px -20px rgba(196, 196, 196, 0.3);
 }
 header .header_main {
-  height: 96px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,6 +103,7 @@ header .header_main__left .header_burger {
   margin-right: 64px;
   padding: 16px;
   cursor: pointer;
+  margin-top: 2px;
 }
 header .header_main__left__location {
   display: flex;
@@ -131,9 +132,10 @@ header .header_main__left__location:hover h4 {
 }
 header .header_main__logo {
   position: absolute;
-  top: 24px;
+  top: 11px;
   left: calc((100vw - 194px) / 2);
   font-size: 36px;
+  cursor: pointer;
 }
 header .header_main__btns {
   display: flex;
@@ -287,6 +289,9 @@ header nav .header_menu__dropdown .header_dropdown_list_more_item h5 {
 }
 .main__banner .swiper_main {
   height: inherit;
+}
+.main__banner .swiper_main img {
+  object-fit: cover;
 }
 .main__banner .swiper_main .swiper-button-next,
 .main__banner .swiper_main .swiper-button-prev {
@@ -681,7 +686,7 @@ header {
   box-shadow: 0px 30px 22px -20px rgba(196, 196, 196, 0.3);
 }
 header .header_main {
-  height: 96px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -698,6 +703,7 @@ header .header_main__left .header_burger {
   margin-right: 64px;
   padding: 16px;
   cursor: pointer;
+  margin-top: 2px;
 }
 header .header_main__left__location {
   display: flex;
@@ -726,9 +732,10 @@ header .header_main__left__location:hover h4 {
 }
 header .header_main__logo {
   position: absolute;
-  top: 24px;
+  top: 11px;
   left: calc((100vw - 194px) / 2);
   font-size: 36px;
+  cursor: pointer;
 }
 header .header_main__btns {
   display: flex;

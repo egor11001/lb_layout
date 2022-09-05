@@ -19,6 +19,10 @@
   .swiper_main {
     height: inherit;
 
+    img {
+      object-fit: cover;
+    }
+
     .swiper-button-next,
     .swiper-button-prev {
       color: transparent;
