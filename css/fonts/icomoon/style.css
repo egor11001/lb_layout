@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('/css/fonts/icomoon/icomoon.eot?yixa80');
-  src: url('/css/fonts/icomoon/icomoon.eot?yixa80#iefix') format('embedded-opentype'),
-    url('/css/fonts/icomoon/icomoon.ttf?yixa80') format('truetype'), url('icomoon.woff?yixa80') format('woff'),
-    url('/css/fonts/icomoon/icomoon.svg?yixa80#icomoon') format('svg');
+  src: url('/css/fonts/icomoon/icomoon.eot?pivuwj');
+  src: url('/css/fonts/icomoon/icomoon.eot?pivuwj#iefix') format('embedded-opentype'),
+    url('/css/fonts/icomoon/icomoon.ttf?pivuwj') format('truetype'), url('icomoon.woff?pivuwj') format('woff'),
+    url('/css/fonts/icomoon/icomoon.svg?pivuwj#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -30,6 +30,9 @@ i {
 .icomoon-arrow-left:before {
   content: '\e909';
 }
+.icomoon-edit:before {
+  content: '\e907';
+}
 .icomoon-small-arrow-right:before {
   content: '\e90a';
 }
@@ -41,6 +44,15 @@ i {
 }
 .icomoon-profile:before {
   content: '\e905';
+}
+.icomoon-vk:before {
+  content: '\e90c';
+}
+.icomoon-youtube:before {
+  content: '\e90d';
+}
+.icomoon-telegram:before {
+  content: '\e906';
 }
 .icomoon-basket:before {
   content: '\e903';
