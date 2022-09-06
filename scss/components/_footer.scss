@@ -207,15 +207,18 @@ footer {
       display: flex;
       align-items: center;
 
-      i {
-        font-size: 32px;
+      a {
         margin-right: 64px;
-        background: colors.$gradient;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
 
-        &:nth-last-of-type(1) {
-          margin-right: 0;
+        i {
+          font-size: 32px;
+          background: colors.$gradient;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+          &:nth-last-of-type(1) {
+            margin-right: 0;
+          }
         }
       }
     }

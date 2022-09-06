@@ -199,6 +199,37 @@ function toggleInfoTabs(tabId) {
   }
 }
 
+$('.header-search-btn').click(function () {
+  if (!$(this).hasClass('header__search_btn-active')) {
+    $(this).toggleClass('header__search_btn-active');
+    $('#header-logo').hide();
+    $('#header-location').hide();
+    $('#header-burger').hide();
+    $('#header-search-input').show();
+    $('#header-search-result').show('fast');
+    $('#header-close-search').show();
+  } else {
+    $(this).toggleClass('header__search_btn-active');
+    $('#header-logo').show();
+    $('#header-location').show();
+    $('#header-burger').show();
+    $('#header-search-result').hide('fast');
+    $('#header-search-input').hide();
+    $('#header-close-search').hide();
+  }
+});
+
+$('#header-close-search').click(function () {
+  $('.header-search-btn').toggleClass('header__search_btn-active');
+  $('#header-logo').show();
+  $('#header-location').show();
+  $('#header-burger').show();
+  $('#header-search-result').hide('fast');
+  $('#header-search-input').hide();
+  $('#header-search-input').val('');
+  $('#header-close-search').hide();
+});
+
 $('.dropdown').click(function () {
   $(this).attr('tabindex', 1).focus();
   $(this).toggleClass('active');

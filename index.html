@@ -35,16 +35,27 @@
               <img src="./img/icons/burger.svg" alt="menu" />
             </button>
 
-            <div class="header_main__left__location">
+            <div class="header_main__left__location" id="header-location">
               <i class="header_main__left__location_icon icomoon-location"></i>
               <h4 class="header_main__left__location_title">Красноярск</h4>
             </div>
           </div>
-          <a href="#" class="header_main__logo">
+          <a href="#" class="header_main__logo" id="header-logo">
             <img src="./img/icons/lookbook.svg" alt="Lookbook" />
           </a>
+          <div class="header__search">
+            <button id="header-close-search">
+              <i class="icomoon-close"></i>
+            </button>
+            <input
+              type="text"
+              class="header__search_input"
+              id="header-search-input"
+              placeholder="Введите что ищете..."
+            />
+          </div>
           <div class="header_main__btns">
-            <button class="header_main__btn">
+            <button class="header_main__btn header-search-btn" id="header-search-btn">
               <i class="icomoon-search header_search_icon"></i>
             </button>
             <button class="header_main__btn">
@@ -60,6 +71,18 @@
               <i class="icomoon-basket header_basket_icon"></i>
             </button>
           </div>
+        </div>
+        <div class="header__search_result" id="header-search-result">
+          <ul class="search_list">
+            <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+            <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+            <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+            <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+            <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+            <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+            <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+            <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+          </ul>
         </div>
         <nav id="header-nav">
           <div class="header_menu">
@@ -107,30 +130,47 @@
               </li>
             </ul>
             <ul id="header-dropdown-node" class="header_dropdown_list_more">
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Очень длинные Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
-              <li class="header_dropdown_list_more_item"><h5>Футболки</h5></li>
+              <li class="header_dropdown_list_more_item">
+                <h5>Все</h5>
+                <i class="icomoon-arrow-right"></i>
+              </li>
+              <li class="header_dropdown_list_more_item">
+                <h5>Футболки</h5>
+                <i class="icomoon-arrow-right"></i>
+              </li>
+              <li class="header_dropdown_list_more_item">
+                <h5>Футболки</h5>
+                <i class="icomoon-arrow-right"></i>
+              </li>
+              <li class="header_dropdown_list_more_item">
+                <h5>Футболки</h5>
+                <i class="icomoon-arrow-right"></i>
+              </li>
+              <li class="header_dropdown_list_more_item">
+                <h5>Футболки</h5>
+                <i class="icomoon-arrow-right"></i>
+              </li>
+              <li class="header_dropdown_list_more_item">
+                <h5>Футболки</h5>
+                <i class="icomoon-arrow-right"></i>
+              </li>
+
+              <li class="header_dropdown_list_more_item">
+                <h5>Футболки</h5>
+                <i class="icomoon-arrow-right"></i>
+              </li>
+              <li class="header_dropdown_list_more_item">
+                <h5>Футболки</h5>
+                <i class="icomoon-arrow-right"></i>
+              </li>
+              <li class="header_dropdown_list_more_item">
+                <h5>Футболки</h5>
+                <i class="icomoon-arrow-right"></i>
+              </li>
+              <li class="header_dropdown_list_more_item">
+                <h5>Футболки</h5>
+                <i class="icomoon-arrow-right"></i>
+              </li>
             </ul>
           </div>
         </nav>
@@ -449,9 +489,9 @@
         <div class="footer__bottom">
           <h2 class="footer__bottom_company">LOOKBOOK, 2022</h2>
           <div class="footer__bottom_socials">
-            <i class="icomoon-telegram"></i>
-            <i class="icomoon-youtube"></i>
-            <i class="icomoon-vk"></i>
+            <a href="#"><i class="icomoon-telegram"></i></a>
+            <a href="#"><i class="icomoon-youtube"></i></a>
+            <a href="#"><i class="icomoon-vk"></i></a>
           </div>
           <div class="footer__bottom_payments">
             <img src="./img/payments/mir.png" alt="MIR" />
