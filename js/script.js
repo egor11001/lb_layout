@@ -120,9 +120,11 @@ function toggleHeaderMenu() {
   let burger = document.getElementById('header-burger');
   if (menu.style.display === 'block') {
     menu.style.display = 'none';
+    document.body.style.overflow = 'auto';
     burger.style.transform = 'rotate(0deg)';
   } else {
     menu.style.display = 'block';
+    document.body.style.overflow = 'hidden';
     burger.style.transform = 'rotate(90deg)';
   }
   /* var lis = document.querySelectorAll("#drop-down > li");

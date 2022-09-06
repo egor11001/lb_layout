@@ -1,6 +1,7 @@
 @use 'colors';
 
 @import 'components/header';
+@import 'components/footer';
 
 .product_wrapper {
   display: flex;
@@ -27,7 +28,8 @@
 
     i {
       color: colors.$black;
-      font-size: 48px;
+      font-size: 40px;
+      font-weight: 600;
     }
   }
 

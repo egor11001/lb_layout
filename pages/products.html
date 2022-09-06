@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lookbook</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link href="../css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="header_main">
+        <div class="header_main__left">
+          <button onclick="toggleHeaderMenu()" class="header_burger" id="header-burger">
+            <img src="../img/icons/burger.svg" alt="menu" />
+          </button>
+
+          <div class="header_main__left__location" id="header-location">
+            <i class="header_main__left__location_icon icomoon-location"></i>
+            <h4 class="header_main__left__location_title">Красноярск</h4>
+          </div>
+        </div>
+        <a href="../index.html" class="header_main__logo" id="header-logo">
+          <img src="../img/icons/lookbook.svg" alt="Lookbook" />
+        </a>
+        <div class="header__search">
+          <button id="header-close-search">
+            <i class="icomoon-close"></i>
+          </button>
+          <input
+            type="text"
+            class="header__search_input"
+            id="header-search-input"
+            placeholder="Введите что ищете..."
+          />
+        </div>
+        <div class="header_main__btns">
+          <button class="header_main__btn header-search-btn" id="header-search-btn">
+            <i class="icomoon-search header_search_icon"></i>
+          </button>
+          <button class="header_main__btn">
+            <i class="icomoon-notification header_notif_icon"></i>
+          </button>
+          <button class="header_main__btn">
+            <i class="icomoon-heart header_heart_icon"></i>
+          </button>
+          <button class="header_main__btn">
+            <i class="icomoon-profile header_profile_icon"></i>
+          </button>
+          <button class="header_main__btn">
+            <i class="icomoon-basket header_basket_icon"></i>
+          </button>
+        </div>
+      </div>
+      <div class="header__search_result" id="header-search-result">
+        <ul class="search_list">
+          <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+          <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+          <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+          <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+          <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+          <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+          <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+          <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+        </ul>
+      </div>
+      <nav id="header-nav">
+        <div class="header_menu">
+          <ul class="header_list">
+            <li class="header_list_item">Женское</li>
+            <li class="header_list_item">Мужское</li>
+            <li class="header_list_item">Бренды</li>
+            <li class="header_list_item header_list_item_sale">% SALE %</li>
+          </ul>
+        </div>
+        <div id="header-dropdown" class="header_menu__dropdown">
+          <ul class="header_dropdown_list">
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Новинки</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Базовый гардероб</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>В тренде</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Классик</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Платья</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Шорты</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Юбки</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Худи</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Свитшоты</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Аксессуары</h5>
+            </li>
+            <li id="header-dropdown-item" class="header_dropdown_list_item">
+              <h5>Обувь</h5>
+            </li>
+          </ul>
+          <ul id="header-dropdown-node" class="header_dropdown_list_more">
+            <li class="header_dropdown_list_more_item">
+              <h5>Все</h5>
+              <i class="icomoon-arrow-right"></i>
+            </li>
+            <li class="header_dropdown_list_more_item">
+              <h5>Футболки</h5>
+              <i class="icomoon-arrow-right"></i>
+            </li>
+            <li class="header_dropdown_list_more_item">
+              <h5>Футболки</h5>
+              <i class="icomoon-arrow-right"></i>
+            </li>
+            <li class="header_dropdown_list_more_item">
+              <h5>Футболки</h5>
+              <i class="icomoon-arrow-right"></i>
+            </li>
+            <li class="header_dropdown_list_more_item">
+              <h5>Футболки</h5>
+              <i class="icomoon-arrow-right"></i>
+            </li>
+            <li class="header_dropdown_list_more_item">
+              <h5>Футболки</h5>
+              <i class="icomoon-arrow-right"></i>
+            </li>
+
+            <li class="header_dropdown_list_more_item">
+              <h5>Футболки</h5>
+              <i class="icomoon-arrow-right"></i>
+            </li>
+            <li class="header_dropdown_list_more_item">
+              <h5>Футболки</h5>
+              <i class="icomoon-arrow-right"></i>
+            </li>
+            <li class="header_dropdown_list_more_item">
+              <h5>Футболки</h5>
+              <i class="icomoon-arrow-right"></i>
+            </li>
+            <li class="header_dropdown_list_more_item">
+              <h5>Футболки</h5>
+              <i class="icomoon-arrow-right"></i>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="products_wrapper">
+      <form class="products__filters">
+        <a href="../index.html" class="products_back">
+          <i class="icomoon-arrow-left"></i>
+        </a>
+        <div class="products__filter">
+          <h1 class="products__filter_title">Бренд</h1>
+          <div class="products__filter_search">
+            <input type="text" placeholder="Название бренда" />
+            <i class="icomoon-search header_search_icon"></i>
+          </div>
+          <div class="products__filter_checkboxes">
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="brand1" name="brand" value="1" />
+              <label for="brand1">Anta</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="brand2" name="brand" value="2" />
+              <label for="brand2">Befree</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="brand3" name="brand" value="3" />
+              <label for="brand3">Cropp</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="brand4" name="brand" value="4" />
+              <label for="brand4">Finn Flare</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="brand5" name="brand" value="5" />
+              <label for="brand5">Levi's</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="brand6" name="brand" value="6" />
+              <label for="brand6">Mango</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="brand7" name="brand" value="7" />
+              <label for="brand7">Nike</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="brand8" name="brand" value="8" />
+              <label for="brand8">Reebok</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="products__filter">
+          <h1 class="products__filter_title">Цвет</h1>
+          <div class="products__filter_search">
+            <input type="text" placeholder="Цвет товара" />
+            <i class="icomoon-search header_search_icon"></i>
+          </div>
+          <div class="products__filter_checkboxes">
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="color1" name="color" value="1" />
+              <label for="color1">Белый</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="color2" name="color" value="2" />
+              <label for="color2">Красный</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="color3" name="color" value="3" />
+              <label for="color3">Черный</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="color4" name="color" value="4" />
+              <label for="color4">Синий</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="color5" name="color" value="5" />
+              <label for="color5">Фиолетовый</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="color6" name="color" value="6" />
+              <label for="color6">Оранжевый</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="color7" name="color" value="7" />
+              <label for="color7">Зеленый</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="color8" name="color" value="8" />
+              <label for="color8">Голубой</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="products__filter">
+          <h1 class="products__filter_title">Состав</h1>
+          <div class="products__filter_search">
+            <input type="text" placeholder="Материал товара" />
+            <i class="icomoon-search header_search_icon"></i>
+          </div>
+          <div class="products__filter_checkboxes">
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="сomposition1" name="сomposition" value="1" />
+              <label for="сomposition1">Натуральная кожа</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="сomposition2" name="сomposition" value="2" />
+              <label for="сomposition2">Вискоза</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="сomposition3" name="сomposition" value="3" />
+              <label for="сomposition3">Искусственная кожа</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="сomposition4" name="сomposition" value="4" />
+              <label for="сomposition4">Натуральная замша</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="сomposition5" name="сomposition" value="5" />
+              <label for="сomposition5">Искусственная замша</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="сomposition6" name="сomposition" value="6" />
+              <label for="сomposition6">Полиэстер</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="сomposition7" name="сomposition" value="7" />
+              <label for="сomposition7">Текстиль</label>
+            </div>
+            <div class="products__filter_checkboxes_item">
+              <input type="checkbox" id="сomposition8" name="сomposition" value="8" />
+              <label for="сomposition8">Шерсть</label>
+            </div>
+          </div>
+        </div>
+        <div class="products__filter">
+          <h1 class="products__filter_title">Размер</h1>
+          <div class="products__filter_sizes">
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="s-size" name="size" value="s" />
+              <div>S</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="m-size" name="size" value="m" />
+              <div>M</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="l-size" name="size" value="l" />
+              <div>L</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="xs-size" name="size" value="xs" />
+              <div>XS</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="xl-size" name="size" value="xl" />
+              <div>XL</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="xxl-size" name="size" value="xxl" />
+              <div>XXL</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="xxxl-size" name="size" value="xxxl" />
+              <div>XXXL</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="35-size" name="size" value="35" />
+              <div>35</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="36-size" name="size" value="36" />
+              <div>36</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="37-size" name="size" value="37" />
+              <div>37</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="38-size" name="size" value="38" />
+              <div>38</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="39-size" name="size" value="39" />
+              <div>39</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="40-size" name="size" value="40" />
+              <div>40</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="41-size" name="size" value="41" />
+              <div>41</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="42-size" name="size" value="42" />
+              <div>42</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="43-size" name="size" value="43" />
+              <div>43</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="44-size" name="size" value="44" />
+              <div>44</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="45-size" name="size" value="45" />
+              <div>45</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="46-size" name="size" value="46" />
+              <div>46</div>
+            </div>
+            <div class="products__filter_sizes_item">
+              <input type="checkbox" id="47-size" name="size" value="47" />
+              <div>47</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="products__filter">
+          <h1 class="products__filter_title">Цена</h1>
+          <div class="products__filter_price">
+            <div class="slider">
+              <div class="progress"></div>
+            </div>
+            <div class="range-input">
+              <input type="range" class="range-min" min="0" max="100000" value="0" step="100" />
+              <input type="range" class="range-max" min="0" max="100000" value="100000" step="100" />
+            </div>
+            <div class="price-input">
+              <div class="field">
+                <input type="number" class="input-min" value="0" placeholder="От" />
+              </div>
+              <div class="separator">-</div>
+              <div class="field">
+                <input type="number" class="input-max" value="100000" placeholder="До" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="submit-filters" type="submit">Применить</button>
+      </form>
+    </div>
+
+    <footer>
+      <div class="footer__main">
+        <div class="footer__main_logo">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.2334 44.1544C36.5953 29.3792 48.9936 22.6126 53.7473 25.7818C60 29.9359 33.9829 54.4113 37.4518 50.0216C40.9208 45.6319 77.5589 40.407 75.4604 50.4499C73.3619 60.4713 51.606 70.5783 32.848 82.2057"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <path
+              d="M50 98.3935C76.7272 98.3935 98.394 76.7267 98.394 49.9995C98.394 23.2722 76.7272 1.60547 50 1.60547C23.2727 1.60547 1.60596 23.2722 1.60596 49.9995C1.60596 76.7267 23.2727 98.3935 50 98.3935Z"
+              stroke="white"
+              stroke-width="3"
+            />
+            <path
+              d="M39.9785 4.04688V95.5244L90.5353 76.3167"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <ul class="footer__main_links">
+          <li class="footer__main_link">О нас</li>
+          <li class="footer__main_link"><a href="#">О компании</a></li>
+          <li class="footer__main_link"><a href="#">Новости</a></li>
+          <li class="footer__main_link"><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="footer__main_links">
+          <li class="footer__main_link">Покупателю</li>
+          <li class="footer__main_link"><a href="#">Доставка</a></li>
+          <li class="footer__main_link"><a href="#">Оплата</a></li>
+          <li class="footer__main_link"><a href="#">Возвраты</a></li>
+        </ul>
+        <ul class="footer__main_links">
+          <li class="footer__main_link">Партнерам</li>
+          <li class="footer__main_link"><a href="#">Отправить заявку</a></li>
+          <li class="footer__main_link"><a href="#">Договор оферты</a></li>
+          <li class="footer__main_link"><a href="#">Помощь и FAQ</a></li>
+        </ul>
+        <div class="footer__main_subscribe">
+          <h1>Подпишись на нашу рассылку</h1>
+          <form>
+            <input type="email" placeholder="Email" />
+            <button>Готово</button>
+          </form>
+          <h5>
+            Подписываясь на рассылку, вы соглашаетесь с условиями <a href="#">Политики конфиденциальности</a>
+          </h5>
+        </div>
+      </div>
+
+      <div class="footer__line"></div>
+
+      <div class="footer__bottom">
+        <h2 class="footer__bottom_company">LOOKBOOK, 2022</h2>
+        <div class="footer__bottom_socials">
+          <a href="#"><i class="icomoon-telegram"></i></a>
+          <a href="#"><i class="icomoon-youtube"></i></a>
+          <a href="#"><i class="icomoon-vk"></i></a>
+        </div>
+        <div class="footer__bottom_payments">
+          <img src="../img/payments/mir.png" alt="MIR" />
+          <img src="../img/payments/mc.png" alt="MC" />
+          <img src="../img/payments/visa.png" alt="VISA" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/rangeInput.js"></script>
+  </body>
+</html>
