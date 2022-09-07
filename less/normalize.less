@@ -1,0 +1,89 @@
+@import 'colors.less';
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Manrope', 'Montserrat', 'Roboto';
+}
+
+body {
+  font-family: 'Manrope', 'Montserrat', 'Red Hat Display', 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #ffffff;
+  padding-top: 72px;
+}
+
+a,
+li,
+span,
+p,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+hr,
+button,
+input {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.02em;
+  font-family: 'Manrope', 'Montserrat', 'Roboto';
+  color: @black;
+}
+
+button,
+button:focus {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  padding: 0;
+  border: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input:focus,
+input {
+  outline: none;
+  border: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  pointer-events: none;
+}
+
+noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}

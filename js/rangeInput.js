@@ -38,6 +38,5 @@ rangeInput.forEach((input) => {
       range.style.left = (minVal / rangeInput[0].max) * 100 + '%';
       range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + '%';
     }
-    console.log(priceInput[0].value, priceInput[1].value);
   });
 });
