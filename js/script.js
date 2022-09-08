@@ -79,7 +79,7 @@ function hideNodes(element){
 } */
 
 $(document).ready(function () {
-  const swiperMain = new Swiper('.swiper_main', {
+  const swiperMain = new Swiper('#swiper-main', {
     slidesPerView: 1,
     loop: true,
     navigation: {
@@ -91,7 +91,18 @@ $(document).ready(function () {
     },
   });
 
-  const swiperMainNews = new Swiper('.swiper-main-news', {
+  const swiperMainProducts = new Swiper('#swiper-main-products', {
+    slidesPerView: 5,
+    slidesPerGroup: 5,
+    watchOverflow: true,
+    spaceBetween: 24,
+    navigation: {
+      nextEl: '.main-products-next',
+      prevEl: '.main-products-prev',
+    },
+  });
+
+  const swiperMainNews = new Swiper('#swiper-main-news', {
     slidesPerView: 2,
     slidesPerGroup: 2,
     loop: true,
@@ -102,7 +113,7 @@ $(document).ready(function () {
     },
   });
 
-  const swiperProduct = new Swiper('.swiper-product', {
+  const swiperProduct = new Swiper('#swiper-product', {
     slidesPerView: 1,
     loop: true,
     navigation: {
