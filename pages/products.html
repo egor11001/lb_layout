@@ -182,7 +182,7 @@
           <i class="icomoon-arrow-left"></i>
         </a>
         <div class="products__filter">
-          <h1 class="products__filter_title">Бренд</h1>
+          <h2 class="products__filter_title">Бренд</h2>
           <div class="products__filter_search">
             <input type="text" placeholder="Название бренда" />
             <i class="icomoon-search header_search_icon"></i>
@@ -224,7 +224,7 @@
         </div>
 
         <div class="products__filter">
-          <h1 class="products__filter_title">Цвет</h1>
+          <h2 class="products__filter_title">Цвет</h2>
           <div class="products__filter_search">
             <input type="text" placeholder="Цвет товара" />
             <i class="icomoon-search header_search_icon"></i>
@@ -266,7 +266,7 @@
         </div>
 
         <div class="products__filter">
-          <h1 class="products__filter_title">Состав</h1>
+          <h2 class="products__filter_title">Состав</h2>
           <div class="products__filter_search">
             <input type="text" placeholder="Материал товара" />
             <i class="icomoon-search header_search_icon"></i>
@@ -307,7 +307,7 @@
           </div>
         </div>
         <div class="products__filter">
-          <h1 class="products__filter_title">Размер</h1>
+          <h2 class="products__filter_title">Размер</h2>
           <div class="products__filter_sizes">
             <div class="products__filter_sizes_item">
               <input type="checkbox" id="s-size" name="size" value="s" />
@@ -393,7 +393,7 @@
         </div>
 
         <div class="products__filter">
-          <h1 class="products__filter_title">Цена</h1>
+          <h2 class="products__filter_title">Цена</h2>
           <div class="products__filter_price">
             <div class="slider">
               <div class="progress"></div>
@@ -416,6 +416,219 @@
 
         <button id="submit-filters" type="submit">Применить</button>
       </form>
+
+      <div class="products__content">
+        <h1 class="products_title">Новинки</h1>
+        <div class="products__content_top">
+          <div class="products_breadcrumbs">
+            <h2>Главная</h2>
+            <svg width="41" height="9" viewBox="0 0 41 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1 4C0.723858 4 0.5 4.22386 0.5 4.5C0.5 4.77614 0.723858 5 1 5L1 4ZM40.3536 4.85355C40.5488 4.65829 40.5488 4.34171 40.3536 4.14644L37.1716 0.964463C36.9763 0.769201 36.6597 0.769201 36.4645 0.964463C36.2692 1.15973 36.2692 1.47631 36.4645 1.67157L39.2929 4.5L36.4645 7.32842C36.2692 7.52369 36.2692 7.84027 36.4645 8.03553C36.6597 8.23079 36.9763 8.23079 37.1716 8.03553L40.3536 4.85355ZM1 5L40 5L40 4L1 4L1 5Z"
+                fill="#525050"
+              />
+            </svg>
+            <h2>Новинки</h2>
+            <svg width="41" height="9" viewBox="0 0 41 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1 4C0.723858 4 0.5 4.22386 0.5 4.5C0.5 4.77614 0.723858 5 1 5L1 4ZM40.3536 4.85355C40.5488 4.65829 40.5488 4.34171 40.3536 4.14644L37.1716 0.964463C36.9763 0.769201 36.6597 0.769201 36.4645 0.964463C36.2692 1.15973 36.2692 1.47631 36.4645 1.67157L39.2929 4.5L36.4645 7.32842C36.2692 7.52369 36.2692 7.84027 36.4645 8.03553C36.6597 8.23079 36.9763 8.23079 37.1716 8.03553L40.3536 4.85355ZM1 5L40 5L40 4L1 4L1 5Z"
+                fill="#525050"
+              />
+            </svg>
+            <h2>Все</h2>
+          </div>
+          <div class="sort-popup">
+            <div class="sort-popup-main">
+              <input style="display: none" type="text" />
+              <h2 class="sort-popup-title">По популярности</h2>
+              <i class="icomoon-small-arrow-left"></i>
+            </div>
+            <div style="display: none" class="sort-popup-dropdown">
+              <h2 id="sort1" class="sort-popup-dropdown_item sort-popup-active-item">По популярности</h2>
+              <h2 id="sort2" class="sort-popup-dropdown_item">Новинки</h2>
+              <h2 id="sort3" class="sort-popup-dropdown_item">По цене мин.</h2>
+              <h2 id="sort4" class="sort-popup-dropdown_item">По цене макс.</h2>
+            </div>
+          </div>
+        </div>
+        <div class="products__content_grid">
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/adidas_forum_mid.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Adidas</h3>
+              <h4 class="products_item_info_desc">Originals x Parley FORUM MID</h4>
+              <h2 class="products_item_info_price">18999 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/adidas_ozweego_meta.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Adidas</h3>
+              <h4 class="products_item_info_desc">Ozweego Meta</h4>
+              <h2 class="products_item_info_price">15000 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/tommy_hoodi.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Tommy Jeans</h3>
+              <h4 class="products_item_info_desc">LINEAR LOGO HOODIE</h4>
+              <h2 class="products_item_info_price">12990 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/adidas_bag.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Adidas</h3>
+              <h4 class="products_item_info_desc">ADICOLOR CLASSIC</h4>
+              <h2 class="products_item_info_price">4399 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/adidas_forum_mid.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Adidas</h3>
+              <h4 class="products_item_info_desc">Originals x Parley FORUM MID</h4>
+              <h2 class="products_item_info_price">18999 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/vans_shirt.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Vans</h3>
+              <h4 class="products_item_info_desc">Torrey Coaches Jacket</h4>
+              <h2 class="products_item_info_price">6090 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/adidas_ozweego_meta.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Adidas</h3>
+              <h4 class="products_item_info_desc">Ozweego Meta</h4>
+              <h2 class="products_item_info_price">15000 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/tommy_hoodi.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Tommy Jeans</h3>
+              <h4 class="products_item_info_desc">LINEAR LOGO HOODIE</h4>
+              <h2 class="products_item_info_price">12990 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/adidas_ozweego_meta.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Adidas</h3>
+              <h4 class="products_item_info_desc">Ozweego Meta</h4>
+              <h2 class="products_item_info_price"><span>15000 ₽</span>12750 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/tommy_hoodi.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Tommy Jeans</h3>
+              <h4 class="products_item_info_desc">LINEAR LOGO HOODIE</h4>
+              <h2 class="products_item_info_price"><span>12990 ₽</span>9000 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/adidas_bag.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Adidas</h3>
+              <h4 class="products_item_info_desc">ADICOLOR CLASSIC</h4>
+              <h2 class="products_item_info_price"><span>4399 ₽</span>3000 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/adidas_forum_mid.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Adidas</h3>
+              <h4 class="products_item_info_desc">Originals x Parley FORUM MID</h4>
+              <h2 class="products_item_info_price"><span>18999 ₽</span>14000 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/vans_shirt.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Vans</h3>
+              <h4 class="products_item_info_desc">Torrey Coaches Jacket</h4>
+              <h2 class="products_item_info_price"><span>6090 ₽</span>4000 ₽</h2>
+            </div>
+          </a>
+          <a href="pages/product.html" class="products__content_item">
+            <button class="item-like-btn">
+              <i class="icomoon-heart"></i>
+            </button>
+            <img src="../img/products/adidas_ozweego_meta.jpg" alt="Photo" />
+            <div class="products_item_info">
+              <h3 class="products_item_info_title">Adidas</h3>
+              <h4 class="products_item_info_desc">Ozweego Meta</h4>
+              <h2 class="products_item_info_price"><span>15000 ₽</span>12750 ₽</h2>
+            </div>
+          </a>
+        </div>
+
+        <div class="products__content_pagination">
+          <div class="pagination-page-number pagination-page-number-active">
+            <a href="#">1</a>
+          </div>
+          <div class="pagination-page-number">
+            <a href="#">2</a>
+          </div>
+          <div class="pagination-page-number">
+            <a href="#">3</a>
+          </div>
+          <div class="pagination-page-number">
+            <a href="#">4</a>
+          </div>
+          <div class="pagination-page-number">
+            <a href="#">5</a>
+          </div>
+          <div class="pagination-page-number">
+            <a href="#">6</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer>
@@ -460,7 +673,7 @@
           <li class="footer__main_link"><a href="#">Помощь и FAQ</a></li>
         </ul>
         <div class="footer__main_subscribe">
-          <h1>Подпишись на нашу рассылку</h1>
+          <h2>Подпишись на нашу рассылку</h2>
           <form>
             <input type="email" placeholder="Email" />
             <button>Готово</button>

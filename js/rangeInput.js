@@ -18,7 +18,7 @@ priceInput.forEach((input) => {
       }
     }
   });
-  console.log(rangeInput[0].value, rangeInput[1].value);
+  /* console.log(rangeInput[0].value, rangeInput[1].value); */
 });
 
 rangeInput.forEach((input) => {
