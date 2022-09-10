@@ -767,7 +767,7 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
   border-radius: 6px;
   cursor: pointer;
 }
-input[type='checkbox']:checked .products_wrapper .products__filters .products__filter_sizes_item div {
+.products_wrapper .products__filters .products__filter_sizes .size-checked div {
   transition: 0.1s;
   background-color: #2d2d2d;
   color: white;

@@ -158,11 +158,44 @@ function showHeaderMenu() {
 function hideHeaderMenu() {
   let menu = document.getElementById('header-nav');
   menu.style.display = 'none';
+  $('.header_menu').css({ 'box-shadow': '0px 30px 22px -20px rgba(196, 196, 196, 0.3)' });
 }
 
-function showHeaderMenuNode() {
-  var menu = document.getElementById('header-dropdown-node');
-  menu.style.display = 'flex';
+function toggleHeaderDropdownMenu(dropdownId) {
+  $('.header_menu').css({ 'box-shadow': '0px 30px 22px -20px rgba(196, 196, 196, 0.1)' });
+  let dropdown = document.getElementById(dropdownId);
+  $('.header_menu__dropdown').css({ display: 'none' });
+  dropdown.style.display = 'flex';
+}
+
+function hoverHeaderDropdownMenuNode(dropdownId) {
+  let parent = document.getElementById(dropdownId);
+  parent.classList.add('header_dropdown_list_item-active');
+  let dropDownNodeId = `${dropdownId}-dropdown`;
+  let dropdown = document.getElementById(dropDownNodeId);
+  $('.header_dropdown_list_more').css({ display: 'none' });
+  dropdown.style.display = 'flex';
+}
+
+function unHoverHeaderDropdownMenuNode(dropdownId) {
+  $('.header_dropdown_list_more').css({ display: 'none' });
+  let parent = document.getElementById(dropdownId);
+  parent.classList.remove('header_dropdown_list_item-active');
+}
+
+function toggleHeaderBrandsAlphabet() {
+  let eng = document.getElementById('brands-eng-alphabet');
+  let ru = document.getElementById('brands-ru-alphabet');
+
+  if (eng.style.display === 'flex') {
+    eng.style.display = 'none';
+    ru.style.display = 'flex';
+    $('#brands-toggle-lang-alphabet').text('A-Z');
+  } else {
+    eng.style.display = 'flex';
+    ru.style.display = 'none';
+    $('#brands-toggle-lang-alphabet').text('А-Я');
+  }
 }
 
 // Hide the drop down
