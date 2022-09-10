@@ -832,6 +832,10 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
   stroke: #525050;
   fill: none;
 }
+.main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn:hover svg path,
+.main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn:hover svg path {
+  stroke: url(#myGradient);
+}
 .main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn-active svg path,
 .main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn-active svg path {
   stroke: url(#myGradient);
@@ -941,12 +945,26 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
 .main__products .swiper-button-disabled {
   display: none;
 }
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  margin: 0 auto;
+}
+.empty h2 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 64px;
+}
 .basket_wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 32px 0 0 0;
   margin-bottom: 80px;
+  position: relative;
 }
 .basket_wrapper .basket_top {
   display: flex;
