@@ -1140,7 +1140,7 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
 .basket_wrapper .basket_content .basket_submit:hover {
   background-color: #2d2d2d;
 }
-.profile_wrapper {
+.profile-info_wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1148,124 +1148,110 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
   margin-bottom: 80px;
   position: relative;
 }
-.profile_wrapper .profile_content {
-  width: fit-content;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 120px;
-  row-gap: 72px;
-  margin: 32px 0 80px 250px;
-}
-@media (max-width: 1700px) {
-  .profile_wrapper .profile_content {
-    margin: 32px 80px 80px 80px;
-  }
-}
-@media (max-width: 1400px) {
-  .profile_wrapper .profile_content {
-    column-gap: 48px;
-    row-gap: 32px;
-  }
-}
-.profile_wrapper .profile_content .profile_item {
+.profile-info_wrapper .profile-info_content {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 0px 5px 22px 5px rgba(196, 196, 196, 0.3);
-  padding: 40px;
-  height: 230px;
-  width: 345px;
-  cursor: pointer;
+  margin-left: 260px;
 }
-.profile_wrapper .profile_content .profile_item-top {
+.profile-info_wrapper .profile-info_content .field {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.profile_wrapper .profile_content .profile_item-top i {
-  font-size: 52px;
-  background: linear-gradient(234.13deg, #ee9ab2 0.9%, #75a4ff 133.24%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.profile_wrapper .profile_content .profile_item-top .icomoon-arrow-right {
-  color: #2d2d2d;
-  -webkit-text-fill-color: #2d2d2d;
-  font-size: 32px;
-  font-weight: 800;
-}
-.profile_wrapper .profile_content .profile_item h2 {
-  font-weight: 500;
-  font-size: 24px;
-  margin-top: 24px;
-}
-.profile_wrapper .form-bonus-link {
-  display: flex;
-  align-items: center;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: 0px 5px 22px 5px rgba(196, 196, 196, 0.3);
-  width: fit-content;
-  position: relative;
-  margin: 0 auto 80px auto;
-}
-.profile_wrapper .form-bonus-link img {
-  object-fit: scale-down;
-}
-@media (max-width: 1380px) {
-  .profile_wrapper .form-bonus-link img {
-    object-position: -100px 0;
-    object-fit: cover;
-    height: 269px;
-    width: 400px;
-  }
-}
-.profile_wrapper .form-bonus-link .form-bonus-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 24px 56px;
-}
-.profile_wrapper .form-bonus-link .form-bonus-content h2 {
-  font-weight: 600;
-  font-size: 24px;
   margin-bottom: 56px;
 }
-.profile_wrapper .form-bonus-link .form-bonus-content input {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 8px 24px;
-  border-bottom: 1px solid #a9a8a8;
-  color: #2d2d2d;
+.profile-info_wrapper .profile-info_content .field label {
+  width: 166px;
+  text-align: left;
+  margin-right: 24px;
   font-weight: 400;
   font-size: 16px;
-  transition: 0.05s;
-  margin-bottom: 50px;
 }
-.profile_wrapper .form-bonus-link .form-bonus-content input ::placeholder {
+.profile-info_wrapper .profile-info_content .field > input {
+  width: 336px;
+  padding: 14px 24px;
+  font-weight: 400;
+  font-size: 16px;
+  border: 2px solid #a9a8a8;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+.profile-info_wrapper .profile-info_content .field > input:hover,
+.profile-info_wrapper .profile-info_content .field > input:focus {
+  transition: 0.1s;
+  border: 2px solid #2d2d2d;
+}
+.profile-info_wrapper .profile-info_content .field > input ::placeholder {
   color: #a9a8a8;
 }
-.profile_wrapper .form-bonus-link .form-bonus-content input:focus,
-.profile_wrapper .form-bonus-link .form-bonus-content input:hover {
-  transition: 0.05s;
-  border-bottom: 1px solid #2d2d2d;
+.profile-info_wrapper .profile-info_content .field-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  cursor: pointer;
 }
-.profile_wrapper .form-bonus-link .form-bonus-content button {
-  font-size: 14px;
-  background: linear-gradient(234.13deg, #ee9ab2 0.9%, #75a4ff 133.24%);
-  opacity: 0.7;
-  border-radius: 30px;
-  width: 200px;
-  padding: 12px 0;
+.profile-info_wrapper .profile-info_content .field-checkbox .custom-checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+.profile-info_wrapper .profile-info_content .field-checkbox .custom-checkbox svg {
+  width: 28px;
+  height: 28px;
+}
+.profile-info_wrapper .profile-info_content .field-checkbox .custom-checkbox svg path {
+  fill: none;
+}
+.profile-info_wrapper .profile-info_content .field-checkbox .custom-checkbox svg path:nth-of-type(2) {
+  stroke-width: 0;
+}
+.profile-info_wrapper .profile-info_content .field-checkbox .custom-checkbox-active svg path:nth-of-type(1) {
+  fill: url(#paint0_linear_3975_51670);
+}
+.profile-info_wrapper .profile-info_content .field-checkbox .custom-checkbox-active svg path:nth-of-type(2) {
+  stroke-width: 2;
+}
+.profile-info_wrapper .profile-info_content .field-checkbox h5 {
+  font-weight: 400;
+  font-size: 16px;
+}
+.profile-info_wrapper .profile-info_content .profile-btns {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+}
+.profile-info_wrapper .profile-info_content .profile-btns #profile-change-pass {
+  font-size: 16px;
+  font-weight: 400;
+  color: #525050;
+  border: 1px solid #a9a8a8;
+  padding: 12px 24px;
+  border-radius: 5px;
+  background-color: white;
+  transition: 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+.profile-info_wrapper .profile-info_content .profile-btns #profile-change-pass:hover {
+  transition: 0.1s;
+  background-color: #a9a8a8;
   color: white;
+}
+.profile-info_wrapper .profile-info_content .profile-btns button[type='submit'] {
+  margin-right: 80px;
+  width: 336px;
+  padding: 16px 0;
+  border-radius: 5px;
+  color: white;
+  background-color: #525050;
   font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.1s;
 }
-.profile_wrapper .form-bonus-link .form-bonus-content button:hover {
+.profile-info_wrapper .profile-info_content .profile-btns button[type='submit']:hover {
   transition: 0.1s;
-  opacity: 1;
+  background-color: #2d2d2d;
 }

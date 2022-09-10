@@ -286,11 +286,11 @@ $('#header-close-search').click(function () {
 
 $('.dropdown').click(function () {
   $(this).attr('tabindex', 1).focus();
-  $(this).toggleClass('active');
+  $(this).toggleClass('active-dropdown');
   $(this).find('.dropdown-menu').slideToggle(150);
 });
 $('.dropdown').focusout(function () {
-  $(this).removeClass('active');
+  $(this).removeClass('active-dropdown');
   $(this).find('.dropdown-menu').slideUp(150);
 });
 $('.dropdown .dropdown-menu li').click(function (e) {
@@ -375,4 +375,15 @@ $('#copy-form-bonus-link').click(async function (e) {
   let val = $('#form-bonus-link').val();
   await navigator.clipboard.writeText(val);
   $('#copy-form-bonus-link').text('Скопировано!');
+});
+
+$('.custom-checkbox-click').click(function () {
+  let input = $(this).find('input');
+  if (input.is(':checked')) {
+    input.prop('checked', false);
+    $(this).find('.custom-checkbox').removeClass('custom-checkbox-active');
+  } else {
+    input.prop('checked', true);
+    $(this).find('.custom-checkbox').toggleClass('custom-checkbox-active');
+  }
 });

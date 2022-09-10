@@ -1,0 +1,141 @@
+@import 'colors.less';
+@import 'components/header.less';
+@import 'components/footer.less';
+@import 'basket.less';
+
+.profile-info_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 32px 0 0 0;
+  margin-bottom: 80px;
+  position: relative;
+
+  .profile-info_content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 260px;
+
+    .field {
+      display: flex;
+      align-items: center;
+      margin-bottom: 56px;
+
+      label {
+        width: 166px;
+        text-align: left;
+        margin-right: 24px;
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      & > input {
+        width: 336px;
+        padding: 14px 24px;
+        font-weight: 400;
+        font-size: 16px;
+        border: 2px solid @light;
+        border-radius: 5px;
+        transition: 0.1s;
+
+        &:hover,
+        &:focus {
+          transition: 0.1s;
+          border: 2px solid @black;
+        }
+
+        ::placeholder {
+          color: @light;
+        }
+      }
+    }
+
+    .field-checkbox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 32px;
+      cursor: pointer;
+
+      .custom-checkbox {
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+        svg {
+          width: 28px;
+          height: 28px;
+
+          path {
+            fill: none;
+            &:nth-of-type(2) {
+              stroke-width: 0;
+            }
+          }
+        }
+      }
+      .custom-checkbox-active {
+        svg {
+          path {
+            &:nth-of-type(1) {
+              fill: url(#paint0_linear_3975_51670);
+            }
+            &:nth-of-type(2) {
+              stroke-width: 2;
+            }
+          }
+        }
+      }
+
+      h5 {
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+
+    .profile-btns {
+      display: flex;
+      align-items: center;
+      margin-top: 32px;
+
+      #profile-change-pass {
+        font-size: 16px;
+        font-weight: 400;
+        color: @grey;
+        border: 1px solid @light;
+        padding: 12px 24px;
+        border-radius: 5px;
+        background-color: white;
+        transition: 0.1s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+
+        &:hover {
+          transition: 0.1s;
+          background-color: @light;
+          color: white;
+        }
+      }
+
+      button[type='submit'] {
+        margin-right: 80px;
+        width: 336px;
+        padding: 16px 0;
+        border-radius: 5px;
+        color: white;
+        background-color: @grey;
+        font-weight: 600;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.1s;
+
+        &:hover {
+          transition: 0.1s;
+          background-color: @black;
+        }
+      }
+    }
+  }
+}

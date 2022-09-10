@@ -24,8 +24,8 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
-    <link href="../css/styles/styles.css" rel="stylesheet" />
-    <link href="../css/fonts/icomoon/style.css" rel="stylesheet" />
+    <link href="../../css/styles/styles.css" rel="stylesheet" />
+    <link href="../../css/fonts/icomoon/style.css" rel="stylesheet" />
   </head>
   <body>
     <div class="content-fluid content-grid top-grid">
@@ -34,7 +34,7 @@
           <div class="header_main">
             <div class="header_main__left">
               <button onclick="toggleHeaderMenu()" class="header_burger" id="header-burger">
-                <img src="../img/icons/burger.svg" alt="menu" />
+                <img src="../../img/icons/burger.svg" alt="menu" />
               </button>
 
               <div class="header_main__left__location" id="header-location">
@@ -42,8 +42,8 @@
                 <h4 class="header_main__left__location_title">Красноярск</h4>
               </div>
             </div>
-            <a href="../index.html" class="header_main__logo" id="header-logo">
-              <img src="../img/icons/lookbook.svg" alt="Lookbook" />
+            <a href="../../index.html" class="header_main__logo" id="header-logo">
+              <img src="../../img/icons/lookbook.svg" alt="Lookbook" />
             </a>
             <div class="header__search">
               <button id="header-close-search">
@@ -53,7 +53,7 @@
                 type="text"
                 class="header__search_input"
                 id="header-search-input"
-                placeholder="Введите что ищете..."
+                placeholder="Введите что ищете../..."
               />
             </div>
             <div class="header_main__btns">
@@ -402,66 +402,240 @@
       </div>
     </div>
 
-    <div class="profile_wrapper">
+    <div class="profile-info_wrapper">
       <div class="basket_top">
         <div class="basket_top_left">
-          <a href="../index.html" class="basket_back"><i class="icomoon-arrow-left icon"></i></a>
-          <h1 class="basket_title">Личный кабинет</h1>
+          <a href="../../index.html" class="basket_back"><i class="icomoon-arrow-left icon"></i></a>
+          <h1 class="basket_title">Профиль</h1>
         </div>
         <div></div>
         <div></div>
       </div>
 
-      <div class="profile_content">
-        <a href="./profile/profile-info.html" class="profile_item">
-          <div class="profile_item-top">
-            <i class="icomoon-profile icon"></i>
-            <i class="icomoon-arrow-right icon"></i>
-          </div>
-          <h2>Профиль</h2>
-        </a>
-        <div class="profile_item">
-          <div class="profile_item-top">
-            <i class="icomoon-map icon"></i>
-            <i class="icomoon-arrow-right icon"></i>
-          </div>
-          <h2>Адреса</h2>
+      <form class="profile-info_content">
+        <div class="field">
+          <label for="name-profile">Имя</label>
+          <input id="name-profile" type="text" placeholder="Ваше имя" />
         </div>
-        <a href="./myBrands.html" class="profile_item">
-          <div class="profile_item-top">
-            <i class="icomoon-list icon"></i>
-            <i class="icomoon-arrow-right icon"></i>
+        <div class="field">
+          <label for="lastName-profile">Фамилия</label>
+          <input id="lastName-profile" type="text" placeholder="Ваша фамилия" />
+        </div>
+        <div class="field">
+          <label for="email-profile">Email</label>
+          <input id="email-profile" type="email" placeholder="example@mail.com" />
+        </div>
+        <div class="field">
+          <label for="phone-profile">Телефон</label>
+          <input id="phone-profile" type="tel" placeholder="+7-999-999-99-99" />
+        </div>
+        <div class="field">
+          <label for="birthday-profile">Дата рождения</label>
+          <input id="birthday-profile" type="date" placeholder="01.01.2000" />
+        </div>
+        <div class="field">
+          <label for="gender-profile">Пол</label>
+          <div class="dropdown">
+            <div class="select">
+              <span>Ваш пол</span>
+              <div><i class="icomoon-small-arrow-left"></i></div>
+            </div>
+            <input type="hidden" name="gender" id="gender-profile" />
+            <div class="dropdown-menu">
+              <li id="male">Мужской</li>
+              <li id="female">Женский</li>
+            </div>
           </div>
-          <h2>Мои бренды</h2>
-        </a>
-        <a href="./wait-list.html" class="profile_item">
-          <div class="profile_item-top">
-            <i class="icomoon-clock icon"></i>
-            <i class="icomoon-arrow-right icon"></i>
+        </div>
+        <div class="field">
+          <label for="clothes-profile">Размер одежды</label>
+          <div class="dropdown">
+            <div class="select">
+              <span>Ваш размер</span>
+              <div><i class="icomoon-small-arrow-left"></i></div>
+            </div>
+            <input type="hidden" name="clothes-profile" id="clothes-profile" />
+            <div class="dropdown-menu">
+              <li id="XS">XS</li>
+              <li id="S">S</li>
+              <li id="M">M</li>
+              <li id="L">L</li>
+              <li id="XL">XL</li>
+              <li id="XXL">XXL</li>
+              <li id="XXXL">XXXL</li>
+            </div>
           </div>
-          <h2>Лист ожидания</h2>
-        </a>
-        <a href="./orders.html" class="profile_item">
-          <div class="profile_item-top">
-            <i class="icomoon-order icon"></i>
-            <i class="icomoon-arrow-right icon"></i>
+        </div>
+        <div class="field">
+          <label for="shoes-profile">Размер обуви</label>
+          <div class="dropdown">
+            <div class="select">
+              <span>Ваш размер</span>
+              <div><i class="icomoon-small-arrow-left"></i></div>
+            </div>
+            <input type="hidden" name="shoes-profile" id="shoes-profile" />
+            <div class="dropdown-menu">
+              <li id="35">35</li>
+              <li id="36">36</li>
+              <li id="37">37</li>
+              <li id="38">38</li>
+              <li id="39">39</li>
+              <li id="40">40</li>
+              <li id="41">41</li>
+              <li id="42">42</li>
+              <li id="43">43</li>
+              <li id="44">44</li>
+              <li id="45">45</li>
+              <li id="46">46</li>
+              <li id="47">47</li>
+            </div>
           </div>
-          <h2>Заказы</h2>
-        </a>
-      </div>
+        </div>
 
-      <form class="form-bonus-link">
-        <img src="../img/form-bonus-profile.png" alt="Photo" />
-        <div class="form-bonus-content">
-          <h2>Пригласи друга - получи бонус</h2>
-          <input
-            id="form-bonus-link"
-            type="text"
-            value="https://egor11001.github.io/lb_layout/index.html"
-            disabled
-            readonly
-          />
-          <button id="copy-form-bonus-link">Копировать</button>
+        <div class="field-checkbox custom-checkbox-click">
+          <input id="policy-profile" type="checkbox" class="disable" />
+          <div class="custom-checkbox">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
+                fill="url(#paint0_linear_3975_51670)"
+                stroke="url(#paint1_linear_3975_51670)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
+                stroke="white"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_3975_51670"
+                  x1="28"
+                  y1="4.512"
+                  x2="-7.93812"
+                  y2="30.501"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EE9AB2" />
+                  <stop offset="1" stop-color="#75A4FF" />
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_3975_51670"
+                  x1="28"
+                  y1="4.512"
+                  x2="-7.93812"
+                  y2="30.501"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EE9AB2" />
+                  <stop offset="1" stop-color="#75A4FF" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h5>
+            Я соглашаюсь на обработку моих персональных данных и ознакомлен(а) с условиями конфиденциальности.
+          </h5>
+        </div>
+        <div class="field-checkbox custom-checkbox-click">
+          <input id="sms-profile" type="checkbox" class="disable" />
+          <div class="custom-checkbox">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
+                fill="url(#paint0_linear_3975_51670)"
+                stroke="url(#paint1_linear_3975_51670)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
+                stroke="white"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_3975_51670"
+                  x1="28"
+                  y1="4.512"
+                  x2="-7.93812"
+                  y2="30.501"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EE9AB2" />
+                  <stop offset="1" stop-color="#75A4FF" />
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_3975_51670"
+                  x1="28"
+                  y1="4.512"
+                  x2="-7.93812"
+                  y2="30.501"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EE9AB2" />
+                  <stop offset="1" stop-color="#75A4FF" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h5>Я хочу получать уведомления о новых заказах по sms</h5>
+        </div>
+        <div class="field-checkbox custom-checkbox-click">
+          <input id="mailing-profile" type="checkbox" class="disable" />
+          <div class="custom-checkbox">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
+                fill="url(#paint0_linear_3975_51670)"
+                stroke="url(#paint1_linear_3975_51670)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
+                stroke="white"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_3975_51670"
+                  x1="28"
+                  y1="4.512"
+                  x2="-7.93812"
+                  y2="30.501"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EE9AB2" />
+                  <stop offset="1" stop-color="#75A4FF" />
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_3975_51670"
+                  x1="28"
+                  y1="4.512"
+                  x2="-7.93812"
+                  y2="30.501"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EE9AB2" />
+                  <stop offset="1" stop-color="#75A4FF" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h5>Я хочу получать уведомления о новых заказах на почту</h5>
+        </div>
+
+        <div class="profile-btns">
+          <button type="submit">Сохранить</button>
+          <button id="profile-change-pass">Сменить пароль</button>
         </div>
       </form>
     </div>
@@ -529,15 +703,15 @@
           <a href="#"><i class="icomoon-vk"></i></a>
         </div>
         <div class="footer__bottom_payments">
-          <img src="../img/payments/mir.png" alt="MIR" />
-          <img src="../img/payments/mc.png" alt="MC" />
-          <img src="../img/payments/visa.png" alt="VISA" />
+          <img src="../../img/payments/mir.png" alt="MIR" />
+          <img src="../../img/payments/mc.png" alt="MC" />
+          <img src="../../img/payments/visa.png" alt="VISA" />
         </div>
       </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../../js/script.js"></script>
   </body>
 </html>
