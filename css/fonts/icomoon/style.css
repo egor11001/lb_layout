@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('/css/fonts/icomoon/fonts/icomoon.eot?tgep3b');
-  src: url('/css/fonts/icomoon/fonts/icomoon.eot?tgep3b#iefix') format('embedded-opentype'),
-    url('/css/fonts/icomoon/fonts/icomoon.ttf?tgep3b') format('truetype'),
-    url('icomoon.woff?tgep3b') format('woff'),
-    url('/css/fonts/icomoon/fonts/icomoon.svg?tgep3b#icomoon') format('svg');
+  src: url('/css/fonts/icomoon/fonts/icomoon.eot?ldsziv');
+  src: url('/css/fonts/icomoon/fonts/icomoon.eot?ldsziv#iefix') format('embedded-opentype'),
+    url('/css/fonts/icomoon/fonts/icomoon.ttf?ldsziv') format('truetype'),
+    url('icomoon.woff?ldsziv') format('woff'),
+    url('/css/fonts/icomoon/fonts/icomoon.svg?ldsziv#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,11 +25,23 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icomoon-order:before {
+  content: '\e911';
+}
+.icomoon-clock:before {
+  content: '\e90f';
+}
+.icomoon-list:before {
+  content: '\e910';
+}
 .icomoon-arrow-right:before {
   content: '\e908';
 }
 .icomoon-arrow-left:before {
   content: '\e909';
+}
+.icomoon-map:before {
+  content: '\e913';
 }
 .icomoon-edit:before {
   content: '\e907';

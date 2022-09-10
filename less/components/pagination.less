@@ -1,0 +1,43 @@
+@import '../colors.less';
+
+.content_pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+
+  .pagination-page-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 16px;
+    cursor: pointer;
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+
+    a {
+      color: @black;
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+  .pagination-page-number-active {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: @gradient;
+
+    a {
+      color: white;
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+}

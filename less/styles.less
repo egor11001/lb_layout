@@ -7,6 +7,8 @@
 @import 'product.less';
 @import 'products.less';
 @import 'basket.less';
+@import 'favorites.less';
+@import 'profile.less';
 
 .modal {
   pointer-events: none;
@@ -69,4 +71,15 @@
 .is-visible {
   opacity: 1;
   pointer-events: auto;
+}
+
+.icomoon-arrow-left:hover,
+.icomoon-arrow-right:hover {
+  background: @gradient !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.active {
+  display: flex !important;
 }

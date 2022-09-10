@@ -293,7 +293,11 @@ $('.dropdown').focusout(function () {
   $(this).removeClass('active');
   $(this).find('.dropdown-menu').slideUp(150);
 });
-$('.dropdown .dropdown-menu li').click(function () {
+$('.dropdown .dropdown-menu li').click(function (e) {
+  if ($(this).hasClass('disable')) {
+    e.stopPropagation();
+    return;
+  }
   $(this).parents('.dropdown').find('span').text($(this).text());
   $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
 });
@@ -323,18 +327,52 @@ $('.item-like-btn').click(function (e) {
   }
 });
 
-document.getElementById('btn-modal').addEventListener('click', function () {
-  document.getElementById('overlay').classList.add('is-visible');
-  document.getElementById('modal').classList.add('is-visible');
+$('#btn-modal').click(function () {
+  $('#overlay').toggleClass('is-visible');
+  $('#modal-sizes').toggleClass('is-visible');
   document.body.style.overflow = 'hidden';
 });
-document.getElementById('close-btn').addEventListener('click', function () {
-  document.getElementById('overlay').classList.remove('is-visible');
-  document.getElementById('modal').classList.remove('is-visible');
+
+$('#close-btn').click(function () {
+  $('#overlay').removeClass('is-visible');
+  $('#modal-sizes').removeClass('is-visible');
   document.body.style.overflow = 'auto';
 });
-document.getElementById('overlay').addEventListener('click', function () {
-  document.getElementById('overlay').classList.remove('is-visible');
-  document.getElementById('modal').classList.remove('is-visible');
+
+$('#overlay').click(function () {
+  $('#overlay').removeClass('is-visible');
+  $('#modal-sizes').removeClass('is-visible');
   document.body.style.overflow = 'auto';
+});
+
+$('.on-subscribe-size').click(function () {
+  $('#overlay').toggleClass('is-visible');
+  $('#modal-size-notif').toggleClass('is-visible');
+  document.body.style.overflow = 'hidden';
+});
+
+$('#close-btn-size-notif').click(function () {
+  $('#overlay').removeClass('is-visible');
+  $('#modal-size-notif').removeClass('is-visible');
+  document.body.style.overflow = 'auto';
+});
+
+$('#overlay').click(function () {
+  $('#overlay').removeClass('is-visible');
+  $('#modal-size-notif').removeClass('is-visible');
+  document.body.style.overflow = 'auto';
+});
+
+$('#modal-size-notif-submit').click(function (e) {
+  if ($('#modal-size-notif-value').val() === '') {
+    e.preventDefault();
+    return;
+  }
+});
+
+$('#copy-form-bonus-link').click(async function (e) {
+  e.preventDefault();
+  let val = $('#form-bonus-link').val();
+  await navigator.clipboard.writeText(val);
+  $('#copy-form-bonus-link').text('Скопировано!');
 });

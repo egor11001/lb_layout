@@ -63,7 +63,7 @@
               <a href="./notifications.html" class="header_main__btn">
                 <i class="icomoon-notification header_notif_icon"></i>
               </a>
-              <a href="./fovorites.html" class="header_main__btn">
+              <a href="./favorites.html" class="header_main__btn">
                 <i class="icomoon-heart header_heart_icon"></i>
               </a>
               <a href="./profile.html" class="header_main__btn">
@@ -460,7 +460,7 @@
       <div class="product__content">
         <h2 class="product__content_title">Adidas</h2>
         <h3 class="product__content_desc">OZWEEGO META</h3>
-        <h2 class="product__content_price">15000 ₽</h2>
+        <h2 class="product__content_price"><span>15000 ₽</span>12750 ₽</h2>
 
         <div class="product__content_sizes">
           <div class="dropdown">
@@ -469,13 +469,14 @@
               <div><i class="icomoon-small-arrow-left"></i></div>
             </div>
             <input type="hidden" name="size" />
-            <ul class="dropdown-menu">
-              <li id="41">41</li>
-              <li id="42">42</li>
-              <li id="43">43</li>
-              <li id="44">44</li>
-              <li id="45">45</li>
-            </ul>
+            <div class="dropdown-menu">
+              <li id="40">40<i class="icomoon-notification header_notif_icon icon on-subscribe-size"></i></li>
+              <li id="41">41<i class="icomoon-notification header_notif_icon icon on-subscribe-size"></i></li>
+              <li id="42" class="disable">42<i class="icomoon-notification header_notif_icon icon on-subscribe-size"></i></li>
+              <li id="43">43<i class="icomoon-notification header_notif_icon icon on-subscribe-size"></i></li>
+              <li id="44">44<i class="icomoon-notification header_notif_icon icon on-subscribe-size"></i></li>
+              <li id="45">45<i class="icomoon-notification header_notif_icon icon on-subscribe-size"></i></li>
+            </div>
           </div>
           <button id="btn-modal" class="sizes_modal-btn">Гид по размерам</button>
         </div>
@@ -515,7 +516,7 @@
         </div>
       </div>
       <div class="overlay" id="overlay"></div>
-      <div class="modal" id="modal">
+      <div class="modal" id="modal-sizes">
         <button class="modal-close-btn" id="close-btn">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#2D2D2D" />
@@ -544,6 +545,55 @@
         </button>
         SM/ длина 71, объём груди 102, длина рукава 33 ML/ длина 74,объём груди 121, длина рукава 44
       </div>
+      <div class="overlay" id="overlay-size-notif"></div>
+      <form class="modal" id="modal-size-notif">
+        <button class="modal-close-btn" id="close-btn-size-notif">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#2D2D2D" />
+            <rect
+              y="-0.353554"
+              width="19.1912"
+              height="1.59948"
+              rx="0.79974"
+              transform="matrix(0.707106 0.707107 -0.707106 0.707107 13.1465 12.5136)"
+              fill="#2D2D2D"
+              stroke="#2D2D2D"
+              stroke-width="0.5"
+            />
+            <rect
+              x="0.353553"
+              y="2.98023e-08"
+              width="19.1912"
+              height="1.59948"
+              rx="0.79974"
+              transform="matrix(-0.707106 0.707107 -0.707106 -0.707107 27.2168 13.1484)"
+              fill="#2D2D2D"
+              stroke="#2D2D2D"
+              stroke-width="0.5"
+            />
+          </svg>
+        </button>
+        <h2>
+          Мы сообщим Вам о поступлении этого товара
+        </h2>
+        <div class="dropdown">
+          <div class="select">
+            <span>Выберите размер</span>
+            <div><i class="icomoon-small-arrow-left"></i></div>
+          </div>
+          <input type="hidden" name="size" id="modal-size-notif-value" required />
+          <div class="dropdown-menu">
+            <li id="40">40</i></li>
+            <li id="41">41</i></li>
+            <li id="42">42</i></li>
+            <li id="43">43</i></li>
+            <li id="44">44</i></li>
+            <li id="45">45</i></li>
+          </div>
+        </div>
+        <input type="email" placeholder="Введите свой e-mail" required />
+        <button id="modal-size-notif-submit" type="submit">Подписаться</button>
+      </form>
     </div>
 
     <section class="main__products" id="product-recomendations-list">
