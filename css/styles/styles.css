@@ -419,12 +419,22 @@ header nav .header_menu__dropdown .brands-alphabet #brands-toggle-lang-alphabet 
   font-weight: 600;
   font-size: 18px;
 }
+header nav .header_menu__dropdown .brands-alphabet #brands-toggle-lang-alphabet:hover {
+  background: linear-gradient(234.13deg, #ee9ab2 0.9%, #75a4ff 133.24%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 header nav .header_menu__dropdown .brands-alphabet #brands-toggle-lang-number {
   white-space: nowrap;
   margin-right: 120px;
   margin-left: 72px;
   font-weight: 600;
   font-size: 18px;
+}
+header nav .header_menu__dropdown .brands-alphabet #brands-toggle-lang-number:hover {
+  background: linear-gradient(234.13deg, #ee9ab2 0.9%, #75a4ff 133.24%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 header nav .header_menu__dropdown .brands-alphabet .brands-alphabet-container {
   width: 100%;
@@ -434,6 +444,11 @@ header nav .header_menu__dropdown .brands-alphabet .brands-alphabet-container {
 header nav .header_menu__dropdown .brands-alphabet .brands-alphabet-container .brands-alphabet-letter {
   font-weight: 400;
   font-size: 16px;
+}
+header nav .header_menu__dropdown .brands-alphabet .brands-alphabet-container .brands-alphabet-letter:hover {
+  background: linear-gradient(234.13deg, #ee9ab2 0.9%, #75a4ff 133.24%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 header nav .header_menu__dropdown .brands-alphabet #brands-ru-alphabet {
   display: none;
@@ -907,19 +922,19 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
 .main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn,
 .main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn {
   position: absolute;
+  z-index: 80;
   top: 16px;
   right: 24px;
 }
-.main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn i,
-.main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn i {
-  font-size: 24px;
-  color: #2d2d2d;
+.main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn svg path,
+.main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn svg path {
+  stroke: #525050;
+  fill: none;
 }
-@media (max-width: 1400px) {
-  .main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn i,
-  .main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn i {
-    font-size: 20px;
-  }
+.main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn-active svg path,
+.main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn-active svg path {
+  stroke: url(#myGradient);
+  fill: url(#myGradient);
 }
 .main__products #swiper-main-products .swiper-wrapper .main__products_item img,
 .main__products #swiper-main-products .swiper-wrapper .swiper-slide img {

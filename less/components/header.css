@@ -317,12 +317,22 @@ header nav .header_menu__dropdown .brands-alphabet #brands-toggle-lang-alphabet 
   font-weight: 600;
   font-size: 18px;
 }
+header nav .header_menu__dropdown .brands-alphabet #brands-toggle-lang-alphabet:hover {
+  background: linear-gradient(234.13deg, #ee9ab2 0.9%, #75a4ff 133.24%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 header nav .header_menu__dropdown .brands-alphabet #brands-toggle-lang-number {
   white-space: nowrap;
   margin-right: 120px;
   margin-left: 72px;
   font-weight: 600;
   font-size: 18px;
+}
+header nav .header_menu__dropdown .brands-alphabet #brands-toggle-lang-number:hover {
+  background: linear-gradient(234.13deg, #ee9ab2 0.9%, #75a4ff 133.24%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 header nav .header_menu__dropdown .brands-alphabet .brands-alphabet-container {
   width: 100%;
@@ -332,6 +342,11 @@ header nav .header_menu__dropdown .brands-alphabet .brands-alphabet-container {
 header nav .header_menu__dropdown .brands-alphabet .brands-alphabet-container .brands-alphabet-letter {
   font-weight: 400;
   font-size: 16px;
+}
+header nav .header_menu__dropdown .brands-alphabet .brands-alphabet-container .brands-alphabet-letter:hover {
+  background: linear-gradient(234.13deg, #ee9ab2 0.9%, #75a4ff 133.24%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 header nav .header_menu__dropdown .brands-alphabet #brands-ru-alphabet {
   display: none;

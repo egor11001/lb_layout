@@ -63,19 +63,19 @@
 .main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn,
 .main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn {
   position: absolute;
+  z-index: 80;
   top: 16px;
   right: 24px;
 }
-.main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn i,
-.main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn i {
-  font-size: 24px;
-  color: #2d2d2d;
+.main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn svg path,
+.main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn svg path {
+  stroke: #525050;
+  fill: none;
 }
-@media (max-width: 1400px) {
-  .main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn i,
-  .main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn i {
-    font-size: 20px;
-  }
+.main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn-active svg path,
+.main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn-active svg path {
+  stroke: url(#myGradient);
+  fill: url(#myGradient);
 }
 .main__products #swiper-main-products .swiper-wrapper .main__products_item img,
 .main__products #swiper-main-products .swiper-wrapper .swiper-slide img {
