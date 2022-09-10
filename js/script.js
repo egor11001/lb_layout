@@ -135,7 +135,6 @@ function toggleHeaderMenu() {
     burger.style.transform = 'rotate(0deg)';
   } else {
     menu.style.display = 'block';
-    document.body.style.overflow = 'hidden';
     burger.style.transform = 'rotate(90deg)';
   }
   /* var lis = document.querySelectorAll("#drop-down > li");
@@ -167,6 +166,7 @@ function toggleHeaderDropdownMenu(dropdownId) {
   let dropdown = document.getElementById(dropdownId);
   $('.header_menu__dropdown').css({ display: 'none' });
   dropdown.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
 }
 
 function hoverHeaderDropdownMenuNode(dropdownId) {

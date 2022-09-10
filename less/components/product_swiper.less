@@ -2,7 +2,7 @@
 
 .main__products {
   margin-top: 72px;
-  margin-bottom: 128px;
+  margin-bottom: 80px;
 
   #swiper-main-products {
     display: flex;
@@ -74,6 +74,14 @@
             path {
               stroke: @grey;
               fill: none;
+            }
+          }
+
+          &:hover {
+            svg {
+              path {
+                stroke: url(#myGradient);
+              }
             }
           }
         }

@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lookbook</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link href="../css/styles/styles.css" rel="stylesheet" />
+    <link href="../css/fonts/icomoon/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="content-fluid content-grid top-grid">
+      <div class="row-fluid">
+        <header class="span16">
+          <div class="header_main">
+            <div class="header_main__left">
+              <button onclick="toggleHeaderMenu()" class="header_burger" id="header-burger">
+                <img src="../img/icons/burger.svg" alt="menu" />
+              </button>
+
+              <div class="header_main__left__location" id="header-location">
+                <i class="header_main__left__location_icon icomoon-location"></i>
+                <h4 class="header_main__left__location_title">Красноярск</h4>
+              </div>
+            </div>
+            <a href="../index.html" class="header_main__logo" id="header-logo">
+              <img src="../img/icons/lookbook.svg" alt="Lookbook" />
+            </a>
+            <div class="header__search">
+              <button id="header-close-search">
+                <i class="icomoon-close"></i>
+              </button>
+              <input
+                type="text"
+                class="header__search_input"
+                id="header-search-input"
+                placeholder="Введите что ищете..."
+              />
+            </div>
+            <div class="header_main__btns">
+              <button class="header_main__btn header-search-btn" id="header-search-btn">
+                <i class="icomoon-search header_search_icon"></i>
+              </button>
+              <a href="./notifications.html" class="header_main__btn">
+                <i class="icomoon-notification header_notif_icon"></i>
+              </a>
+              <a href="./fovorites.html" class="header_main__btn">
+                <i class="icomoon-heart header_heart_icon"></i>
+              </a>
+              <a href="./profile.html" class="header_main__btn">
+                <i class="icomoon-profile header_profile_icon"></i>
+              </a>
+              <a href="./basket.html" class="header_main__btn">
+                <i class="icomoon-basket header_basket_icon"></i>
+              </a>
+            </div>
+          </div>
+          <div class="header__search_result" id="header-search-result">
+            <ul class="search_list">
+              <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+              <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+              <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+              <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+              <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+              <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+              <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+              <li class="search_list_item"><i class="icomoon-small-arrow-right"></i><a href="#">Футболка</a></li>
+            </ul>
+          </div>
+          <nav id="header-nav">
+            <div class="header_menu">
+              <ul class="header_list">
+                <li onclick="toggleHeaderDropdownMenu('header-dropdown-woman')" class="header_list_item">
+                  Женское
+                </li>
+                <li onclick="toggleHeaderDropdownMenu('header-dropdown-man')" class="header_list_item">Мужское</li>
+                <li onclick="toggleHeaderDropdownMenu('header-dropdown-brands')" class="header_list_item">
+                  Бренды
+                </li>
+                <li class="header_list_item header_list_item_sale">% SALE %</li>
+              </ul>
+            </div>
+            <div id="header-dropdown-woman" class="header_menu__dropdown">
+              <ul class="header_dropdown_list">
+                <a
+                  onmouseenter="hoverHeaderDropdownMenuNode('newest')"
+                  onmouseleave="unHoverHeaderDropdownMenuNode('newest')"
+                  id="newest"
+                  class="header_dropdown_list_item"
+                >
+                  <h5>Новинки</h5>
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
+                  <h5>Базовый гардероб</h5>
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
+                  <h5>В тренде</h5>
+                </a>
+                <a
+                  onmouseenter="hoverHeaderDropdownMenuNode('classic')"
+                  onmouseleave="unHoverHeaderDropdownMenuNode('classic')"
+                  id="classic"
+                  class="header_dropdown_list_item"
+                >
+                  <h5>Классик</h5>
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
+                  <h5>Платья</h5>
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
+                  <h5>Шорты</h5>
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
+                  <h5>Юбки</h5>
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
+                  <h5>Худи</h5>
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
+                  <h5>Свитшоты</h5>
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
+                  <h5>Аксессуары</h5>
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
+                  <h5>Обувь</h5>
+                </a>
+              </ul>
+              <ul
+                onmouseenter="hoverHeaderDropdownMenuNode('newest')"
+                onmouseleave="unHoverHeaderDropdownMenuNode('newest')"
+                id="newest-dropdown"
+                class="header_dropdown_list_more"
+              >
+                <a class="header_dropdown_list_more_item">
+                  <h5>Все</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Футболки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Футболки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Футболки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Футболки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Футболки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+
+                <a class="header_dropdown_list_more_item">
+                  <h5>Футболки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Футболки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Футболки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Футболки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+              </ul>
+              <ul
+                onmouseenter="hoverHeaderDropdownMenuNode('classic')"
+                onmouseleave="unHoverHeaderDropdownMenuNode('classic')"
+                id="classic-dropdown"
+                class="header_dropdown_list_more"
+              >
+                <a class="header_dropdown_list_more_item">
+                  <h5>Все</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Пиджаки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Рубашки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Брюки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Туфли</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Шарфы</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Ремни</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+              </ul>
+              <!-- <div class="header_menu__dropdown_brands">
+                  <div class="dropdown_brands__alphabet">
+                    <button id="alphabet-lang">А-Я</button>
+  
+                    butt
+                  </div>
+                </div> -->
+            </div>
+            <div id="header-dropdown-brands" class="header_menu__dropdown">
+              <div class="brands-alphabet">
+                <button onclick="toggleHeaderBrandsAlphabet()" id="brands-toggle-lang-alphabet">А-Я</button>
+                <div id="brands-eng-alphabet" class="brands-alphabet-container" style="display: flex">
+                  <button class="brands-alphabet-letter" id="letter-A">А</button>
+                  <button class="brands-alphabet-letter" id="letter-B">B</button>
+                  <button class="brands-alphabet-letter" id="letter-C">C</button>
+                  <button class="brands-alphabet-letter" id="letter-D">D</button>
+                  <button class="brands-alphabet-letter" id="letter-E">E</button>
+                  <button class="brands-alphabet-letter" id="letter-F">F</button>
+                  <button class="brands-alphabet-letter" id="letter-G">G</button>
+                  <button class="brands-alphabet-letter" id="letter-H">H</button>
+                  <button class="brands-alphabet-letter" id="letter-I">I</button>
+                  <button class="brands-alphabet-letter" id="letter-J">J</button>
+                  <button class="brands-alphabet-letter" id="letter-K">K</button>
+                  <button class="brands-alphabet-letter" id="letter-L">L</button>
+                  <button class="brands-alphabet-letter" id="letter-M">M</button>
+                  <button class="brands-alphabet-letter" id="letter-N">N</button>
+                  <button class="brands-alphabet-letter" id="letter-O">O</button>
+                  <button class="brands-alphabet-letter" id="letter-P">P</button>
+                  <button class="brands-alphabet-letter" id="letter-Q">Q</button>
+                  <button class="brands-alphabet-letter" id="letter-R">R</button>
+                  <button class="brands-alphabet-letter" id="letter-S">S</button>
+                  <button class="brands-alphabet-letter" id="letter-T">T</button>
+                  <button class="brands-alphabet-letter" id="letter-U">U</button>
+                  <button class="brands-alphabet-letter" id="letter-V">V</button>
+                  <button class="brands-alphabet-letter" id="letter-W">W</button>
+                  <button class="brands-alphabet-letter" id="letter-X">X</button>
+                  <button class="brands-alphabet-letter" id="letter-Y">Y</button>
+                  <button class="brands-alphabet-letter" id="letter-Z">Z</button>
+                </div>
+                <div id="brands-ru-alphabet" class="brands-alphabet-container">
+                  <button class="brands-alphabet-letter" id="letter-А">А</button>
+                  <button class="brands-alphabet-letter" id="letter-Б">Б</button>
+                  <button class="brands-alphabet-letter" id="letter-В">В</button>
+                  <button class="brands-alphabet-letter" id="letter-Г">Г</button>
+                  <button class="brands-alphabet-letter" id="letter-Д">Д</button>
+                  <button class="brands-alphabet-letter" id="letter-Е">Е</button>
+                  <button class="brands-alphabet-letter" id="letter-Ё">Ё</button>
+                  <button class="brands-alphabet-letter" id="letter-Ж">Ж</button>
+                  <button class="brands-alphabet-letter" id="letter-З">З</button>
+                  <button class="brands-alphabet-letter" id="letter-И">И</button>
+                  <button class="brands-alphabet-letter" id="letter-Й">Й</button>
+                  <button class="brands-alphabet-letter" id="letter-К">К</button>
+                  <button class="brands-alphabet-letter" id="letter-Л">Л</button>
+                  <button class="brands-alphabet-letter" id="letter-М">М</button>
+                  <button class="brands-alphabet-letter" id="letter-Н">Н</button>
+                  <button class="brands-alphabet-letter" id="letter-О">О</button>
+                  <button class="brands-alphabet-letter" id="letter-П">П</button>
+                  <button class="brands-alphabet-letter" id="letter-Р">Р</button>
+                  <button class="brands-alphabet-letter" id="letter-С">С</button>
+                  <button class="brands-alphabet-letter" id="letter-Т">Т</button>
+                  <button class="brands-alphabet-letter" id="letter-У">У</button>
+                  <button class="brands-alphabet-letter" id="letter-Ф">Ф</button>
+                  <button class="brands-alphabet-letter" id="letter-Х">Х</button>
+                  <button class="brands-alphabet-letter" id="letter-Ц">Ц</button>
+                  <button class="brands-alphabet-letter" id="letter-Ч">Ч</button>
+                  <button class="brands-alphabet-letter" id="letter-Ш">Ш</button>
+                  <button class="brands-alphabet-letter" id="letter-Щ">Щ</button>
+                  <button class="brands-alphabet-letter" id="letter-Э">Э</button>
+                  <button class="brands-alphabet-letter" id="letter-Ю">Ю</button>
+                  <button class="brands-alphabet-letter" id="letter-Я">Я</button>
+                </div>
+                <button id="brands-toggle-lang-number">0-9</button>
+              </div>
+              <div class="brands-content">
+                <div class="brands-content-items">
+                  <h2 id="brands-search-active-letter">A</h2>
+                  <div class="brands-content-list">
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Krakatau</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">12Storeez</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Adidas</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="brands-content-second">
+                  <div class="brands-content-search">
+                    <input
+                      type="text"
+                      class="brands-search-input"
+                      id="brands-search-input"
+                      placeholder="Введите название бренда"
+                    />
+                    <button id="brands-close-search">
+                      <i class="icomoon-search"></i>
+                    </button>
+                  </div>
+                  <div class="brands-content-favorites">
+                    <h2>Избранное</h2>
+                    <div class="brands-content-favorites-list">
+                      <div class="brand-container"><a href="#">Adidas</a></div>
+                      <div class="brand-container"><a href="#">12storeez</a></div>
+                      <div class="brand-container"><a href="#">Krakatau</a></div>
+                      <div class="brand-container"><a href="#">lastseen</a></div>
+                      <div class="brand-container"><a href="#">Adidas</a></div>
+                      <div class="brand-container"><a href="#">12storeez</a></div>
+                      <div class="brand-container"><a href="#">Krakatau</a></div>
+                      <div class="brand-container"><a href="#">lastseen</a></div>
+                      <div class="brand-container"><a href="#">Adidas</a></div>
+                      <div class="brand-container"><a href="#">12storeez</a></div>
+                      <div class="brand-container"><a href="#">Krakatau</a></div>
+                      <div class="brand-container"><a href="#">lastseen</a></div>
+                      <div class="brand-container"><a href="#">Adidas</a></div>
+                      <div class="brand-container"><a href="#">12storeez</a></div>
+                      <div class="brand-container"><a href="#">Krakatau</a></div>
+                      <div class="brand-container"><a href="#">lastseen</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div class="basket_wrapper">
+      <div class="basket_top">
+        <div class="basket_top_left">
+          <a href="../index.html" class="basket_back"><i class="icomoon-arrow-left"></i></a>
+          <h1 class="basket_title">Корзина</h1>
+        </div>
+        <h2 class="basket_top_count"><span>4</span>товара</h2>
+        <h3 class="basket_total">Итого: <span>8650 ₽</span></h3>
+      </div>
+      <div class="basket_content">
+        <a href="./product.html" class="basket_content_item">
+          <div class="item_left">
+            <img src="../img/products/adidas_ozweego_meta.jpg" alt="IMG" />
+            <div class="item_info">
+              <h3 class="item_info_brand">Adidas</h3>
+              <h2 class="item_info_type">Ozweego Meta</h2>
+              <h2 class="item_info_size">44</h2>
+              <h5 class="item_info_count">1 шт.</h5>
+            </div>
+          </div>
+          <div class="item_right">
+            <h2 class="item_price"><span>15000 ₽</span>12750 ₽</h2>
+            <div class="item_btns">
+              <button class="item_like-btn item-like-btn">
+                <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <button class="item_remove-btn">
+                <i class="icomoon-trash icon"></i>
+              </button>
+            </div>
+          </div>
+        </a>
+        <a href="./product.html" class="basket_content_item">
+          <div class="item_left">
+            <img src="../img/products/adidas_forum_mid.jpg" alt="IMG" />
+            <div class="item_info">
+              <h3 class="item_info_brand">Adidas</h3>
+              <h2 class="item_info_type">Originals x Parley FORUM MID</h2>
+              <h2 class="item_info_size">42</h2>
+              <h5 class="item_info_count">1 шт.</h5>
+            </div>
+          </div>
+          <div class="item_right">
+            <h2 class="item_price">18999 ₽</h2>
+            <div class="item_btns">
+              <button class="item_like-btn item-like-btn">
+                <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <button class="item_remove-btn">
+                <i class="icomoon-trash icon"></i>
+              </button>
+            </div>
+          </div>
+        </a>
+        <a href="./product.html" class="basket_content_item">
+          <div class="item_left">
+            <img src="../img/products/vans_shirt.jpg" alt="IMG" />
+            <div class="item_info">
+              <h3 class="item_info_brand">Vans</h3>
+              <h2 class="item_info_type">Torrey Coaches Jacket</h2>
+              <h2 class="item_info_size">L</h2>
+              <h5 class="item_info_count">1 шт.</h5>
+            </div>
+          </div>
+          <div class="item_right">
+            <h2 class="item_price">6090 ₽</h2>
+            <div class="item_btns">
+              <button class="item_like-btn item-like-btn">
+                <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <button class="item_remove-btn">
+                <i class="icomoon-trash icon"></i>
+              </button>
+            </div>
+          </div>
+        </a>
+        <a href="./product.html" class="basket_content_item">
+          <div class="item_left">
+            <img src="../img/products/adidas_bag.jpg" alt="IMG" />
+            <div class="item_info">
+              <h3 class="item_info_brand">Adidas</h3>
+              <h2 class="item_info_type">ADICOLOR CLASSIC</h2>
+              <h2 class="item_info_size">44</h2>
+              <h5 class="item_info_count">1 шт.</h5>
+            </div>
+          </div>
+          <div class="item_right">
+            <h2 class="item_price"><span>4399 ₽</span>3000 ₽</h2>
+            <div class="item_btns">
+              <button class="item_like-btn item-like-btn">
+                <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <button class="item_remove-btn">
+                <i class="icomoon-trash icon"></i>
+              </button>
+            </div>
+          </div>
+        </a>
+        <button class="basket_submit" id="basket-submit">Оформить заказ</button>
+      </div>
+
+      <section class="main__products" id="basket-recomendations-list">
+        <div class="swiper" id="swiper-main-products">
+          <div class="main__section_head">
+            <h2 class="main__section_title">Вам может понравится</h2>
+          </div>
+          <div class="swiper-wrapper">
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_ozweego_meta.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">Ozweego Meta</h4>
+                <h2 class="main_item_info_price">15000 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/tommy_hoodi.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Tommy Jeans</h3>
+                <h4 class="main_item_info_desc">LINEAR LOGO HOODIE</h4>
+                <h2 class="main_item_info_price">12990 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_bag.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">ADICOLOR CLASSIC</h4>
+                <h2 class="main_item_info_price">4399 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_forum_mid.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">Originals x Parley FORUM MID</h4>
+                <h2 class="main_item_info_price">18999 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/vans_shirt.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Vans</h3>
+                <h4 class="main_item_info_desc">Torrey Coaches Jacket</h4>
+                <h2 class="main_item_info_price">6090 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_ozweego_meta.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">Ozweego Meta</h4>
+                <h2 class="main_item_info_price">15000 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/tommy_hoodi.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Tommy Jeans</h3>
+                <h4 class="main_item_info_desc">LINEAR LOGO HOODIE</h4>
+                <h2 class="main_item_info_price">12990 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_bag.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">ADICOLOR CLASSIC</h4>
+                <h2 class="main_item_info_price">4399 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_forum_mid.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">Originals x Parley FORUM MID</h4>
+                <h2 class="main_item_info_price">18999 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/vans_shirt.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Vans</h3>
+                <h4 class="main_item_info_desc">Torrey Coaches Jacket</h4>
+                <h2 class="main_item_info_price">6090 ₽</h2>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-button-prev main-products-prev"><i class="icomoon-arrow-left"></i></div>
+          <div class="swiper-button-next main-products-next"><i class="icomoon-arrow-right"></i></div>
+        </div>
+      </section>
+
+      <section class="main__products" id="basket-watched-list">
+        <div class="swiper" id="swiper-main-products">
+          <div class="main__section_head">
+            <h2 class="main__section_title">Вы смотрели</h2>
+          </div>
+          <div class="swiper-wrapper">
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_ozweego_meta.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">Ozweego Meta</h4>
+                <h2 class="main_item_info_price">15000 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/tommy_hoodi.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Tommy Jeans</h3>
+                <h4 class="main_item_info_desc">LINEAR LOGO HOODIE</h4>
+                <h2 class="main_item_info_price">12990 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_bag.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">ADICOLOR CLASSIC</h4>
+                <h2 class="main_item_info_price">4399 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_forum_mid.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">Originals x Parley FORUM MID</h4>
+                <h2 class="main_item_info_price">18999 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/vans_shirt.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Vans</h3>
+                <h4 class="main_item_info_desc">Torrey Coaches Jacket</h4>
+                <h2 class="main_item_info_price">6090 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_ozweego_meta.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">Ozweego Meta</h4>
+                <h2 class="main_item_info_price">15000 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/tommy_hoodi.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Tommy Jeans</h3>
+                <h4 class="main_item_info_desc">LINEAR LOGO HOODIE</h4>
+                <h2 class="main_item_info_price">12990 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_bag.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">ADICOLOR CLASSIC</h4>
+                <h2 class="main_item_info_price">4399 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/adidas_forum_mid.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Adidas</h3>
+                <h4 class="main_item_info_desc">Originals x Parley FORUM MID</h4>
+                <h2 class="main_item_info_price">18999 ₽</h2>
+              </div>
+            </a>
+            <a href="pages/product.html" class="swiper-slide">
+              <button class="item-like-btn">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="myGradient">
+                      <stop offset="0%" stop-color="#A8A0DF" />
+                      <stop offset="50%" stop-color="#C69ECC" />
+
+                      <stop offset="100%" stop-color="#E19BBB" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M15 8C8.925 8 4 12.925 4 19C4 30 17 40 24 42.326C31 40 44 30 44 19C44 12.925 39.075 8 33 8C29.28 8 25.99 9.847 24 12.674C22.9857 11.2292 21.6382 10.0501 20.0715 9.23649C18.5049 8.42289 16.7653 7.99875 15 8Z"
+                    stroke="black"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </button>
+              <img src="../img/products/vans_shirt.jpg" alt="Photo" />
+              <div class="main_item_info">
+                <h3 class="main_item_info_title">Vans</h3>
+                <h4 class="main_item_info_desc">Torrey Coaches Jacket</h4>
+                <h2 class="main_item_info_price">6090 ₽</h2>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-button-prev main-products-prev"><i class="icomoon-arrow-left"></i></div>
+          <div class="swiper-button-next main-products-next"><i class="icomoon-arrow-right"></i></div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer__main">
+        <div class="footer__main_logo">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.2334 44.1544C36.5953 29.3792 48.9936 22.6126 53.7473 25.7818C60 29.9359 33.9829 54.4113 37.4518 50.0216C40.9208 45.6319 77.5589 40.407 75.4604 50.4499C73.3619 60.4713 51.606 70.5783 32.848 82.2057"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <path
+              d="M50 98.3935C76.7272 98.3935 98.394 76.7267 98.394 49.9995C98.394 23.2722 76.7272 1.60547 50 1.60547C23.2727 1.60547 1.60596 23.2722 1.60596 49.9995C1.60596 76.7267 23.2727 98.3935 50 98.3935Z"
+              stroke="white"
+              stroke-width="3"
+            />
+            <path
+              d="M39.9785 4.04688V95.5244L90.5353 76.3167"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <ul class="footer__main_links">
+          <li class="footer__main_link">О нас</li>
+          <li class="footer__main_link"><a href="#">О компании</a></li>
+          <li class="footer__main_link"><a href="#">Новости</a></li>
+          <li class="footer__main_link"><a href="#">Контакты</a></li>
+        </ul>
+        <ul class="footer__main_links">
+          <li class="footer__main_link">Покупателю</li>
+          <li class="footer__main_link"><a href="#">Доставка</a></li>
+          <li class="footer__main_link"><a href="#">Оплата</a></li>
+          <li class="footer__main_link"><a href="#">Возвраты</a></li>
+        </ul>
+        <ul class="footer__main_links">
+          <li class="footer__main_link">Партнерам</li>
+          <li class="footer__main_link"><a href="#">Отправить заявку</a></li>
+          <li class="footer__main_link"><a href="#">Договор оферты</a></li>
+          <li class="footer__main_link"><a href="#">Помощь и FAQ</a></li>
+        </ul>
+        <div class="footer__main_subscribe">
+          <h2>Подпишись на нашу рассылку</h2>
+          <form>
+            <input type="email" placeholder="Email" />
+            <button>Готово</button>
+          </form>
+          <h5>
+            Подписываясь на рассылку, вы соглашаетесь с условиями <a href="#">Политики конфиденциальности</a>
+          </h5>
+        </div>
+      </div>
+
+      <div class="footer__line"></div>
+
+      <div class="footer__bottom">
+        <h2 class="footer__bottom_company">LOOKBOOK, 2022</h2>
+        <div class="footer__bottom_socials">
+          <a href="#"><i class="icomoon-telegram"></i></a>
+          <a href="#"><i class="icomoon-youtube"></i></a>
+          <a href="#"><i class="icomoon-vk"></i></a>
+        </div>
+        <div class="footer__bottom_payments">
+          <img src="../img/payments/mir.png" alt="MIR" />
+          <img src="../img/payments/mc.png" alt="MC" />
+          <img src="../img/payments/visa.png" alt="VISA" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 .main__products {
   margin-top: 72px;
-  margin-bottom: 128px;
+  margin-bottom: 80px;
 }
 .main__products #swiper-main-products {
   display: flex;
@@ -71,6 +71,10 @@
 .main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn svg path {
   stroke: #525050;
   fill: none;
+}
+.main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn:hover svg path,
+.main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn:hover svg path {
+  stroke: url(#myGradient);
 }
 .main__products #swiper-main-products .swiper-wrapper .main__products_item .item-like-btn-active svg path,
 .main__products #swiper-main-products .swiper-wrapper .swiper-slide .item-like-btn-active svg path {

@@ -470,12 +470,25 @@
             &:nth-last-of-type(1) {
               margin-bottom: 0;
             }
+
+            i {
+              opacity: 0;
+              margin-right: 12px;
+              font-size: 16px;
+              background: @gradient;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
           }
 
           .sort-popup-active-item {
             font-weight: 600;
             font-size: 16px;
             margin-bottom: 22px;
+
+            i {
+              opacity: 1;
+            }
           }
         }
       }
@@ -509,15 +522,23 @@
 
         .item-like-btn {
           position: absolute;
+          z-index: 80;
           top: 16px;
           right: 24px;
 
-          i {
-            font-size: 24px;
-            color: @black;
+          svg {
+            path {
+              stroke: @grey;
+              fill: none;
+            }
+          }
+        }
 
-            @media (max-width: 1400px) {
-              font-size: 20px;
+        .item-like-btn-active {
+          svg {
+            path {
+              stroke: url(#myGradient);
+              fill: url(#myGradient);
             }
           }
         }

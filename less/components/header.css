@@ -139,6 +139,9 @@ header .header_main__btn .header_basket_icon {
 header .header_main__btn:hover i {
   color: linear-gradient(234.13deg, #ee9ab2 0.9%, #75a4ff 133.24%);
 }
+header .header_main button {
+  margin-right: 40px !important;
+}
 header .header_main .header__search_btn-active {
   transition: 0.25s;
   position: relative;

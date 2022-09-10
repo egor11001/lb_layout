@@ -98,7 +98,7 @@ footer .footer__main_links .footer__main_link:nth-last-of-type(1) {
 footer .footer__main_subscribe {
   margin-bottom: 16px;
 }
-footer .footer__main_subscribe h1 {
+footer .footer__main_subscribe h2 {
   font-weight: 600;
   font-size: 20px;
   line-height: 27px;
@@ -107,7 +107,7 @@ footer .footer__main_subscribe h1 {
   color: white;
 }
 @media (max-width: 1220px) {
-  footer .footer__main_subscribe h1 {
+  footer .footer__main_subscribe h2 {
     font-size: 16px;
   }
 }

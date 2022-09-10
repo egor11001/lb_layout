@@ -42,7 +42,7 @@
                 <h4 class="header_main__left__location_title">Красноярск</h4>
               </div>
             </div>
-            <a href="#" class="header_main__logo" id="header-logo">
+            <a href="../index.html" class="header_main__logo" id="header-logo">
               <img src="../img/icons/lookbook.svg" alt="Lookbook" />
             </a>
             <div class="header__search">
@@ -60,18 +60,18 @@
               <button class="header_main__btn header-search-btn" id="header-search-btn">
                 <i class="icomoon-search header_search_icon"></i>
               </button>
-              <button class="header_main__btn">
+              <a href="./notifications.html" class="header_main__btn">
                 <i class="icomoon-notification header_notif_icon"></i>
-              </button>
-              <button class="header_main__btn">
+              </a>
+              <a href="./fovorites.html" class="header_main__btn">
                 <i class="icomoon-heart header_heart_icon"></i>
-              </button>
-              <button class="header_main__btn">
+              </a>
+              <a href="./profile.html" class="header_main__btn">
                 <i class="icomoon-profile header_profile_icon"></i>
-              </button>
-              <button class="header_main__btn">
+              </a>
+              <a href="./basket.html" class="header_main__btn">
                 <i class="icomoon-basket header_basket_icon"></i>
-              </button>
+              </a>
             </div>
           </div>
           <div class="header__search_result" id="header-search-result">
@@ -89,90 +89,144 @@
           <nav id="header-nav">
             <div class="header_menu">
               <ul class="header_list">
-                <li class="header_list_item">Женское</li>
-                <li class="header_list_item">Мужское</li>
-                <li class="header_list_item">Бренды</li>
+                <li onclick="toggleHeaderDropdownMenu('header-dropdown-woman')" class="header_list_item">
+                  Женское
+                </li>
+                <li onclick="toggleHeaderDropdownMenu('header-dropdown-man')" class="header_list_item">Мужское</li>
+                <li onclick="toggleHeaderDropdownMenu('header-dropdown-brands')" class="header_list_item">
+                  Бренды
+                </li>
                 <li class="header_list_item header_list_item_sale">% SALE %</li>
               </ul>
             </div>
-            <div id="header-dropdown" class="header_menu__dropdown">
+            <div id="header-dropdown-woman" class="header_menu__dropdown">
               <ul class="header_dropdown_list">
-                <li id="header-dropdown-item" class="header_dropdown_list_item">
+                <a
+                  onmouseenter="hoverHeaderDropdownMenuNode('newest')"
+                  onmouseleave="unHoverHeaderDropdownMenuNode('newest')"
+                  id="newest"
+                  class="header_dropdown_list_item"
+                >
                   <h5>Новинки</h5>
-                </li>
-                <li id="header-dropdown-item" class="header_dropdown_list_item">
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
                   <h5>Базовый гардероб</h5>
-                </li>
-                <li id="header-dropdown-item" class="header_dropdown_list_item">
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
                   <h5>В тренде</h5>
-                </li>
-                <li id="header-dropdown-item" class="header_dropdown_list_item">
+                </a>
+                <a
+                  onmouseenter="hoverHeaderDropdownMenuNode('classic')"
+                  onmouseleave="unHoverHeaderDropdownMenuNode('classic')"
+                  id="classic"
+                  class="header_dropdown_list_item"
+                >
                   <h5>Классик</h5>
-                </li>
-                <li id="header-dropdown-item" class="header_dropdown_list_item">
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
                   <h5>Платья</h5>
-                </li>
-                <li id="header-dropdown-item" class="header_dropdown_list_item">
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
                   <h5>Шорты</h5>
-                </li>
-                <li id="header-dropdown-item" class="header_dropdown_list_item">
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
                   <h5>Юбки</h5>
-                </li>
-                <li id="header-dropdown-item" class="header_dropdown_list_item">
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
                   <h5>Худи</h5>
-                </li>
-                <li id="header-dropdown-item" class="header_dropdown_list_item">
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
                   <h5>Свитшоты</h5>
-                </li>
-                <li id="header-dropdown-item" class="header_dropdown_list_item">
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
                   <h5>Аксессуары</h5>
-                </li>
-                <li id="header-dropdown-item" class="header_dropdown_list_item">
+                </a>
+                <a id="header-dropdown-item" class="header_dropdown_list_item">
                   <h5>Обувь</h5>
-                </li>
+                </a>
               </ul>
-              <ul id="header-dropdown-node" class="header_dropdown_list_more">
-                <li class="header_dropdown_list_more_item">
+              <ul
+                onmouseenter="hoverHeaderDropdownMenuNode('newest')"
+                onmouseleave="unHoverHeaderDropdownMenuNode('newest')"
+                id="newest-dropdown"
+                class="header_dropdown_list_more"
+              >
+                <a class="header_dropdown_list_more_item">
                   <h5>Все</h5>
                   <i class="icomoon-arrow-right"></i>
-                </li>
-                <li class="header_dropdown_list_more_item">
+                </a>
+                <a class="header_dropdown_list_more_item">
                   <h5>Футболки</h5>
                   <i class="icomoon-arrow-right"></i>
-                </li>
-                <li class="header_dropdown_list_more_item">
+                </a>
+                <a class="header_dropdown_list_more_item">
                   <h5>Футболки</h5>
                   <i class="icomoon-arrow-right"></i>
-                </li>
-                <li class="header_dropdown_list_more_item">
+                </a>
+                <a class="header_dropdown_list_more_item">
                   <h5>Футболки</h5>
                   <i class="icomoon-arrow-right"></i>
-                </li>
-                <li class="header_dropdown_list_more_item">
+                </a>
+                <a class="header_dropdown_list_more_item">
                   <h5>Футболки</h5>
                   <i class="icomoon-arrow-right"></i>
-                </li>
-                <li class="header_dropdown_list_more_item">
+                </a>
+                <a class="header_dropdown_list_more_item">
                   <h5>Футболки</h5>
                   <i class="icomoon-arrow-right"></i>
-                </li>
+                </a>
 
-                <li class="header_dropdown_list_more_item">
+                <a class="header_dropdown_list_more_item">
                   <h5>Футболки</h5>
                   <i class="icomoon-arrow-right"></i>
-                </li>
-                <li class="header_dropdown_list_more_item">
+                </a>
+                <a class="header_dropdown_list_more_item">
                   <h5>Футболки</h5>
                   <i class="icomoon-arrow-right"></i>
-                </li>
-                <li class="header_dropdown_list_more_item">
+                </a>
+                <a class="header_dropdown_list_more_item">
                   <h5>Футболки</h5>
                   <i class="icomoon-arrow-right"></i>
-                </li>
-                <li class="header_dropdown_list_more_item">
+                </a>
+                <a class="header_dropdown_list_more_item">
                   <h5>Футболки</h5>
                   <i class="icomoon-arrow-right"></i>
-                </li>
+                </a>
+              </ul>
+              <ul
+                onmouseenter="hoverHeaderDropdownMenuNode('classic')"
+                onmouseleave="unHoverHeaderDropdownMenuNode('classic')"
+                id="classic-dropdown"
+                class="header_dropdown_list_more"
+              >
+                <a class="header_dropdown_list_more_item">
+                  <h5>Все</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Пиджаки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Рубашки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Брюки</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Туфли</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Шарфы</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
+                <a class="header_dropdown_list_more_item">
+                  <h5>Ремни</h5>
+                  <i class="icomoon-arrow-right"></i>
+                </a>
               </ul>
               <!-- <div class="header_menu__dropdown_brands">
                   <div class="dropdown_brands__alphabet">
@@ -181,6 +235,167 @@
                     butt
                   </div>
                 </div> -->
+            </div>
+            <div id="header-dropdown-brands" class="header_menu__dropdown">
+              <div class="brands-alphabet">
+                <button onclick="toggleHeaderBrandsAlphabet()" id="brands-toggle-lang-alphabet">А-Я</button>
+                <div id="brands-eng-alphabet" class="brands-alphabet-container" style="display: flex">
+                  <button class="brands-alphabet-letter" id="letter-A">А</button>
+                  <button class="brands-alphabet-letter" id="letter-B">B</button>
+                  <button class="brands-alphabet-letter" id="letter-C">C</button>
+                  <button class="brands-alphabet-letter" id="letter-D">D</button>
+                  <button class="brands-alphabet-letter" id="letter-E">E</button>
+                  <button class="brands-alphabet-letter" id="letter-F">F</button>
+                  <button class="brands-alphabet-letter" id="letter-G">G</button>
+                  <button class="brands-alphabet-letter" id="letter-H">H</button>
+                  <button class="brands-alphabet-letter" id="letter-I">I</button>
+                  <button class="brands-alphabet-letter" id="letter-J">J</button>
+                  <button class="brands-alphabet-letter" id="letter-K">K</button>
+                  <button class="brands-alphabet-letter" id="letter-L">L</button>
+                  <button class="brands-alphabet-letter" id="letter-M">M</button>
+                  <button class="brands-alphabet-letter" id="letter-N">N</button>
+                  <button class="brands-alphabet-letter" id="letter-O">O</button>
+                  <button class="brands-alphabet-letter" id="letter-P">P</button>
+                  <button class="brands-alphabet-letter" id="letter-Q">Q</button>
+                  <button class="brands-alphabet-letter" id="letter-R">R</button>
+                  <button class="brands-alphabet-letter" id="letter-S">S</button>
+                  <button class="brands-alphabet-letter" id="letter-T">T</button>
+                  <button class="brands-alphabet-letter" id="letter-U">U</button>
+                  <button class="brands-alphabet-letter" id="letter-V">V</button>
+                  <button class="brands-alphabet-letter" id="letter-W">W</button>
+                  <button class="brands-alphabet-letter" id="letter-X">X</button>
+                  <button class="brands-alphabet-letter" id="letter-Y">Y</button>
+                  <button class="brands-alphabet-letter" id="letter-Z">Z</button>
+                </div>
+                <div id="brands-ru-alphabet" class="brands-alphabet-container">
+                  <button class="brands-alphabet-letter" id="letter-А">А</button>
+                  <button class="brands-alphabet-letter" id="letter-Б">Б</button>
+                  <button class="brands-alphabet-letter" id="letter-В">В</button>
+                  <button class="brands-alphabet-letter" id="letter-Г">Г</button>
+                  <button class="brands-alphabet-letter" id="letter-Д">Д</button>
+                  <button class="brands-alphabet-letter" id="letter-Е">Е</button>
+                  <button class="brands-alphabet-letter" id="letter-Ё">Ё</button>
+                  <button class="brands-alphabet-letter" id="letter-Ж">Ж</button>
+                  <button class="brands-alphabet-letter" id="letter-З">З</button>
+                  <button class="brands-alphabet-letter" id="letter-И">И</button>
+                  <button class="brands-alphabet-letter" id="letter-Й">Й</button>
+                  <button class="brands-alphabet-letter" id="letter-К">К</button>
+                  <button class="brands-alphabet-letter" id="letter-Л">Л</button>
+                  <button class="brands-alphabet-letter" id="letter-М">М</button>
+                  <button class="brands-alphabet-letter" id="letter-Н">Н</button>
+                  <button class="brands-alphabet-letter" id="letter-О">О</button>
+                  <button class="brands-alphabet-letter" id="letter-П">П</button>
+                  <button class="brands-alphabet-letter" id="letter-Р">Р</button>
+                  <button class="brands-alphabet-letter" id="letter-С">С</button>
+                  <button class="brands-alphabet-letter" id="letter-Т">Т</button>
+                  <button class="brands-alphabet-letter" id="letter-У">У</button>
+                  <button class="brands-alphabet-letter" id="letter-Ф">Ф</button>
+                  <button class="brands-alphabet-letter" id="letter-Х">Х</button>
+                  <button class="brands-alphabet-letter" id="letter-Ц">Ц</button>
+                  <button class="brands-alphabet-letter" id="letter-Ч">Ч</button>
+                  <button class="brands-alphabet-letter" id="letter-Ш">Ш</button>
+                  <button class="brands-alphabet-letter" id="letter-Щ">Щ</button>
+                  <button class="brands-alphabet-letter" id="letter-Э">Э</button>
+                  <button class="brands-alphabet-letter" id="letter-Ю">Ю</button>
+                  <button class="brands-alphabet-letter" id="letter-Я">Я</button>
+                </div>
+                <button id="brands-toggle-lang-number">0-9</button>
+              </div>
+              <div class="brands-content">
+                <div class="brands-content-items">
+                  <h2 id="brands-search-active-letter">A</h2>
+                  <div class="brands-content-list">
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Krakatau</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">12Storeez</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Adidas</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                    <div class="brand-container">
+                      <a href="#">Acne</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="brands-content-second">
+                  <div class="brands-content-search">
+                    <input
+                      type="text"
+                      class="brands-search-input"
+                      id="brands-search-input"
+                      placeholder="Введите название бренда"
+                    />
+                    <button id="brands-close-search">
+                      <i class="icomoon-search"></i>
+                    </button>
+                  </div>
+                  <div class="brands-content-favorites">
+                    <h2>Избранное</h2>
+                    <div class="brands-content-favorites-list">
+                      <div class="brand-container"><a href="#">Adidas</a></div>
+                      <div class="brand-container"><a href="#">12storeez</a></div>
+                      <div class="brand-container"><a href="#">Krakatau</a></div>
+                      <div class="brand-container"><a href="#">lastseen</a></div>
+                      <div class="brand-container"><a href="#">Adidas</a></div>
+                      <div class="brand-container"><a href="#">12storeez</a></div>
+                      <div class="brand-container"><a href="#">Krakatau</a></div>
+                      <div class="brand-container"><a href="#">lastseen</a></div>
+                      <div class="brand-container"><a href="#">Adidas</a></div>
+                      <div class="brand-container"><a href="#">12storeez</a></div>
+                      <div class="brand-container"><a href="#">Krakatau</a></div>
+                      <div class="brand-container"><a href="#">lastseen</a></div>
+                      <div class="brand-container"><a href="#">Adidas</a></div>
+                      <div class="brand-container"><a href="#">12storeez</a></div>
+                      <div class="brand-container"><a href="#">Krakatau</a></div>
+                      <div class="brand-container"><a href="#">lastseen</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </nav>
         </header>
@@ -331,7 +546,7 @@
       </div>
     </div>
 
-    <section class="main__products" id="main-sale-list">
+    <section class="main__products" id="product-recomendations-list">
       <div class="swiper" id="swiper-main-products">
         <div class="main__section_head">
           <h2 class="main__section_title">Вам может понравится</h2>
@@ -623,7 +838,7 @@
       </div>
     </section>
 
-    <section class="main__products" id="main-sale-list">
+    <section class="main__products" id="product-watched-list">
       <div class="swiper" id="swiper-main-products">
         <div class="main__section_head">
           <h2 class="main__section_title">Вы смотрели</h2>
