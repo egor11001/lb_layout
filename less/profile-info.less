@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 260px;
+    margin-bottom: 80px;
 
     .field {
       display: flex;
@@ -94,7 +95,7 @@
     .profile-btns {
       display: flex;
       align-items: center;
-      margin-top: 32px;
+      margin-top: 40px;
 
       #profile-change-pass {
         font-size: 16px;
@@ -135,6 +136,60 @@
           transition: 0.1s;
           background-color: @black;
         }
+      }
+    }
+  }
+
+  #modal-profile-pass {
+    width: 462px !important;
+    padding: 64px 82px 48px 82px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    #close-btn-profile-pass {
+      right: 28px;
+      top: 28px;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 56px;
+    }
+
+    input {
+      width: 298px;
+      padding: 8px 16px;
+      font-weight: 400;
+      font-size: 16px;
+      border-bottom: 1px solid @light;
+      margin-bottom: 64px;
+
+      ::placeholder {
+        color: @light;
+      }
+
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid @black;
+      }
+    }
+
+    button[type='submit'] {
+      width: 180px;
+      padding: 10px 0;
+      font-weight: 600;
+      font-size: 16px;
+      background-color: @grey;
+      margin-top: 24px;
+      color: white;
+      border-radius: 5px;
+      transition: 0.1s;
+
+      &:hover {
+        transition: 0.1s;
+        background-color: @black;
       }
     }
   }

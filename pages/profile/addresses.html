@@ -53,7 +53,7 @@
                 type="text"
                 class="header__search_input"
                 id="header-search-input"
-                placeholder="Введите что ищете../..."
+                placeholder="Введите что ищете..."
               />
             </div>
             <div class="header_main__btns">
@@ -402,245 +402,54 @@
       </div>
     </div>
 
-    <div class="profile-info_wrapper">
+    <div class="favorites_wrapper">
       <div class="basket_top">
         <div class="basket_top_left">
           <a href="../profile.html" class="basket_back"><i class="icomoon-arrow-left icon"></i></a>
-          <h1 class="basket_title">Профиль</h1>
+          <h1 class="basket_title">Мои адреса</h1>
         </div>
         <div></div>
         <div></div>
       </div>
 
-      <form class="profile-info_content">
-        <div class="field">
-          <label for="name-profile">Имя</label>
-          <input id="name-profile" type="text" placeholder="Ваше имя" />
-        </div>
-        <div class="field">
-          <label for="lastName-profile">Фамилия</label>
-          <input id="lastName-profile" type="text" placeholder="Ваша фамилия" />
-        </div>
-        <div class="field">
-          <label for="email-profile">Email</label>
-          <input id="email-profile" type="email" placeholder="example@mail.com" />
-        </div>
-        <div class="field">
-          <label for="phone-profile">Телефон</label>
-          <input id="phone-profile" type="tel" placeholder="+7-999-999-99-99" />
-        </div>
-        <div class="field">
-          <label for="birthday-profile">Дата рождения</label>
-          <input id="birthday-profile" type="date" placeholder="01.01.2000" />
-        </div>
-        <div class="field">
-          <label for="gender-profile">Пол</label>
-          <div class="dropdown">
-            <div class="select">
-              <span>Ваш пол</span>
-              <div><i class="icomoon-small-arrow-left"></i></div>
-            </div>
-            <input type="hidden" name="gender" id="gender-profile" />
-            <div class="dropdown-menu">
-              <li id="male">Мужской</li>
-              <li id="female">Женский</li>
+      <div class="addresses_content" id="my-addresses-list">
+        <button id="create-address">
+          <svg width="32" height="32" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.5 26V15.5M15.5 15.5V5M15.5 15.5H26M15.5 15.5H5"
+              stroke="#C4C4C4"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <div class="addresses_content_item">
+          <div class="address-top">
+            <h2 class="address-name">Основной</h2>
+            <div class="address-main active">
+              <img src="../../img/icons/checkbox-grad.svg" alt="По умолчанию" />
             </div>
           </div>
+          <h2 class="address-desc">Россия, Красноярск, ул.Петра Ломако 8, 45кв</h2>
+          <button id="delete-address" class="delete-address">
+            <i class="icomoon-trash icon"></i>
+          </button>
         </div>
-        <div class="field">
-          <label for="clothes-profile">Размер одежды</label>
-          <div class="dropdown">
-            <div class="select">
-              <span>Ваш размер</span>
-              <div><i class="icomoon-small-arrow-left"></i></div>
-            </div>
-            <input type="hidden" name="clothes-profile" id="clothes-profile" />
-            <div class="dropdown-menu">
-              <li id="XS">XS</li>
-              <li id="S">S</li>
-              <li id="M">M</li>
-              <li id="L">L</li>
-              <li id="XL">XL</li>
-              <li id="XXL">XXL</li>
-              <li id="XXXL">XXXL</li>
-            </div>
+        <div class="addresses_content_item">
+          <div class="address-top">
+            <h2 class="address-name">Дополнительный</h2>
+            <div class="address-main"></div>
           </div>
+          <h2 class="address-desc">Россия, Красноярск, ул.Алексеева 109</h2>
+          <button id="delete-address" class="delete-address">
+            <i class="icomoon-trash icon"></i>
+          </button>
         </div>
-        <div class="field">
-          <label for="shoes-profile">Размер обуви</label>
-          <div class="dropdown">
-            <div class="select">
-              <span>Ваш размер</span>
-              <div><i class="icomoon-small-arrow-left"></i></div>
-            </div>
-            <input type="hidden" name="shoes-profile" id="shoes-profile" />
-            <div class="dropdown-menu">
-              <li id="35">35</li>
-              <li id="36">36</li>
-              <li id="37">37</li>
-              <li id="38">38</li>
-              <li id="39">39</li>
-              <li id="40">40</li>
-              <li id="41">41</li>
-              <li id="42">42</li>
-              <li id="43">43</li>
-              <li id="44">44</li>
-              <li id="45">45</li>
-              <li id="46">46</li>
-              <li id="47">47</li>
-            </div>
-          </div>
-        </div>
+      </div>
 
-        <div class="field-checkbox custom-checkbox-click">
-          <input id="policy-profile" type="checkbox" class="disable" />
-          <div class="custom-checkbox">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
-                fill="url(#paint0_linear_3975_51670)"
-                stroke="url(#paint1_linear_3975_51670)"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-              <path
-                d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
-                stroke="white"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_3975_51670"
-                  x1="28"
-                  y1="4.512"
-                  x2="-7.93812"
-                  y2="30.501"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#EE9AB2" />
-                  <stop offset="1" stop-color="#75A4FF" />
-                </linearGradient>
-                <linearGradient
-                  id="paint1_linear_3975_51670"
-                  x1="28"
-                  y1="4.512"
-                  x2="-7.93812"
-                  y2="30.501"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#EE9AB2" />
-                  <stop offset="1" stop-color="#75A4FF" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h5>
-            Я соглашаюсь на обработку моих персональных данных и ознакомлен(а) с условиями конфиденциальности.
-          </h5>
-        </div>
-        <div class="field-checkbox custom-checkbox-click">
-          <input id="sms-profile" type="checkbox" class="disable" />
-          <div class="custom-checkbox">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
-                fill="url(#paint0_linear_3975_51670)"
-                stroke="url(#paint1_linear_3975_51670)"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-              <path
-                d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
-                stroke="white"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_3975_51670"
-                  x1="28"
-                  y1="4.512"
-                  x2="-7.93812"
-                  y2="30.501"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#EE9AB2" />
-                  <stop offset="1" stop-color="#75A4FF" />
-                </linearGradient>
-                <linearGradient
-                  id="paint1_linear_3975_51670"
-                  x1="28"
-                  y1="4.512"
-                  x2="-7.93812"
-                  y2="30.501"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#EE9AB2" />
-                  <stop offset="1" stop-color="#75A4FF" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h5>Я хочу получать уведомления о новых заказах по sms</h5>
-        </div>
-        <div class="field-checkbox custom-checkbox-click">
-          <input id="mailing-profile" type="checkbox" class="disable" />
-          <div class="custom-checkbox">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
-                fill="url(#paint0_linear_3975_51670)"
-                stroke="url(#paint1_linear_3975_51670)"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-              <path
-                d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
-                stroke="white"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_3975_51670"
-                  x1="28"
-                  y1="4.512"
-                  x2="-7.93812"
-                  y2="30.501"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#EE9AB2" />
-                  <stop offset="1" stop-color="#75A4FF" />
-                </linearGradient>
-                <linearGradient
-                  id="paint1_linear_3975_51670"
-                  x1="28"
-                  y1="4.512"
-                  x2="-7.93812"
-                  y2="30.501"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#EE9AB2" />
-                  <stop offset="1" stop-color="#75A4FF" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h5>Я хочу получать уведомления о новых заказах на почту</h5>
-        </div>
-
-        <div class="profile-btns">
-          <button type="submit">Сохранить</button>
-          <button id="profile-change-pass">Сменить пароль</button>
-        </div>
-      </form>
       <div class="overlay" id="overlay"></div>
-      <form class="modal" id="modal-profile-pass">
-        <button class="modal-close-btn" id="close-btn-profile-pass">
+      <form class="modal" id="modal-addresses-create">
+        <button class="modal-close-btn" id="close-btn-addresses-create">
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#2D2D2D" />
             <rect
@@ -666,12 +475,82 @@
             />
           </svg>
         </button>
-        <h2>Смена пароля</h2>
-
-        <input id="profile-pass-old" type="password" placeholder="Старый пароль" required />
-        <input id="profile-pass-new" type="password" placeholder="Новый пароль" required />
-        <input id="profile-pass-new-repeat" type="password" placeholder="Повторите пароль" required />
-        <button id="modal-profile-pass-submit" type="submit">Сохранить</button>
+        <h2>Создать адрес</h2>
+        <div class="field">
+          <label for="address-name-create">Имя</label>
+          <input id="address-name-create" type="text" placeholder="Имя адреса" required />
+        </div>
+        <div class="field">
+          <label for="address-value-create">Адрес</label>
+          <div id="address-search" class="address-search">
+            <input
+              id="address-search-value"
+              type="text"
+              class="address-search-value"
+              placeholder="Адрес"
+              required
+            />
+            <div id="address-search-options" class="address-search-options">
+              <!--  <div class="search-option">
+                <h3>12312</h3>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="field-checkbox custom-checkbox-click">
+          <input id="address-main-create" type="checkbox" class="disable" />
+          <div class="custom-checkbox">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
+                fill="url(#paint0_linear_3975_51670)"
+                stroke="url(#paint1_linear_3975_51670)"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
+                stroke="white"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_3975_51670"
+                  x1="28"
+                  y1="4.512"
+                  x2="-7.93812"
+                  y2="30.501"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EE9AB2" />
+                  <stop offset="1" stop-color="#75A4FF" />
+                </linearGradient>
+                <linearGradient
+                  id="paint1_linear_3975_51670"
+                  x1="28"
+                  y1="4.512"
+                  x2="-7.93812"
+                  y2="30.501"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#EE9AB2" />
+                  <stop offset="1" stop-color="#75A4FF" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h5>Сделать его основным</h5>
+        </div>
+        <button id="modal-address-create-submit" type="submit">Создать</button>
+      </form>
+      <form class="modal" id="modal-addresses-delete">
+        <h2>Удалить <span>Основной</span></h2>
+        <div>
+          <button id="modal-address-delete-submit" type="submit">Да</button>
+          <button id="close-btn-addresses-delete">Нет</button>
+        </div>
       </form>
     </div>
 
@@ -747,6 +626,16 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=68c854da-2c88-4f08-9b81-2aa1063a7895&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <script src="../../js/script.js"></script>
   </body>
 </html>

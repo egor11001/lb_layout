@@ -10,6 +10,8 @@
 @import 'favorites.less';
 @import 'profile.less';
 @import 'profile-info.less';
+@import 'my-brands.less';
+@import 'addresses.less';
 
 .modal {
   pointer-events: none;
@@ -79,6 +81,58 @@
   background: @gradient !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
+}
+
+.item-like-btn {
+  display: block;
+  position: absolute;
+  z-index: 80;
+  top: 16px;
+  right: 24px;
+
+  svg {
+    path {
+      stroke: @grey;
+      fill: none;
+    }
+  }
+}
+
+.item-like-btn-active {
+  svg {
+    path {
+      stroke: url(#myGradient);
+      fill: url(#myGradient);
+    }
+  }
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  svg {
+    width: 28px;
+    height: 28px;
+
+    path {
+      fill: none;
+      &:nth-of-type(2) {
+        stroke-width: 0;
+      }
+    }
+  }
+}
+.custom-checkbox-active {
+  svg {
+    path {
+      &:nth-of-type(1) {
+        fill: url(#paint0_linear_3975_51670);
+      }
+      &:nth-of-type(2) {
+        stroke-width: 2;
+      }
+    }
+  }
 }
 
 .active {

@@ -339,25 +339,14 @@ $('#close-btn').click(function () {
   document.body.style.overflow = 'auto';
 });
 
-$('#overlay').click(function () {
-  $('#overlay').removeClass('is-visible');
-  $('#modal-sizes').removeClass('is-visible');
-  document.body.style.overflow = 'auto';
-});
-
 $('.on-subscribe-size').click(function () {
   $('#overlay').toggleClass('is-visible');
   $('#modal-size-notif').toggleClass('is-visible');
   document.body.style.overflow = 'hidden';
 });
 
-$('#close-btn-size-notif').click(function () {
-  $('#overlay').removeClass('is-visible');
-  $('#modal-size-notif').removeClass('is-visible');
-  document.body.style.overflow = 'auto';
-});
-
-$('#overlay').click(function () {
+$('#close-btn-size-notif').click(function (e) {
+  e.preventDefault();
   $('#overlay').removeClass('is-visible');
   $('#modal-size-notif').removeClass('is-visible');
   document.body.style.overflow = 'auto';
@@ -368,6 +357,55 @@ $('#modal-size-notif-submit').click(function (e) {
     e.preventDefault();
     return;
   }
+});
+
+$('#profile-change-pass').click(function (e) {
+  e.preventDefault();
+  $('#overlay').toggleClass('is-visible');
+  $('#modal-profile-pass').toggleClass('is-visible');
+  document.body.style.overflow = 'hidden';
+});
+
+$('#close-btn-profile-pass').click(function (e) {
+  e.preventDefault();
+  $('#overlay').removeClass('is-visible');
+  $('#modal-profile-pass').removeClass('is-visible');
+  document.body.style.overflow = 'auto';
+});
+
+$('#create-address').click(function () {
+  $('#overlay').toggleClass('is-visible');
+  $('#modal-addresses-create').toggleClass('is-visible');
+  document.body.style.overflow = 'hidden';
+});
+
+$('#close-btn-addresses-create').click(function (e) {
+  e.preventDefault();
+  $('#overlay').removeClass('is-visible');
+  $('#modal-addresses-create').removeClass('is-visible');
+  document.body.style.overflow = 'auto';
+});
+
+$('.delete-address').click(function () {
+  $('#overlay').toggleClass('is-visible');
+  $('#modal-addresses-delete').toggleClass('is-visible');
+  document.body.style.overflow = 'hidden';
+});
+
+$('#close-btn-addresses-delete').click(function (e) {
+  e.preventDefault();
+  $('#overlay').removeClass('is-visible');
+  $('#modal-addresses-delete').removeClass('is-visible');
+  document.body.style.overflow = 'auto';
+});
+
+$('#overlay').click(function () {
+  $('#overlay').removeClass('is-visible');
+  $('#modal-addresses-delete').removeClass('is-visible');
+  $('#modal-profile-pass').removeClass('is-visible');
+  $('#modal-size-notif').removeClass('is-visible');
+  $('#modal-sizes').removeClass('is-visible');
+  document.body.style.overflow = 'auto';
 });
 
 $('#copy-form-bonus-link').click(async function (e) {
@@ -387,3 +425,29 @@ $('.custom-checkbox-click').click(function () {
     $(this).find('.custom-checkbox').toggleClass('custom-checkbox-active');
   }
 });
+
+$('#address-search-value').on(
+  'input',
+  _.debounce(async function (e) {
+    console.log(e.target.value);
+    let res = await ymaps.suggest(e.target.value, { results: 6 });
+    console.log(res);
+    await $('#address-search-options').empty();
+    for (let i = 0; i < res.length; i++) {
+      await $('#address-search-options').append(`<div id='${res[i].value}' class='search-option'>
+      <h3>${res[i].displayName}</h3>
+    </div>`);
+    }
+    $('.search-option').click(function () {
+      $('#address-search-value').val($(this).attr('id'));
+      $('#address-search-options').empty();
+      $('#address-search-value').focusout();
+    });
+
+    $(document).click(function (e) {
+      if (!$(e.target).is('#address-search-options, .search-option')) {
+        $('#address-search-options').empty();
+      }
+    });
+  }, 400),
+);
