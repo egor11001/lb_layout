@@ -2414,8 +2414,8 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
 }
 .basket_wrapper .basket_content_item .item_right .item_btns .item_like-btn {
   cursor: pointer;
-  margin-right: 42px;
-  margin-bottom: 40px;
+  position: static;
+  margin: 0 42px 48px 0;
 }
 .basket_wrapper .basket_content_item .item_right .item_btns .item_like-btn svg path {
   stroke: #525050;
