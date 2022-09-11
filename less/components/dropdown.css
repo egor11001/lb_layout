@@ -91,7 +91,7 @@
   font-weight: 600;
 }
 .dropdown .dropdown-menu .disable {
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   color: #525050;
   background-color: #e2e2e2;
