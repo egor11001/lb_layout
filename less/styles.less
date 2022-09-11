@@ -12,6 +12,8 @@
 @import 'profile-info.less';
 @import 'my-brands.less';
 @import 'addresses.less';
+@import 'orders.less';
+@import 'order.less';
 
 .modal {
   pointer-events: none;
@@ -140,5 +142,13 @@
 }
 
 .disable {
-  display: none;
+  display: none !important;
+}
+
+.visible {
+  opacity: 1 !important;
+}
+
+.no-visible {
+  opacity: 0 !important;
 }
