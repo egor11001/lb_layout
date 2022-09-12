@@ -48,6 +48,10 @@ button:focus {
   padding: 0;
   border: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: 0.1s;
+}
+button:hover {
+  transition: 0.1s;
 }
 input:focus,
 input {

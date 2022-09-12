@@ -1,0 +1,117 @@
+@import 'colors.less';
+
+@import 'components/header.less';
+@import 'components/footer.less';
+@import 'components/sort_popup';
+@import 'components/pagination.less';
+@import 'basket.less';
+
+.favorites_wrapper {
+  .about_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 1370px) {
+      margin: 0 80px;
+    }
+
+    .about_title {
+      font-weight: 600;
+      font-size: 32px;
+      margin-bottom: 96px;
+      text-align: center;
+
+      @media (max-width: 1370px) {
+        width: fit-content;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 88px;
+      width: 1100px;
+      text-align: center;
+      line-height: 31px;
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 80px;
+        width: fit-content;
+      }
+
+      @media (max-width: 1370px) {
+        width: fit-content;
+      }
+    }
+
+    .form-about {
+      display: flex;
+      align-items: center;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0px 5px 22px 5px rgba(196, 196, 196, 0.3);
+      width: fit-content;
+      position: relative;
+      margin: 0 auto 80px auto;
+
+      img {
+        object-fit: scale-down;
+
+        @media (max-width: 1380px) {
+          object-position: -100px 0;
+          object-fit: cover;
+          height: 269px;
+          width: 400px;
+        }
+      }
+
+      .form-about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px 56px;
+
+        h2 {
+          font-weight: 600;
+          font-size: 24px;
+          margin-bottom: 56px;
+        }
+
+        input {
+          padding: 8px 24px;
+          border-bottom: 1px solid @light;
+          color: @black;
+          font-weight: 400;
+          font-size: 16px;
+          transition: 0.05s;
+          margin-bottom: 50px;
+
+          ::placeholder {
+            color: @light;
+          }
+
+          &:focus,
+          &:hover {
+            transition: 0.05s;
+            border-bottom: 1px solid @black;
+          }
+        }
+
+        button {
+          font-size: 14px;
+          color: white;
+          font-weight: 600;
+          border-radius: 5px;
+          width: 202px;
+          padding: 12px 0;
+          background-color: @black;
+
+          &:hover {
+            background-color: black;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@import 'components/header.less';
+@import 'components/footer.less';
+@import 'components/sort_popup';
+@import 'components/pagination.less';
+@import 'basket.less';
+
+.favorites_wrapper {
+  height: fit-content;
+  margin-bottom: 0;
+  .partners_content {
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+    height: 777px;
+
+    @media (max-width: 1360px) {
+      height: 700px;
+    }
+
+    img {
+      width: 850px;
+      height: 777px;
+      position: relative;
+      z-index: 50;
+      align-self: flex-end;
+      object-fit: cover;
+
+      @media (max-width: 1700px) {
+        width: 800px;
+        height: 727px;
+      }
+
+      @media (max-width: 1495px) {
+        width: 750px;
+        height: 680px;
+      }
+
+      @media (max-width: 1360px) {
+        width: 650px;
+        height: 594px;
+      }
+    }
+
+    .partners_info {
+      position: relative;
+      right: 44px;
+      top: 56px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      @media (max-width: 1700px) {
+        top: 108px;
+        right: 20px;
+      }
+      @media (max-width: 1495px) {
+        right: 40px;
+        top: 140px;
+      }
+
+      @media (max-width: 1360px) {
+        right: 16px;
+        top: 48px;
+      }
+
+      h3 {
+        font-weight: 400;
+        font-size: 48px;
+        margin-bottom: 64px;
+        font-family: 'Montserrat';
+
+        @media (max-width: 1700px) {
+          font-size: 36px;
+        }
+
+        @media (max-width: 1360px) {
+          font-size: 32px;
+        }
+      }
+
+      h2 {
+        font-weight: 600;
+        font-size: 64px;
+        margin-bottom: 116px;
+        font-family: 'Montserrat';
+        @media (max-width: 1700px) {
+          font-size: 48px;
+        }
+
+        @media (max-width: 1360px) {
+          font-size: 40px;
+        }
+      }
+
+      a {
+        background: @gradient;
+        box-shadow: 0px 5px 22px 5px rgba(196, 196, 196, 0.3);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 314px;
+        padding: 16px 0;
+        font-weight: 800;
+        font-size: 24px;
+        color: @black;
+        transition: 0.2s;
+
+        &:hover {
+          color: white;
+          transition: 0.2s;
+        }
+
+        @media (max-width: 1700px) {
+          font-size: 22px;
+          width: 282px;
+        }
+        @media (max-width: 1360px) {
+          font-size: 20px;
+          width: 248px;
+          padding: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1190,7 +1190,6 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
   width: 240px;
   height: 48px;
   border-radius: 5px;
-  background-color: #525050;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1199,9 +1198,9 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
   font-size: 16px;
   transition: 0.1s;
   margin-bottom: 80px;
+  background-color: #2d2d2d;
 }
 .products_wrapper .products__filters #submit-filters:hover {
-  transition: 0.1s;
   background-color: #2d2d2d;
 }
 .products_wrapper .products__content {

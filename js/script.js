@@ -426,6 +426,16 @@ $('.custom-checkbox-click').click(function () {
   }
 });
 
+$('.faq_item_name').click(function () {
+  if ($(this).hasClass('active')) {
+    $(this).parent().find('.faq_item_desc').slideUp(150);
+    $(this).removeClass('active');
+  } else {
+    $(this).parent().find('.faq_item_desc').slideToggle(150);
+    $(this).toggleClass('active');
+  }
+});
+
 $('#address-search-value').on(
   'input',
   _.debounce(async function (e) {

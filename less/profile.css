@@ -1101,8 +1101,8 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
 }
 .basket_wrapper .basket_content_item .item_right .item_btns .item_like-btn {
   cursor: pointer;
-  margin-right: 42px;
-  margin-bottom: 40px;
+  position: static;
+  margin: 0 42px 48px 0;
 }
 .basket_wrapper .basket_content_item .item_right .item_btns .item_like-btn svg path {
   stroke: #525050;
@@ -1131,14 +1131,10 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
   margin-top: 32px;
   padding: 16px 0;
   width: 336px;
-  background-color: #525050;
   color: white;
   font-weight: 600;
   font-size: 16px;
   border-radius: 5px;
-}
-.basket_wrapper .basket_content .basket_submit:hover {
-  background-color: #2d2d2d;
 }
 .profile_wrapper {
   display: flex;
@@ -1264,8 +1260,10 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
   color: white;
   font-weight: 600;
   transition: 0.1s;
+  background-color: #2d2d2d;
 }
 .profile_wrapper .form-bonus-link .form-bonus-content button:hover {
+  background-color: black;
   transition: 0.1s;
   opacity: 1;
 }
