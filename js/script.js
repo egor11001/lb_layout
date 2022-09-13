@@ -436,6 +436,14 @@ $('.faq_item_name').click(function () {
   }
 });
 
+$('.notif-check-btn').click(function (e) {
+  e.preventDefault();
+  $(this).find('.custom-checkbox').toggleClass('custom-checkbox-active');
+  $(this)
+    .parent()
+    .animate({ 'margin-right': '+=600', opacity: 0 }, { complete: () => $(this).parent().hide(), duration: 400 });
+});
+
 $('#address-search-value').on(
   'input',
   _.debounce(async function (e) {

@@ -1201,7 +1201,7 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
   background-color: #2d2d2d;
 }
 .products_wrapper .products__filters #submit-filters:hover {
-  background-color: #2d2d2d;
+  background-color: black;
 }
 .products_wrapper .products__content {
   display: flex;

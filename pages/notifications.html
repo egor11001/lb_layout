@@ -24,8 +24,8 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
-    <link href="../../css/styles/styles.css" rel="stylesheet" />
-    <link href="../../css/fonts/icomoon/style.css" rel="stylesheet" />
+    <link href="../css/styles/styles.css" rel="stylesheet" />
+    <link href="../css/fonts/icomoon/style.css" rel="stylesheet" />
   </head>
   <body>
     <div class="content-fluid content-grid top-grid">
@@ -34,7 +34,7 @@
           <div class="header_main">
             <div class="header_main__left">
               <button onclick="toggleHeaderMenu()" class="header_burger" id="header-burger">
-                <img src="../../img/icons/burger.svg" alt="menu" />
+                <img src="../img/icons/burger.svg" alt="menu" />
               </button>
 
               <div class="header_main__left__location" id="header-location">
@@ -42,8 +42,8 @@
                 <h4 class="header_main__left__location_title">Красноярск</h4>
               </div>
             </div>
-            <a href="../../index.html" class="header_main__logo" id="header-logo">
-              <img src="../../img/icons/lookbook.svg" alt="Lookbook" />
+            <a href="../index.html" class="header_main__logo" id="header-logo">
+              <img src="../img/icons/lookbook.svg" alt="Lookbook" />
             </a>
             <div class="header__search">
               <button id="header-close-search">
@@ -60,16 +60,16 @@
               <button class="header_main__btn header-search-btn" id="header-search-btn">
                 <i class="icomoon-search header_search_icon"></i>
               </button>
-              <a href="../notifications.html" class="header_main__btn">
+              <a href="./notifications.html" class="header_main__btn">
                 <i class="icomoon-notification header_notif_icon"></i>
               </a>
-              <a href="../favorites.html" class="header_main__btn">
+              <a href="./favorites.html" class="header_main__btn">
                 <i class="icomoon-heart header_heart_icon"></i>
               </a>
-              <a href="../profile.html" class="header_main__btn">
+              <a href="./profile.html" class="header_main__btn">
                 <i class="icomoon-profile header_profile_icon"></i>
               </a>
-              <a href="../basket.html" class="header_main__btn">
+              <a href="./basket.html" class="header_main__btn">
                 <i class="icomoon-basket header_basket_icon"></i>
               </a>
             </div>
@@ -405,91 +405,117 @@
     <div class="content-wrapper">
       <div class="content-top">
         <div class="back">
-          <a href="./orders.html" class="back-btn"><i class="icomoon-arrow-left icon"></i></a>
-          <h1 class="back-title">Заказ <span>№4444</span></h1>
+          <a href="../index.html" class="back-btn"><i class="icomoon-arrow-left icon"></i></a>
+          <h1 class="back-title">Уведомления</h1>
         </div>
       </div>
 
-      <div class="order_content" id="order-info">
-        <div class="order-left">
-          <h4 class="order-count"><span>5</span>товаров</h4>
-          <h2 class="order-price">16500 ₽</h2>
-          <h3 class="order-date">Создан 24.07.22</h3>
-          <div class="line-h"></div>
-          <h2 class="order-info">
-            Метод оплаты:
-            <span>Картой при получении</span>
-          </h2>
-          <h2 class="order-info">
-            Адрес доставки:
-            <span>Россия, Красноярск, ул.Петра Ломако 8, 45кв.</span>
-          </h2>
+      <div class="content-center notif_content">
+        <div class="notif_item">
+          <button class="notif-check-btn">
+            <div class="custom-checkbox notif-checkbox">
+              <svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
+                  fill="url(#paint0_linear_3975_51670)"
+                  stroke="url(#paint1_linear_3975_51670)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
+                  stroke="white"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_3975_51670"
+                    x1="28"
+                    y1="4.512"
+                    x2="-7.93812"
+                    y2="30.501"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EE9AB2" />
+                    <stop offset="1" stop-color="#75A4FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_3975_51670"
+                    x1="28"
+                    y1="4.512"
+                    x2="-7.93812"
+                    y2="30.501"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EE9AB2" />
+                    <stop offset="1" stop-color="#75A4FF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </button>
+          <div class="notif-info">
+            <h2>Оцените товар</h2>
+            <h3>Недавно Вы получили заказ. Поделитесь впечатлениями!</h3>
+          </div>
+          <button class="notif-accept-btn">
+            <i class="icomoon-arrow-right icon"></i>
+          </button>
         </div>
-        <div class="line-v"></div>
-        <div class="order-main">
-          <div class="order-owner">
-            <span id="order-owner-name">Артур</span>
-            <span id="order-owner-lastName">Пирожков</span>
+        <div class="notif_item">
+          <button class="notif-check-btn">
+            <div class="custom-checkbox notif-checkbox">
+              <svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
+                  fill="url(#paint0_linear_3975_51670)"
+                  stroke="url(#paint1_linear_3975_51670)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
+                  stroke="white"
+                  stroke-width="1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_3975_51670"
+                    x1="28"
+                    y1="4.512"
+                    x2="-7.93812"
+                    y2="30.501"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EE9AB2" />
+                    <stop offset="1" stop-color="#75A4FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_3975_51670"
+                    x1="28"
+                    y1="4.512"
+                    x2="-7.93812"
+                    y2="30.501"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EE9AB2" />
+                    <stop offset="1" stop-color="#75A4FF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </button>
+          <div class="notif-info">
+            <h2>Оцените товар</h2>
+            <h3>Недавно Вы получили заказ. Поделитесь впечатлениями!</h3>
           </div>
-          <h2 class="order-owner-phone">+7-923-393-00-75</h2>
-          <div class="order-statuses">
-            <div class="order-status-block active">
-              <img src="../../img/icons/status-complete.svg" alt="Собран" />
-              <h2>Собран</h2>
-            </div>
-            <div class="order-status-block active">
-              <img src="../../img/icons/status-complete.svg" alt="В доставке" />
-              <h2>Передан в доставку</h2>
-            </div>
-            <div class="order-status-block">
-              <img src="../../img/icons/status-complete.svg" alt="Отправлен" />
-              <h2>Отправлен</h2>
-            </div>
-            <div class="order-status-block">
-              <img src="../../img/icons/status-complete.svg" alt="Доставлен" />
-              <h2>Доставлен</h2>
-            </div>
-            <div class="order-status-block">
-              <img src="../../img/icons/status-complete.svg" alt="Отменен" />
-              <h2>Отменен</h2>
-            </div>
-          </div>
-          <div class="line-h"></div>
-          <div class="order-items">
-            <a href="../product.html" class="order-item">
-              <img src="../../img/products/adidas_ozweego_meta.jpg" alt="Ozweego Meta" />
-              <div class="order-item-info">
-                <h3 class="order-item-brand">Adidas</h3>
-                <h3 class="order-item-article">арт. 0025</h3>
-                <h2 class="order-item-name">Ozweego Meta</h2>
-                <h2 class="order-item-price"><span>15000 ₽</span>12750 ₽</h2>
-                <h4 class="order-item-count"><span>1</span>шт.</h4>
-                <h4 class="order-item-size">44</h4>
-              </div>
-            </a>
-            <a href="../product.html" class="order-item">
-              <img src="../../img/products/adidas_forum_mid.jpg" alt="Forum Mid" />
-              <div class="order-item-info">
-                <h3 class="order-item-brand">Adidas</h3>
-                <h3 class="order-item-article">арт. 0044</h3>
-                <h2 class="order-item-name">Originals x Parley FORUM MID</h2>
-                <h2 class="order-item-price">18999 ₽</h2>
-                <h4 class="order-item-count"><span>1</span>шт.</h4>
-                <h4 class="order-item-size">43</h4>
-              </div>
-            </a>
-            <a href="../product.html" class="order-item">
-              <img src="../../img/products/tommy_hoodi.jpg" alt="Tommy" />
-              <div class="order-item-info">
-                <h3 class="order-item-brand">Tommy Jeans</h3>
-                <h3 class="order-item-article">арт. 2047</h3>
-                <h2 class="order-item-name">LINEAR LOGO HOODIE</h2>
-                <h2 class="order-item-price">12999 ₽</h2>
-                <h4 class="order-item-count"><span>4</span>шт.</h4>
-                <h4 class="order-item-size">M</h4>
-              </div>
-            </a>
-          </div>
+          <button class="notif-accept-btn">
+            <i class="icomoon-arrow-right icon"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -519,21 +545,21 @@
         </div>
         <ul class="footer__main_links">
           <li class="footer__main_link">О нас</li>
-          <li class="footer__main_link"><a href="../about.html">О компании</a></li>
-          <li class="footer__main_link"><a href="../news.html">Новости</a></li>
-          <li class="footer__main_link"><a href="../contacts.html">Контакты</a></li>
+          <li class="footer__main_link"><a href="./about.html">О компании</a></li>
+          <li class="footer__main_link"><a href="./news.html">Новости</a></li>
+          <li class="footer__main_link"><a href="./contacts.html">Контакты</a></li>
         </ul>
         <ul class="footer__main_links">
           <li class="footer__main_link">Покупателю</li>
-          <li class="footer__main_link"><a href="../delivery.html">Доставка</a></li>
-          <li class="footer__main_link"><a href="../payments.html">Оплата</a></li>
-          <li class="footer__main_link"><a href="../returns.html">Возвраты</a></li>
+          <li class="footer__main_link"><a href="./delivery.html">Доставка</a></li>
+          <li class="footer__main_link"><a href="./payments.html">Оплата</a></li>
+          <li class="footer__main_link"><a href="./returns.html">Возвраты</a></li>
         </ul>
         <ul class="footer__main_links">
           <li class="footer__main_link">Партнерам</li>
-          <li class="footer__main_link"><a href="../partners.html">Отправить заявку</a></li>
-          <li class="footer__main_link"><a href="../offer.html">Договор оферты</a></li>
-          <li class="footer__main_link"><a href="../faq.html">Помощь и FAQ</a></li>
+          <li class="footer__main_link"><a href="./partners.html">Отправить заявку</a></li>
+          <li class="footer__main_link"><a href="./offer.html">Договор оферты</a></li>
+          <li class="footer__main_link"><a href="./faq.html">Помощь и FAQ</a></li>
         </ul>
         <div class="footer__main_subscribe">
           <h2>Подпишись на нашу рассылку</h2>
@@ -543,11 +569,10 @@
           </form>
           <h5>
             Подписываясь на рассылку, вы соглашаетесь с условиями
-            <a href="../policy-privacy.html">Политики конфиденциальности</a>
+            <a href="./policy-privacy.html">Политики конфиденциальности</a>
           </h5>
         </div>
       </div>
-
       <div class="footer__line"></div>
 
       <div class="footer__bottom">
@@ -558,15 +583,15 @@
           <a href="#"><i class="icomoon-vk"></i></a>
         </div>
         <div class="footer__bottom_payments">
-          <img src="../../img/payments/mir.png" alt="MIR" />
-          <img src="../../img/payments/mc.png" alt="MC" />
-          <img src="../../img/payments/visa.png" alt="VISA" />
+          <img src="../img/payments/mir.png" alt="MIR" />
+          <img src="../img/payments/mc.png" alt="MC" />
+          <img src="../img/payments/visa.png" alt="VISA" />
         </div>
       </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="../../js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

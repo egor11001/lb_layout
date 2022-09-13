@@ -5,288 +5,285 @@
 @import 'components/sort_popup';
 @import 'components/pagination.less';
 @import 'components/search-input.less';
-@import 'basket.less';
 
-.favorites_wrapper {
-  .addresses_content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0 312px;
-    column-gap: 80px;
-    row-gap: 40px;
-    min-height: 500px;
+.addresses_content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 312px;
+  column-gap: 80px;
+  row-gap: 40px;
+  min-height: 500px;
+  margin-bottom: 96px;
+  margin-top: 32px;
+
+  @media (max-width: 1700px) {
+    margin: 0 110px;
     margin-bottom: 96px;
-    margin-top: 32px;
+  }
+  @media (max-width: 1500px) {
+    margin: 0 70px;
+    column-gap: 48px;
+    row-gap: 32px;
+    margin-bottom: 96px;
+  }
+  @media (max-width: 1240px) {
+    margin: 0 110px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-    @media (max-width: 1700px) {
-      margin: 0 110px;
-      margin-bottom: 96px;
-    }
-    @media (max-width: 1500px) {
-      margin: 0 70px;
-      column-gap: 48px;
-      row-gap: 32px;
-      margin-bottom: 96px;
-    }
-    @media (max-width: 1240px) {
-      margin: 0 110px;
-      grid-template-columns: repeat(3, 1fr);
-    }
+  #create-address {
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+    padding: 0;
+    color: @light;
+    background-image: repeating-linear-gradient(
+        29deg,
+        @light,
+        @light 21px,
+        transparent 21px,
+        transparent 39px,
+        @light 39px
+      ),
+      repeating-linear-gradient(119deg, @light, @light 21px, transparent 21px, transparent 39px, @light 39px),
+      repeating-linear-gradient(209deg, @light, @light 21px, transparent 21px, transparent 39px, @light 39px),
+      repeating-linear-gradient(299deg, @light, @light 21px, transparent 21px, transparent 39px, @light 39px);
+    background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+    height: 168px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    #create-address {
-      cursor: pointer;
-      outline: none;
+    svg > path {
+      stroke: @light;
       transition: 0.3s;
-      padding: 0;
-      color: @light;
-      background-image: repeating-linear-gradient(
-          29deg,
-          @light,
-          @light 21px,
-          transparent 21px,
-          transparent 39px,
-          @light 39px
-        ),
-        repeating-linear-gradient(119deg, @light, @light 21px, transparent 21px, transparent 39px, @light 39px),
-        repeating-linear-gradient(209deg, @light, @light 21px, transparent 21px, transparent 39px, @light 39px),
-        repeating-linear-gradient(299deg, @light, @light 21px, transparent 21px, transparent 39px, @light 39px);
-      background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
-      background-position: 0 0, 0 0, 100% 0, 0 100%;
-      background-repeat: no-repeat;
-      height: 168px;
-      width: 100%;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      svg > path {
-        stroke: @light;
-        transition: 0.3s;
-      }
-
-      &:hover {
-        background-color: @light;
-        transition: 0.3s;
-        svg > path {
-          stroke: white;
-          transition: 0.3s;
-        }
-      }
     }
 
-    &_item {
-      cursor: pointer;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      padding: 24px 20px 20px 24px;
-      border-radius: 10px;
-      overflow: hidden;
-      height: 168px;
-      box-shadow: 0px 5px 22px 5px rgba(196, 196, 196, 0.3);
-      transition: 0.1s;
-
-      .address-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 20px;
-
-        .address-name {
-          font-weight: 600;
-          font-size: 16px;
-        }
-
-        .address-main {
-          opacity: 1;
-          border-radius: 100px;
-          overflow: hidden;
-          width: 24px;
-          height: 24px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .address-main.acitve {
-          opacity: 1;
-        }
-      }
-
-      .address-desc {
-        font-weight: 600;
-        font-size: 12px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        margin-bottom: 24px;
-      }
-
-      #delete-address {
-        width: fit-content;
-
-        i {
-          color: @light;
-          font-size: 20px;
-        }
-
-        &:hover {
-          i {
-            background: @gradient !important;
-            -webkit-background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-          }
-        }
+    &:hover {
+      background-color: @light;
+      transition: 0.3s;
+      svg > path {
+        stroke: white;
+        transition: 0.3s;
       }
     }
   }
 
-  #modal-addresses-create {
+  &_item {
+    cursor: pointer;
+    position: relative;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 64px;
-    padding-right: 64px;
+    width: 100%;
+    padding: 24px 20px 20px 24px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 168px;
+    box-shadow: 0px 5px 22px 5px rgba(196, 196, 196, 0.3);
+    transition: 0.1s;
 
-    h2 {
+    .address-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      .address-name {
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      .address-main {
+        opacity: 1;
+        border-radius: 100px;
+        overflow: hidden;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .address-main.acitve {
+        opacity: 1;
+      }
+    }
+
+    .address-desc {
+      font-weight: 600;
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      margin-bottom: 24px;
+    }
+
+    #delete-address {
+      width: fit-content;
+
+      i {
+        color: @light;
+        font-size: 20px;
+      }
+
+      &:hover {
+        i {
+          background: @gradient !important;
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent !important;
+        }
+      }
+    }
+  }
+}
+
+#modal-addresses-create {
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 64px;
+  padding-right: 64px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 64px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 56px;
+
+    label {
+      width: 150px;
+      margin-right: 20px;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    input {
+      width: 336px;
+      padding: 14px 16px 14px 24px;
+      border: 2px solid @light;
+      border-radius: 5px;
+      font-weight: 400;
+      font-size: 16px;
+      transition: 0.1s;
+
+      &:hover,
+      &:focus {
+        transition: 0.1s;
+        border: 2px solid @black;
+      }
+
+      ::placeholder {
+        color: @light;
+      }
+    }
+
+    .address-search {
+      input {
+        width: 500px;
+      }
+    }
+  }
+
+  .field-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 48px;
+    cursor: pointer;
+
+    .custom-checkbox {
+      margin-right: 32px;
+      svg {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    h5 {
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+
+  button[type='submit'] {
+    width: 220px;
+    align-self: center;
+    padding: 14px 0;
+    border: 2px solid @black;
+    border-radius: 5px;
+    background-color: white;
+    color: @black;
+    font-weight: 600;
+    font-size: 16px;
+
+    &:hover {
+      background-color: @black;
+      color: white;
+    }
+  }
+}
+
+#modal-addresses-delete {
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 544px !important;
+  height: 344px !important;
+
+  h2 {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 56px;
+
+    span {
+      margin-left: 8px;
       font-weight: 600;
       font-size: 24px;
-      margin-bottom: 64px;
-      width: 100%;
-      text-align: center;
     }
+  }
 
-    .field {
-      display: flex;
-      align-items: center;
-      margin-bottom: 56px;
+  div {
+    display: flex;
+    justify-content: center;
 
-      label {
-        width: 150px;
-        margin-right: 20px;
-        font-weight: 400;
-        font-size: 20px;
-      }
-
-      input {
-        width: 336px;
-        padding: 14px 16px 14px 24px;
-        border: 2px solid @light;
-        border-radius: 5px;
-        font-weight: 400;
-        font-size: 16px;
-        transition: 0.1s;
-
-        &:hover,
-        &:focus {
-          transition: 0.1s;
-          border: 2px solid @black;
-        }
-
-        ::placeholder {
-          color: @light;
-        }
-      }
-
-      .address-search {
-        input {
-          width: 500px;
-        }
-      }
-    }
-
-    .field-checkbox {
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
-      margin-bottom: 48px;
-      cursor: pointer;
-
-      .custom-checkbox {
-        margin-right: 32px;
-        svg {
-          width: 36px;
-          height: 36px;
-        }
-      }
-
-      h5 {
-        font-weight: 400;
-        font-size: 20px;
-      }
-    }
-
-    button[type='submit'] {
-      width: 220px;
-      align-self: center;
+    button {
+      width: 140px;
       padding: 14px 0;
-      border: 2px solid @black;
       border-radius: 5px;
-      background-color: white;
+      border: 2px solid @black;
       color: @black;
       font-weight: 600;
       font-size: 16px;
 
       &:hover {
-        background-color: @black;
         color: white;
       }
     }
-  }
 
-  #modal-addresses-delete {
-    padding: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 544px !important;
-    height: 344px !important;
+    #modal-address-delete-submit {
+      margin-right: 48px;
 
-    h2 {
-      font-weight: 400;
-      font-size: 24px;
-      margin-bottom: 56px;
-
-      span {
-        margin-left: 8px;
-        font-weight: 600;
-        font-size: 24px;
+      &:hover {
+        background-color: @green;
+        border: 2px solid @green;
       }
     }
-
-    div {
-      display: flex;
-      justify-content: center;
-
-      button {
-        width: 140px;
-        padding: 14px 0;
-        border-radius: 5px;
+    #close-btn-addresses-delete {
+      &:hover {
+        background-color: @black;
         border: 2px solid @black;
-        color: @black;
-        font-weight: 600;
-        font-size: 16px;
-
-        &:hover {
-          color: white;
-        }
-      }
-
-      #modal-address-delete-submit {
-        margin-right: 48px;
-
-        &:hover {
-          background-color: @green;
-          border: 2px solid @green;
-        }
-      }
-      #close-btn-addresses-delete {
-        &:hover {
-          background-color: @black;
-          border: 2px solid @black;
-        }
       }
     }
   }

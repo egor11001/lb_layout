@@ -1,196 +1,186 @@
 @import 'colors.less';
 @import 'components/header.less';
 @import 'components/footer.less';
-@import 'basket.less';
 
-.profile-info_wrapper {
+.profile-info_content {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 32px 0 0 0;
+  margin-left: 244px;
   margin-bottom: 80px;
-  position: relative;
 
-  .profile-info_content {
-    display: flex;
-    flex-direction: column;
-    margin-left: 260px;
-    margin-bottom: 80px;
-
-    .field {
-      display: flex;
-      align-items: center;
-      margin-bottom: 56px;
-
-      label {
-        width: 166px;
-        text-align: left;
-        margin-right: 24px;
-        font-weight: 400;
-        font-size: 16px;
-      }
-
-      & > input {
-        width: 336px;
-        padding: 14px 24px;
-        font-weight: 400;
-        font-size: 16px;
-        border: 2px solid @light;
-        border-radius: 5px;
-        transition: 0.1s;
-
-        &:hover,
-        &:focus {
-          transition: 0.1s;
-          border: 2px solid @black;
-        }
-
-        ::placeholder {
-          color: @light;
-        }
-      }
-    }
-
-    .field-checkbox {
-      display: flex;
-      align-items: center;
-      margin-bottom: 32px;
-      cursor: pointer;
-
-      .custom-checkbox {
-        display: flex;
-        align-items: center;
-        margin-right: 16px;
-        svg {
-          width: 28px;
-          height: 28px;
-
-          path {
-            fill: none;
-            &:nth-of-type(2) {
-              stroke-width: 0;
-            }
-          }
-        }
-      }
-      .custom-checkbox-active {
-        svg {
-          path {
-            &:nth-of-type(1) {
-              fill: url(#paint0_linear_3975_51670);
-            }
-            &:nth-of-type(2) {
-              stroke-width: 2;
-            }
-          }
-        }
-      }
-
-      h5 {
-        font-weight: 400;
-        font-size: 16px;
-      }
-    }
-
-    .profile-btns {
-      display: flex;
-      align-items: center;
-      margin-top: 40px;
-
-      #profile-change-pass {
-        font-size: 16px;
-        font-weight: 400;
-        color: @grey;
-        border: 1px solid @light;
-        padding: 12px 24px;
-        border-radius: 5px;
-        background-color: white;
-        transition: 0.1s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: fit-content;
-
-        &:hover {
-          transition: 0.1s;
-          background-color: @light;
-          color: white;
-        }
-      }
-
-      button[type='submit'] {
-        margin-right: 80px;
-        width: 336px;
-        padding: 16px 0;
-        border-radius: 5px;
-        color: white;
-        background-color: @black;
-        font-weight: 600;
-        font-size: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.1s;
-
-        &:hover {
-          transition: 0.1s;
-          background-color: black;
-        }
-      }
-    }
-  }
-
-  #modal-profile-pass {
-    width: 462px !important;
-    padding: 64px 82px 48px 82px;
+  .field {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    margin-bottom: 56px;
 
-    #close-btn-profile-pass {
-      right: 28px;
-      top: 28px;
-    }
-
-    h2 {
-      font-weight: 400;
-      font-size: 24px;
-      margin-bottom: 56px;
-    }
-
-    input {
-      width: 298px;
-      padding: 8px 16px;
+    label {
+      width: 166px;
+      text-align: left;
+      margin-right: 24px;
       font-weight: 400;
       font-size: 16px;
-      border-bottom: 1px solid @light;
-      margin-bottom: 64px;
+    }
+
+    & > input {
+      width: 336px;
+      padding: 14px 24px;
+      font-weight: 400;
+      font-size: 16px;
+      border: 2px solid @light;
+      border-radius: 5px;
+      transition: 0.1s;
+
+      &:hover,
+      &:focus {
+        transition: 0.1s;
+        border: 2px solid @black;
+      }
 
       ::placeholder {
         color: @light;
       }
+    }
+  }
 
-      &:hover,
-      &:focus {
-        border-bottom: 1px solid @black;
+  .field-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    cursor: pointer;
+
+    .custom-checkbox {
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+      svg {
+        width: 28px;
+        height: 28px;
+
+        path {
+          fill: none;
+          &:nth-of-type(2) {
+            stroke-width: 0;
+          }
+        }
+      }
+    }
+    .custom-checkbox-active {
+      svg {
+        path {
+          &:nth-of-type(1) {
+            fill: url(#paint0_linear_3975_51670);
+          }
+          &:nth-of-type(2) {
+            stroke-width: 2;
+          }
+        }
+      }
+    }
+
+    h5 {
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+
+  .profile-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+
+    #profile-change-pass {
+      font-size: 16px;
+      font-weight: 400;
+      color: @grey;
+      border: 1px solid @light;
+      padding: 12px 24px;
+      border-radius: 5px;
+      background-color: white;
+      transition: 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+
+      &:hover {
+        transition: 0.1s;
+        background-color: @light;
+        color: white;
       }
     }
 
     button[type='submit'] {
-      width: 180px;
-      padding: 10px 0;
+      margin-right: 80px;
+      width: 336px;
+      padding: 16px 0;
+      border-radius: 5px;
+      color: white;
+      background-color: @black;
       font-weight: 600;
       font-size: 16px;
-      margin-top: 24px;
-      color: white;
-      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       transition: 0.1s;
-      background-color: @black;
 
       &:hover {
         transition: 0.1s;
         background-color: black;
       }
+    }
+  }
+}
+
+#modal-profile-pass {
+  width: 462px !important;
+  padding: 64px 82px 48px 82px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  #close-btn-profile-pass {
+    right: 28px;
+    top: 28px;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 56px;
+  }
+
+  input {
+    width: 298px;
+    padding: 8px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    border-bottom: 1px solid @light;
+    margin-bottom: 64px;
+
+    ::placeholder {
+      color: @light;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid @black;
+    }
+  }
+
+  button[type='submit'] {
+    width: 180px;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 24px;
+    color: white;
+    border-radius: 5px;
+    transition: 0.1s;
+    background-color: @black;
+
+    &:hover {
+      transition: 0.1s;
+      background-color: black;
     }
   }
 }
