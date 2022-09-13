@@ -1224,6 +1224,10 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
   padding: 14px 0;
   width: 336px;
   color: white;
+  background-color: #2d2d2d;
+}
+.product_wrapper .product__content_buy:hover {
+  background-color: black;
 }
 .product_wrapper .product__content .product__info {
   margin-top: 80px;

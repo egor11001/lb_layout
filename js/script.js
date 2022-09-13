@@ -441,7 +441,16 @@ $('.notif-check-btn').click(function (e) {
   $(this).find('.custom-checkbox').toggleClass('custom-checkbox-active');
   $(this)
     .parent()
-    .animate({ 'margin-right': '+=600', opacity: 0 }, { complete: () => $(this).parent().hide(), duration: 400 });
+    .animate(
+      { 'margin-right': '+=600', opacity: 0 },
+      {
+        complete: () =>
+          $(this)
+            .parent()
+            .css({ opacity: '0', width: '0', height: '0', postition: 'absolute', left: '0', bottom: '0' }),
+        duration: 400,
+      },
+    );
 });
 
 $('#address-search-value').on(

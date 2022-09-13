@@ -758,6 +758,9 @@ footer .footer__bottom_payments img {
 footer .footer__bottom_payments img:nth-last-of-type(1) {
   margin-right: 0;
 }
+.notif_content {
+  min-height: 680px;
+}
 .notif_item {
   display: flex;
   align-items: center;
