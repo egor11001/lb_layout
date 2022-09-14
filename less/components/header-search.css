@@ -1,0 +1,98 @@
+#header-search-btn {
+  margin-right: 40px;
+  position: static;
+}
+.header-search-btn-active {
+  position: relative;
+  z-index: 1300;
+  right: 16px;
+}
+.header-search {
+  display: none;
+}
+.header-search .header-search-field {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  z-index: 1200;
+  height: 72px;
+  background-color: white;
+  width: calc(100% - 380px);
+  margin-right: 200px;
+  display: flex;
+  align-items: center;
+  padding-left: 64px;
+}
+.header-search .header-search-result {
+  position: absolute !important;
+  z-index: 900;
+  background-color: white;
+  left: 0;
+  top: 72px;
+  justify-content: center;
+  height: fit-content;
+  overflow: hidden;
+  width: 100%;
+  padding: 24px 100px 20px 80px;
+}
+.header-search .header-search-result ul {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.header-search .header-search-result ul li {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
+.header-search .header-search-result ul li:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.header-search .header-search-result ul li i {
+  margin-right: 24px;
+  opacity: 0;
+  font-size: 28px;
+  font-weight: 600;
+  background: linear-gradient(234.13deg, #ee9ab2 0.9%, #75a4ff 133.24%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header-search .header-search-result ul li:hover i {
+  opacity: 1;
+}
+#header-search-close i {
+  font-size: 40px;
+  color: #525050;
+}
+#header-search-close:hover i {
+  color: #2d2d2d;
+}
+.header-search-input {
+  width: 100%;
+  padding: 8px 40px 8px 12px;
+  border-bottom: 2px solid #a9a8a8;
+  font-weight: 600;
+  font-size: 20px;
+  color: #2d2d2d;
+  position: relative;
+  left: 28px;
+  /*  @media (max-width: 1800px) {
+      width: 1000px;
+    }
+    @media (max-width: 1400px) {
+      width: calc(100vw * 0.52);
+    } */
+}
+.header-search-input::placeholder {
+  color: #a9a8a8;
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 80px;
+}
+.header-search-input:focus,
+.header-search-input:hover {
+  border-bottom: 2px solid #2d2d2d;
+}

@@ -136,6 +136,7 @@ noselect {
   padding: 32px 0 0 0;
   margin-bottom: 80px;
   position: relative;
+  min-height: 650px;
 }
 .content-center {
   display: flex;
@@ -1805,6 +1806,10 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
   padding: 14px 0;
   width: 336px;
   color: white;
+  background-color: #2d2d2d;
+}
+.product_wrapper .product__content_buy:hover {
+  background-color: black;
 }
 .product_wrapper .product__content .product__info {
   margin-top: 80px;
@@ -4000,6 +4005,9 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
     margin-bottom: 40px;
   }
 }
+.notif_content {
+  min-height: 680px;
+}
 .notif_item {
   display: flex;
   align-items: center;
@@ -4064,6 +4072,96 @@ footer .footer__bottom_payments img:nth-last-of-type(1) {
   background: linear-gradient(234.13deg, #ee9ab2 0.9%, #75a4ff 133.24%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
+}
+.not-find-content {
+  margin-top: 160px;
+  margin-bottom: 80px;
+}
+.not-find-content img {
+  margin-bottom: 80px;
+}
+.not-find-content h2 {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 88px;
+}
+.not-find-content a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 336px;
+  padding: 14px 0;
+  border-radius: 5px;
+  border: 2px solid #2d2d2d;
+  font-weight: 600;
+  font-size: 20px;
+  color: #2d2d2d;
+}
+.not-find-content a:hover {
+  background-color: #2d2d2d;
+  color: white;
+}
+.privacy-policy {
+  width: 1360px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.02em;
+  word-wrap: break-word;
+}
+@media (max-width: 1620px) {
+  .privacy-policy {
+    width: 1200px;
+    margin-left: 45px;
+  }
+}
+@media (max-width: 1350px) {
+  .privacy-policy {
+    width: 1000px;
+  }
+}
+.privacy-policy ul li {
+  list-style-type: upper-roman;
+}
+.privacy-policy span {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+.privacy-policy b {
+  margin-top: 12px;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+.ordering-complete img {
+  margin-bottom: 32px;
+}
+.ordering-complete h2 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 64px;
+}
+.ordering-complete h3 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 72px;
+}
+.ordering-complete a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 336px;
+  padding: 14px 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  background-color: #2d2d2d;
+}
+.ordering-complete a:hover {
+  background-color: black;
 }
 .modal {
   pointer-events: none;
