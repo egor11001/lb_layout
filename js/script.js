@@ -455,6 +455,20 @@ $('.notif-check-btn').click(function (e) {
     );
 });
 
+$('.auth-tab').click(function (e) {
+  $('.auth-tab').prop('disabled', false);
+  $(this).prop('disabled', true);
+
+  if (e.target.id === 'tab-login') {
+    $('.auth-tab-content').removeClass('active');
+    $('#login').toggleClass('active');
+  }
+  if (e.target.id === 'tab-registration') {
+    $('.auth-tab-content').removeClass('active');
+    $('#registration').toggleClass('active');
+  }
+});
+
 $('#address-search-value').on(
   'input',
   _.debounce(async function (e) {

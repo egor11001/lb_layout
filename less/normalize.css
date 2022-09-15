@@ -40,6 +40,9 @@ input {
   font-family: 'Manrope', 'Montserrat', 'Roboto';
   color: #2d2d2d;
 }
+hr {
+  border: none;
+}
 button,
 button:focus {
   cursor: pointer;
