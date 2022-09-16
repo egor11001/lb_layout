@@ -199,6 +199,15 @@ function toggleHeaderBrandsAlphabet() {
   }
 }
 
+$('.header_list_item').hover(
+  function () {
+    $(this).find('.header_list').css({ display: 'flex' });
+  },
+  function () {
+    $(this).find('.header_list').css({ display: 'none' });
+  },
+);
+
 // Hide the drop down
 function hideHeaderMenuNode() {
   let menu = document.getElementById('header-dropdown-node');
@@ -247,22 +256,6 @@ function toggleInfoTabs(tabId) {
 }
 
 $('.header-search-btn').click(function () {
-  /*  if (!$(this).hasClass('header__search_btn-active')) {
-    $(this).toggleClass('header__search_btn-active');
-    $('#header-logo').hide();
-    $('#header-location').hide();
-    $('#header-burger').hide();
-    $('#header-search-input').show();
-    $('#header-search-result').show('fast');
-    $('#header-close-search').show();
-    let menu = document.getElementById('header-nav');
-    let burger = document.getElementById('header-burger');
-    if (menu.style.display === 'block') {
-      menu.style.display = 'none';
-      document.body.style.overflow = 'auto';
-      burger.style.transform = 'rotate(0deg)';
-    }
-  } else { */
   if (!$(this).hasClass('header-search-btn-active')) {
     $(this).toggleClass('header-search-btn-active');
     $('.header-search').css({ display: 'flex' });
