@@ -151,16 +151,18 @@ header {
         }
 
         .header_list_node {
+          display: flex !important;
           position: absolute;
           left: 0;
           top: 72px;
           z-index: 550;
           width: 100%;
           height: 86vh;
-
           background-color: white;
           flex-direction: column;
-          padding: 32px 0 32px 140px;
+          align-content: flex-start;
+          flex-wrap: wrap;
+          padding: 32px 0 80px 140px;
 
           .header_list_item_node {
             width: 260px;
@@ -168,6 +170,7 @@ header {
             display: flex;
             align-items: center;
             cursor: pointer;
+            margin-right: 24px;
 
             > a {
               font-weight: 600;
