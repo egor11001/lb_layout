@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 185px 32px 104px;
+  margin: 0 5.5%;
+  margin-bottom: 32px;
 }
 .content-top-left {
   display: flex;
@@ -320,4 +322,20 @@
 }
 .no-visible {
   opacity: 0 !important;
+}
+.d-row {
+  display: flex;
+  align-items: center;
+}
+.d-col {
+  display: flex;
+  flex-direction: column;
+}
+.d-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.m-0 {
+  margin: 0 !important;
 }

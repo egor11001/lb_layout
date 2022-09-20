@@ -409,7 +409,7 @@
           <h1 class="back-title">Оформление заказа</h1>
         </div>
       </div>
-      <div class="ordering">
+      <div class="d-sb ordering">
         <form class="ordering-content">
           <!-- <div class="notif">
             <button type="button" class="close modal-close-btn" data-dismiss="alert">
@@ -442,12 +442,6 @@
             Товар уже есть в списке отложенных товаров
           </div> -->
 
-          <h2 class="ordering-title">Контактные данные</h2>
-          <input type="text" placeholder="Имя" required />
-          <input type="text" placeholder="Фамилия" required />
-          <input type="tel" placeholder="Телефон" required />
-          <input type="email" placeholder="Email" required />
-
           <h2 class="ordering-title">Адрес доставки</h2>
           <div id="address-search" class="address-search ordering-address">
             <input
@@ -463,6 +457,17 @@
                 </div> -->
             </div>
           </div>
+
+          <h2 class="ordering-title">Контактные данные</h2>
+          <div class="d-row">
+            <input type="text" placeholder="Имя*" required />
+            <input type="text" placeholder="Фамилия*" required />
+          </div>
+          <div class="d-row m-0">
+            <input type="tel" placeholder="Телефон*" required />
+            <input type="email" placeholder="Email*" required />
+          </div>
+
           <h2 class="ordering-title">Способ доставки</h2>
 
           <div class="custom-checkbox-click ordering-delivery">
