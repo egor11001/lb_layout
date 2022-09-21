@@ -96,6 +96,10 @@
 .header-search-input:hover {
   border-bottom: 2px solid #2d2d2d;
 }
+.header__search_result,
+#header-nav {
+  display: none !important;
+}
 header {
   width: 100%;
   position: fixed;

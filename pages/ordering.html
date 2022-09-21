@@ -409,164 +409,171 @@
           <h1 class="back-title">Оформление заказа</h1>
         </div>
       </div>
-      <div class="d-sb ordering">
-        <form class="ordering-content">
+      <div class="f-sb ordering">
+        <form class="ordering-content span-10">
           <!-- <div class="notif">
-            <button type="button" class="close modal-close-btn" data-dismiss="alert">
-              <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#2D2D2D" />
-                <rect
-                  y="-0.353554"
-                  width="19.1912"
-                  height="1.59948"
-                  rx="0.79974"
-                  transform="matrix(0.707106 0.707107 -0.707106 0.707107 13.1465 12.5136)"
-                  fill="#2D2D2D"
-                  stroke="#2D2D2D"
-                  stroke-width="0.5"
-                />
-                <rect
-                  x="0.353553"
-                  y="2.98023e-08"
-                  width="19.1912"
-                  height="1.59948"
-                  rx="0.79974"
-                  transform="matrix(-0.707106 0.707107 -0.707106 -0.707107 27.2168 13.1484)"
-                  fill="#2D2D2D"
-                  stroke="#2D2D2D"
-                  stroke-width="0.5"
-                />
-              </svg>
-            </button>
-            <strong><img src="../img/icons/notif-alert.svg" alt="alert" />Оповещение</strong>
-            Товар уже есть в списке отложенных товаров
-          </div> -->
+              <button type="button" class="close modal-close-btn" data-dismiss="alert">
+                <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#2D2D2D" />
+                  <rect
+                    y="-0.353554"
+                    width="19.1912"
+                    height="1.59948"
+                    rx="0.79974"
+                    transform="matrix(0.707106 0.707107 -0.707106 0.707107 13.1465 12.5136)"
+                    fill="#2D2D2D"
+                    stroke="#2D2D2D"
+                    stroke-width="0.5"
+                  />
+                  <rect
+                    x="0.353553"
+                    y="2.98023e-08"
+                    width="19.1912"
+                    height="1.59948"
+                    rx="0.79974"
+                    transform="matrix(-0.707106 0.707107 -0.707106 -0.707107 27.2168 13.1484)"
+                    fill="#2D2D2D"
+                    stroke="#2D2D2D"
+                    stroke-width="0.5"
+                  />
+                </svg>
+              </button>
+              <strong><img src="../img/icons/notif-alert.svg" alt="alert" />Оповещение</strong>
+              Товар уже есть в списке отложенных товаров
+            </div> -->
 
-          <h2 class="ordering-title">Адрес доставки</h2>
-          <div id="address-search" class="address-search ordering-address">
-            <input
-              id="address-search-value"
-              type="text"
-              class="address-search-value"
-              placeholder="Адрес"
-              required
-            />
-            <div id="address-search-options" class="address-search-options">
-              <!--  <div class="search-option">
-                  <h3>12312</h3>
-                </div> -->
+          <h2 class="ordering-title mt-0">Доставка</h2>
+          <div class="f-row m-0">
+            <input type="text" placeholder="Город" />
+          </div>
+
+          <div class="delivery-options">
+            <h2 class="ordering-title">Способ доставки</h2>
+
+            <div class="custom-checkbox-click ordering-delivery">
+              <img src="../img/sdek.png" alt="logo" />
+              <h3 class="delivery-name">СДЭК</h3>
+              <h3 class="delivery-time">4 дн.</h3>
+              <h3 class="delivery-price">690 ₽</h3>
+              <div class="custom-checkbox delivery-check">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
+                    fill="url(#paint0_linear_3975_51670)"
+                    stroke="url(#paint1_linear_3975_51670)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
+                    stroke="white"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_3975_51670"
+                      x1="28"
+                      y1="4.512"
+                      x2="-7.93812"
+                      y2="30.501"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#EE9AB2" />
+                      <stop offset="1" stop-color="#75A4FF" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint1_linear_3975_51670"
+                      x1="28"
+                      y1="4.512"
+                      x2="-7.93812"
+                      y2="30.501"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#EE9AB2" />
+                      <stop offset="1" stop-color="#75A4FF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <input name="delivery" value="cdek" id="delivery-type" type="radio" class="disable" />
+            </div>
+            <div class="custom-checkbox-click ordering-delivery m-0">
+              <img src="../img/sdek.png" alt="logo" />
+              <h3 class="delivery-name">СДЭК</h3>
+              <h3 class="delivery-time">4 дн.</h3>
+              <h3 class="delivery-price">690 ₽</h3>
+              <div class="custom-checkbox delivery-check">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
+                    fill="url(#paint0_linear_3975_51670)"
+                    stroke="url(#paint1_linear_3975_51670)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
+                    stroke="white"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_3975_51670"
+                      x1="28"
+                      y1="4.512"
+                      x2="-7.93812"
+                      y2="30.501"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#EE9AB2" />
+                      <stop offset="1" stop-color="#75A4FF" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint1_linear_3975_51670"
+                      x1="28"
+                      y1="4.512"
+                      x2="-7.93812"
+                      y2="30.501"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#EE9AB2" />
+                      <stop offset="1" stop-color="#75A4FF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <input name="delivery" value="pochta" id="delivery-type2" type="radio" class="disable" />
             </div>
           </div>
 
           <h2 class="ordering-title">Контактные данные</h2>
-          <div class="d-row">
+          <div class="f-row">
+            <div id="address-search" class="address-search ordering-address">
+              <input
+                id="address-search-value"
+                type="text"
+                class="address-search-value"
+                placeholder="Адрес*"
+                required
+              />
+              <div id="address-search-options" class="address-search-options">
+                <!--  <div class="search-option">
+                      <h3>12312</h3>
+                    </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="f-row">
             <input type="text" placeholder="Имя*" required />
             <input type="text" placeholder="Фамилия*" required />
           </div>
-          <div class="d-row m-0">
+          <div class="f-row m-0">
             <input type="tel" placeholder="Телефон*" required />
             <input type="email" placeholder="Email*" required />
-          </div>
-
-          <h2 class="ordering-title">Способ доставки</h2>
-
-          <div class="custom-checkbox-click ordering-delivery">
-            <img src="../img/sdek.png" alt="logo" />
-            <h3 class="delivery-name">СДЭК</h3>
-            <h3 class="delivery-time">4 дн.</h3>
-            <h3 class="delivery-price">690 ₽</h3>
-            <div class="custom-checkbox delivery-check">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
-                  fill="url(#paint0_linear_3975_51670)"
-                  stroke="url(#paint1_linear_3975_51670)"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
-                  stroke="white"
-                  stroke-width="1"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_3975_51670"
-                    x1="28"
-                    y1="4.512"
-                    x2="-7.93812"
-                    y2="30.501"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#EE9AB2" />
-                    <stop offset="1" stop-color="#75A4FF" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint1_linear_3975_51670"
-                    x1="28"
-                    y1="4.512"
-                    x2="-7.93812"
-                    y2="30.501"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#EE9AB2" />
-                    <stop offset="1" stop-color="#75A4FF" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <input name="delivery" value="cdek" id="delivery-type" type="radio" class="disable" />
-          </div>
-          <div class="custom-checkbox-click ordering-delivery">
-            <img src="../img/sdek.png" alt="logo" />
-            <h3 class="delivery-name">СДЭК</h3>
-            <h3 class="delivery-time">4 дн.</h3>
-            <h3 class="delivery-price">690 ₽</h3>
-            <div class="custom-checkbox delivery-check">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M4 16C4 9.37259 9.37259 4 16 4C22.6275 4 28 9.37259 28 16C28 22.6275 22.6275 28 16 28C9.37259 28 4 22.6275 4 16Z"
-                  fill="url(#paint0_linear_3975_51670)"
-                  stroke="url(#paint1_linear_3975_51670)"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M10.666 15.9997L14.666 19.9997L21.3327 13.333"
-                  stroke="white"
-                  stroke-width="1"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_3975_51670"
-                    x1="28"
-                    y1="4.512"
-                    x2="-7.93812"
-                    y2="30.501"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#EE9AB2" />
-                    <stop offset="1" stop-color="#75A4FF" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint1_linear_3975_51670"
-                    x1="28"
-                    y1="4.512"
-                    x2="-7.93812"
-                    y2="30.501"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#EE9AB2" />
-                    <stop offset="1" stop-color="#75A4FF" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <input name="delivery" value="pochta" id="delivery-type2" type="radio" class="disable" checked />
           </div>
 
           <h2 class="ordering-title">Метод оплаты</h2>
@@ -619,25 +626,38 @@
 
           <button type="submit" class="ordering-submit">Оформить заказ</button>
         </form>
-        <div class="ordering-info">
-          <h2>Товары в заказе:</h2>
-          <div class="ordering-items">
-            <div class="ordering-item">
-              <span>Футболка, Цвет: Синий</span>
-              <span>S</span>
-              <span>1 x 75.00 ₽</span>
+        <div class="span-6 w-100 f-center">
+          <div class="ordering-info">
+            <h2>Товары в заказе:</h2>
+            <div class="ordering-items">
+              <div class="ordering-item f-sb">
+                <div class="f-col">
+                  <span>Футболка, Цвет: Синий</span>
+                  <span>S</span>
+                </div>
+                <span>1 x 75.00 ₽</span>
+              </div>
+              <div class="ordering-item f-sb">
+                <div class="f-col">
+                  <span>Футболка, Цвет: Красный</span>
+                  <span>XL</span>
+                </div>
+                <span>3 x 1200.00 ₽</span>
+              </div>
             </div>
-          </div>
-          <div class="ordering-count"><span class="count">3 шт.</span> <span class="count-price">3 шт.</span></div>
-          <div class="ordering-delivery-info">
-            <span>Доставка</span> <span class="delivery-price">1260 ₽</span>
-          </div>
+            <div class="ordering-count">
+              <span class="count">Количество</span> <span class="count-price">3 шт.</span>
+            </div>
+            <div class="ordering-delivery-info">
+              <span>Доставка</span> <span class="delivery-price">1260 ₽</span>
+            </div>
 
-          <div class="ordering-promo">
-            <input type="text" placeholder="Промокод" />
-            <button>Применить</button>
+            <div class="ordering-promo">
+              <input type="text" placeholder="Промокод" />
+              <button>Применить</button>
+            </div>
+            <h2 class="ordering-total">Итого: <span>1335 ₽</span></h2>
           </div>
-          <h2 class="ordering-total">Итого: <span>1335 ₽</span></h2>
         </div>
       </div>
     </div>
